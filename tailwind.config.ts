@@ -9,8 +9,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
+       
         foreground: "var(--foreground)",
+        barcolor:"rgb(52, 55, 70)",
+        background: "rgb(33, 34, 44)",
+        
       },
     },
   },
