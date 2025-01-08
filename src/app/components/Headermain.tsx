@@ -1,16 +1,15 @@
 import Link from "next/link"
-import Home from "./Homemain"
+import Home from "./Aboutitem"
 
 const Headermain = () => {
 
     return (
-        <div className="bg-background w-full h-8 text-white flex  text-sm ">
-            <div className="w-32 border-r flex gap-1 border-black text-center p-1">Home.js
+        <div className="w-full h-8 border-b-2 border-borderdark flex  text-sm ">
+            <div className="w-36 border-r flex  justify-center gap-1 border-black text-center font-semibold text-linkcolor focus:border-b-2 hover:border-blue-500 p-1">
+                <img src="starsvg.svg" alt="" />
+                About Me
             </div>
-            <div className="w-32 border-r border-black text-center p-1">about</div>
-            <div className="w-32 border-r border-black text-center p-1">contact</div>
-            <div className="w-32 border-r border-black text-center p-1" >project</div>
-            <div className="w-32 border-r border-black text-center p-1">github </div>
+
         </div>
     )
 }

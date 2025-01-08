@@ -11,10 +11,29 @@ export default {
       colors: {
        
         foreground: "var(--foreground)",
-        barcolor:"rgb(52, 55, 70)",
-        background: "rgb(33, 34, 44)",
-        
+        fontcolor:"rgb(169, 177, 214)",
+        borderdark:"rgb(27 30 46 )",
+        linkcolor:"rgb(61 185 201)",
       },
+      gridTemplateColumns:{
+        '16':'repeat(16,minmax(0,1fr))',
+       
+      },
+      gridColumnEnd: {
+        '13': '13',
+        '14': '14',
+        '15': '15',
+        '16': '16',
+        '17': '17',
+      },
+      keyframes:{
+        wave:{
+          to:{transform:'rotate(-10deg)'}
+        }
+      },
+      animation:{
+        wave:'wave 400ms ease infinite'
+      }
     },
   },
   plugins: [],

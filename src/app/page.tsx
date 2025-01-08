@@ -1,35 +1,17 @@
-import Image from "next/image";
-import RootLayout from "./layout";
-import Header from "@/app/components/Header";
-import Activiybar from "./components/Activitybar";
-import Footer from "./components/Footer";
-import Explore from "./components/Explore";
-import Main from "./components/Main";
-import { jetBrainsMono } from "./ui/font";
-import Headermain from "./components/Headermain";
+
+
 import React from "react";
 
+import AboutMe from "./components/Aboutme";
 
-export default function Home({children}:{children:React.ReactNode}) {
+
+export default function Home() {
 
   return (
-    
-    
-    <div className="h-screen" >
-      <Header />
-      <div className="flex ">
-        <Activiybar />
-        <Explore />
-        <div className="flex flex-col">
-          <Headermain />
-          <div>{children}</div>
-        </div>
 
-      </div>
-      <Footer />
-
+    <div className=" overflow-y-auto h-screen">
+      <AboutMe />
     </div>
-   
-    
+
   );
 }

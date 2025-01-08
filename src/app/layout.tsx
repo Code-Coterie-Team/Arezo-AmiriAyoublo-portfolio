@@ -18,8 +18,19 @@ export default function RootLayout({
   return (
      
     <html lang="en">
-      <body className={`${sourcesanPro.className} antialiased `} >
-        {children}
+      <body className={` antialiased h-screen  max-h-screen text-fontcolor`} >
+        <Header/>
+        <div className="grid grid-cols-16 h-[88%] ">
+          <Activiybar/>
+          <Explore/>
+          <div className="col-start-6  col-end-17  w-full h-full">
+              <Headermain/>
+              <div>{children}</div>
+          </div>
+        </div>
+        <Footer/>
+
+        
       </body>
     </html>
   );
