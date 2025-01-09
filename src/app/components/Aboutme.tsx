@@ -7,7 +7,7 @@ import PersonalInformation from "./Personinformation";
 const AboutMe=()=>{
 
     return(
-        <div className="flex flex-col p-10  gap-20 w-full "   >
+        <div className="flex flex-col p-10  gap-60 w-full "   >
             <PersonalInformation/>
             <WorkExperience/>
         </div>

@@ -3,10 +3,10 @@ import Link from "next/link";
 
 const AboutMets=()=>{
     return(
-       <div className=" flex gap-6">
+        <div className=" flex gap-6">
             <div className="text-fontcolor  "></div>
             <div className="flex flex-col gap-2 ">
-                <div className="flex gap-1  hover:bg-borderdark pl-2">
+                <div className="flex gap-1  hover:bg-borderdark ">
 
                     <StarSvg/>
                     <span className="text-gray-500">about_me.ts</span>

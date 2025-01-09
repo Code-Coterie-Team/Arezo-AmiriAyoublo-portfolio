@@ -22,10 +22,10 @@ export default function RootLayout({
         
           <div className=" grid grid-rows-16 h-screen  ">
             <Header />
-            <div className="grid row-start-2 row-end-16 grid-cols-12   md:grid-cols-16 overflow-hidden ">
+            <div className="grid row-start-2 row-end-16 grid-cols-12   md:grid-cols-16  ">
               <Activiybar />
               <Explore />
-              <div className="col-start-6  col-end-17 ">
+              <div className="col-start-6  col-end-17 overflow-hidden ">
                 <Headermain />
                 <div className=" overflow-y-auto h-screen " style={{ minHeight: '1500 px' }}>{children}</div>
               </div>
