@@ -26,6 +26,17 @@ export default {
         '16': '16',
         '17': '17',
       },
+      gridTemplateRows:{
+        
+        '16':'repeat(16,minmax(0,1fr))',
+      },
+      gridRowEnd:{
+        '13': '13',
+        '14': '14',
+        '15': '15',
+        '16': '16',
+        '17': '17',
+      },
       keyframes:{
         wave:{
           to:{transform:'rotate(-10deg)'}

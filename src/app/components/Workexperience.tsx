@@ -5,7 +5,7 @@ const WorkExperience=()=>{
      
 
     return(
-        <div className="flex flex-col gap-6 overflow-auto">
+        <div id='/#work-experience' className="flex flex-col gap-6 overflow-auto">
             <div className="flex gap-2 w-full">
                 <div className="w-4 border-t-4 border-white"></div>
                 <div className=" w-full border-t border-fontcolor p-2"></div>

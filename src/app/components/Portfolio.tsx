@@ -3,6 +3,7 @@
 import { useState } from "react"
 import AboutMe from "./Aboutitem"
 import AboutMets from "./Aboutitem"
+import { ArowSvg, NextitemSvg, NodeitemSvg, PublicitemSvg } from "@/assets"
 
 
 const Portfolio = () => {
@@ -13,18 +14,18 @@ const Portfolio = () => {
     return (
         <div className="flex flex-col gap-2">
             <div className="flex gap-1  hover:bg-borderdark pl-2">
-                <div><img src="arow.svg" alt="" /></div>
-                <div><img src="nextitem.svg" alt="" /></div>
+                <ArowSvg/>
+                <NextitemSvg/>
                 <span className="text-gray-500">.next</span>
             </div>
             <div className="flex gap-1  hover:bg-borderdark pl-2">
-                <div><img src="arow.svg" alt="" /></div>
-                <div><img src="nodeitem.svg" alt="" /></div>
+                <ArowSvg />
+                <NodeitemSvg/>
                 <span className="text-gray-500">node-modules</span>
             </div>
             <div className="flex gap-1  hover:bg-borderdark pl-2" onClick={togglePublic}>
-                <div><img src="arow.svg" alt="" /></div>
-                <div><img src="publicitem.svg" alt="" /></div>
+                <ArowSvg />
+                <PublicitemSvg/>
                 <span className="text-gray-500">public</span>
 
             </div>

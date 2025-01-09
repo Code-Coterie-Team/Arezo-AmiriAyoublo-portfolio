@@ -1,13 +1,14 @@
-import  {ArowSvg } from "../../assets";
+import  {ArowSvg, VscodeSvg } from "../../assets";
 
 
 
 const Header=()=>{
     return(
-        <div className=" flex   h-[7%]  justify-between  border-b-2 border-borderdark text-sm p-2  ">
-            <div className="flex gap-16">
-                {/* <ArowSvg/> */}
-                <ul className="flex gap-4 ">
+        <div className="   flex row-span-1  justify-between  border-b-2 border-borderdark text-sm p-2  ">
+            <div className="flex gap-20 text-base">
+               
+                <ul className="flex gap-4   ">
+                    <VscodeSvg/>
                     <li className="h-full w-5"><img src="vscod.svg" alt="" /></li>
                     <li>File</li>
                     <li> Edit</li>
@@ -17,8 +18,9 @@ const Header=()=>{
                     <li>Terminal</li>
                     <li>Help</li>
                 </ul>
-                <div>Arezoo AmiriAyoubloo-Visual Studio Code</div>
+                <h1>Arezoo AmiriAyoubloo-Visual Studio Code</h1>
             </div>
+            
             <div className="flex gap-2 ">
                 <div className="size-3  rounded-full bg-yellow-200"></div>
                 <div className=" size-3 rounded-full bg-green-400 "></div>

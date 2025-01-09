@@ -18,20 +18,24 @@ export default function RootLayout({
   return (
      
     <html lang="en">
-      <body className={` antialiased h-screen  max-h-screen text-fontcolor`} >
-        <Header/>
-        <div className="grid grid-cols-16 h-[88%] ">
-          <Activiybar/>
-          <Explore/>
-          <div className="col-start-6  col-end-17  w-full h-full">
-              <Headermain/>
-              <div>{children}</div>
-          </div>
-        </div>
-        <Footer/>
-
+      <body className={` antialiased min-h-screen max-h-screen text-fontcolor`} >
         
-      </body>
+          <div className=" grid grid-rows-16 h-screen  ">
+            <Header />
+            <div className="grid row-start-2 row-end-16 grid-cols-12   md:grid-cols-16 overflow-hidden ">
+              <Activiybar />
+              <Explore />
+              <div className="col-start-6  col-end-17 ">
+                <Headermain />
+                <div className=" overflow-y-auto h-screen " style={{ minHeight: '1500 px' }}>{children}</div>
+              </div>
+            </div>
+            <Footer />
+          </div>
+        
+
+        </body>
+      
     </html>
   );
 }

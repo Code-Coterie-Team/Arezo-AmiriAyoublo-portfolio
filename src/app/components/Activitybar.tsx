@@ -1,20 +1,20 @@
 import Link from "next/link";
-
+import { AboutSvg, BranchSvg, ContactSvg, ExtentionSvg, FileSvg, RunitemSvg, SearchSvg, SettingSvg } from "@/assets";
 
 const  Activiybar=()=>{
 
     return(
-        <div className=" col-span-1 flex flex-col h-full justify-between   ">
-            <div className="flex flex-col  gap-2 pt-2 cursor-pointer w-2/3 ">
-                <button className="w-full  hover:bg-slate-600 p-4"><img src="file.svg" alt="" className="h-full w-4/5 " /></button>
-                <button className="w-full hover:bg-slate-600 p-4"><img src="searchsvg.svg" alt="" className="h-full w-4/5" /></button>
-                <button className="w-full hover:bg-slate-600 p-4"><img src="branch.svg" alt="" className="h-full w-4/5" /></button>
-                <button className=" w-full hover:bg-slate-600 p-4"><img src="runitem.svg" alt="" className="h-full w-4/5" /></button>
-                <button className=" w-full hover:bg-slate-600 p-4"><img src="extentionitem.svg" alt="" className="h-full w-4/5" /></button>
+        <div className=" col-span-1 flex flex-col gap-16 ">
+            <div className="flex flex-col  gap-2 pt-2 cursor-pointer">
+                <button className=" hover:bg-slate-600 p-4"><FileSvg className="w-8 h-8 " /></button>
+                <button className="w-full hover:bg-slate-600 p-4"><SearchSvg  className="w-8 h-8" /></button>
+                <button className="w-full hover:bg-slate-600 p-4">< BranchSvg className="w-8 h-8" /></button>
+                <button className=" w-full hover:bg-slate-600 p-4">< RunitemSvg  className="w-8 h-8" /></button>
+                <button className=" w-full hover:bg-slate-600 p-4"><ExtentionSvg className="w-8 h-8" /></button>
             </div>
-            <div className="flex flex-col gap-2 w-2/3">
-                <div className="h-10 w-full p-2 "><img src="about.svg" alt="" className="h-full w-full" /></div>
-                <Link href="/setting"><div className="h-10 w-full p-2"><img src="setting.svg" alt="" className="h-full w-full" /></div></Link>
+            <div className="flex flex-col ">
+                <div className=" p-4 "><ContactSvg  /></div>
+                <Link href="/setting"><div className="p-4 "><SettingSvg  /></div></Link>
             </div>
         </div>
     )

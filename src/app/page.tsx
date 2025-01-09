@@ -3,13 +3,14 @@
 import React from "react";
 
 import AboutMe from "./components/Aboutme";
+import { Root } from "postcss";
 
 
 export default function Home() {
 
   return (
-
-    <div className=" overflow-y-auto h-screen">
+    
+    <div className="  ">
       <AboutMe />
     </div>
 
