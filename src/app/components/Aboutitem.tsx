@@ -17,7 +17,7 @@ const AboutMets=()=>{
                 <div className="flex gap-1  hover:bg-borderdark  " onClick={toggleAboutMe}>
 
                     <StarSvg/>
-                    <span className="text-gray-500">about_me.ts</span>
+                    <span className="">about_me.ts</span>
                 </div>
                 {showAboutme && <AboutTs/>}
             </div>
