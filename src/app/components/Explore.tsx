@@ -15,7 +15,7 @@ const Explore=()=>{
     }
 
     return(
-        <div className="  col-start-2 col-end-6 flex flex-col gap-6  border-r-2 border-borderdark">
+        <div className="  col-start-2 col-end-6 flex flex-col gap-6  border-r-2 border-borderdark  ">
             <div className="font-light ">EXPLORER</div>
             <div className="flex font-bold bordr-b-2 border-borderdark text-sm flex-col gap-2 ">
                 <div className="flex gap-1 h-8 hover:border-[0.5px] hover:border-fontcolor">
@@ -28,7 +28,7 @@ const Explore=()=>{
                         <span className="text-sm">PORTFOLIO</span>
                         
                     </div>
-                    <div>{showPortfolio && <Portfolio />}</div>
+                    {showPortfolio && <Portfolio />}
                     
                     
                 </div>

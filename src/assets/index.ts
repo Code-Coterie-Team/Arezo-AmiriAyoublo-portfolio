@@ -19,12 +19,28 @@ import SkillsSvg from './skills.svg';
 import StarSvg from './starsvg.svg';
 import VscodeSvg from './vscode.svg';
 import WorkSvg from './worksvg.svg';
-import SuitcaSvg from './suticas.svg'
+import SuitcaSvg from './suticas.svg';
+import GiticonSvg from './giticon.svg';
+import EsllintSvg from './eslinticon.svg';
+import GitignoreSvg from './gitignore.svg';
+import JsonpakageSvg from './jsonpakage.svg';
+import NextSvg from './nexticon.svg';
+import TailwindSvg from './tailwind.svg';
+import TsconfigSvg from './tsconfig.svg';
+import SidewindowSvg from'./sidewindow.svg';
+import HorizWindowSvg from './horizwindow.svg';
+import ActiveWindowSvg from "./activwindow.svg";
+import BackgroundSvg from './background.svg';
 
 export { ArowSvg,AboutSvg,BranchSvg,ContactSvg
     ,ExtentionSvg,FileSvg,GithubSvg,
     MywokrSvg,NextitemSvg,NodeitemSvg,ProjectSvg,
     PublicitemSvg,RunitemSvg,
     SearchSvg,SettingSvg,SkillsSvg,StarSvg,VscodeSvg,WorkSvg,
-    SuitcaSvg,Skillitem
+    SuitcaSvg,Skillitem,GiticonSvg,EsllintSvg,
+    GitignoreSvg,JsonpakageSvg,NextSvg,TailwindSvg,
+    TsconfigSvg,HorizWindowSvg,SidewindowSvg,ActiveWindowSvg,
+    BackgroundSvg,
+    
+
 }
