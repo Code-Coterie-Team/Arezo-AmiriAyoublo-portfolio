@@ -2,7 +2,7 @@ import ArowSvg from './arow.svg';
 import AboutSvg from './aboutsvg.svg';
 import BranchSvg from './branch.svg';
 import ContactSvg from './contact.svg';
-
+import Skillitem from './skillitem.svg'
 import ExtentionSvg from './extentionitem.svg';
 import  FileSvg from './file.svg';
 import GithubSvg from './github.svg';
@@ -19,10 +19,12 @@ import SkillsSvg from './skills.svg';
 import StarSvg from './starsvg.svg';
 import VscodeSvg from './vscode.svg';
 import WorkSvg from './worksvg.svg';
+import SuitcaSvg from './suticas.svg'
 
 export { ArowSvg,AboutSvg,BranchSvg,ContactSvg
     ,ExtentionSvg,FileSvg,GithubSvg,
     MywokrSvg,NextitemSvg,NodeitemSvg,ProjectSvg,
     PublicitemSvg,RunitemSvg,
-    SearchSvg,SettingSvg,SkillsSvg,StarSvg,VscodeSvg,WorkSvg
+    SearchSvg,SettingSvg,SkillsSvg,StarSvg,VscodeSvg,WorkSvg,
+    SuitcaSvg,Skillitem
 }

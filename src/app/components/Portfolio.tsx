@@ -23,10 +23,10 @@ const Portfolio = () => {
                 <NodeitemSvg/>
                 <span className="text-gray-500">node-modules</span>
             </div>
-            <div className="flex gap-1  hover:bg-borderdark pl-2" onClick={togglePublic}>
+            <div className="flex gap-1 text-base text-fontcolor hover:bg-borderdark pl-2" onClick={togglePublic}>
                 <ArowSvg />
                 <PublicitemSvg/>
-                <span className="text-gray-500">public</span>
+                <span >public</span>
 
             </div>
             <div className="flex gap-8 pl-4">

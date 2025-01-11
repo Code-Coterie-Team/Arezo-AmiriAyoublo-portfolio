@@ -3,7 +3,7 @@ import Link from "next/link"
 export default  function PersonalInformation(){
     return (
         <>   
-         <div id="#about-me" className="flex flex-col pt-20 gap-4 justify-center content-center  text-white">
+            <div id="aboutme" className="flex flex-col pt-20 gap-4 justify-center content-center  text-white">
                 <div className="flex text-5xl gap-4 relative">
                     <h1 className=" font-semibold ">Arezoo AmiriAyoubloo</h1>
                     <span className="  animation animate-wave" >👋</span>
