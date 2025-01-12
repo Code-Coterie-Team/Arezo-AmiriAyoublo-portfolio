@@ -1,79 +1,105 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import AboutMe from "./Aboutitem"
 import AboutMets from "./Aboutitem"
-import { ArowSvg, EsllintSvg, GitignoreSvg, JsonpakageSvg, NextitemSvg, NodeitemSvg, PublicitemSvg, TailwindSvg, TsconfigSvg } from "@/assets"
+import { ArowSvg, EsllintSvg, GitignoreSvg, JsonpakageSvg, NextitemSvg, NodeitemSvg, PublicitemSvg, SearchSvg, SrcSvg, TailwindSvg, TsconfigSvg, WorksrcSvg } from "@/assets"
 import { title } from "process"
+import { transform } from "next/dist/build/swc/generated-native"
+import { useStore } from "@/store"
 
 
 const Portfolio = () => {
-
-    const [showPublic, setShowPublic] = useState(true)
+    const { changeStyle } = useStore()
+    const [showPublic, setShowPublic] = useState(true);
+    const [showSrc, setShowSrc] = useState(true);
     const togglePublic = () => {
         setShowPublic(!showPublic);
+        changeStyle();
+
     }
-    const directory=[
+    const toggleSrc = () => {
+        setShowSrc(!showSrc);
+    }
+
+    const firstDirectory = [
         {
-            title:'.eslintrc.json',
-            svg:<EsllintSvg/>
+            title: '.next',
+            svg: <NextitemSvg />
+        },
+        {
+            title: 'node-modules',
+            svg: <NodeitemSvg />
+        },
+
+
+    ]
+    const directory = [
+        {
+            title: '.eslintrc.json',
+            svg: <EsllintSvg />
 
         },
         {
-            title:'.gitignore',
-            svg:<GitignoreSvg/>
+            title: '.gitignore',
+            svg: <GitignoreSvg />
         },
         {
-            title:'next.config.js',
-            svg:<NextitemSvg/>
+            title: 'next.config.js',
+            svg: <NextitemSvg />
         },
         {
-            title:"package-lock.js",
-            svg:<JsonpakageSvg/>,
+            title: "package-lock.js",
+            svg: <JsonpakageSvg />,
 
         },
         {
-            title:'package.json',
-            svg:<JsonpakageSvg/>,
+            title: 'package.json',
+            svg: <JsonpakageSvg />,
         },
         {
-            title:'tailwind.config.ts',
-            svg:<TailwindSvg/>
+            title: 'tailwind.config.ts',
+            svg: <TailwindSvg />
         },
         {
-            title:'tsconfig.json',
-            svg:<TsconfigSvg/>
+            title: 'tsconfig.json',
+            svg: <TsconfigSvg />
         }
     ]
     return (
         <div className="flex flex-col gap-2  h-screen overflow-y-auto" style={{ maxHeight: '300px' }}>
-            <div className="flex gap-1  hover:bg-borderdark pl-2">
-                <ArowSvg/>
-                <NextitemSvg/>
-                <span className="text-gray-500">.next</span>
-            </div>
-            <div className="flex gap-1  hover:bg-borderdark pl-2">
-                <ArowSvg />
-                <NodeitemSvg/>
-                <span className="text-gray-500">node-modules</span>
-            </div>
+            {firstDirectory.map((item, index) => (
+                <div className="flex gap-1  hover:bg-borderdark pl-2">
+                    <ArowSvg />
+                    {item.svg}
+                    <span className="text-gray-500">{item.title}</span>
+                </div>
+
+            ))}
             <div className="flex gap-1 text-base text-fontcolor hover:bg-borderdark pl-2" onClick={togglePublic}>
                 <ArowSvg />
-                <PublicitemSvg/>
+                <PublicitemSvg />
                 <span >public</span>
 
             </div>
-            <div className="flex gap-8 pl-4">
+            <div className="flex gap-8 pl-4 " >
 
-                <div className="p">{showPublic && <AboutMets />}</div>
+                {showPublic && <AboutMets />}
             </div>
-            <div className="pl-2 ">
+            <div className="pl-2 flex gap-1 " onClick={toggleSrc}>
                 <ArowSvg />
+                <SrcSvg />
                 <span>src</span>
-
             </div>
+            {showSrc &&
+                <div className="flex gap-1 pl-8">
+                    <ArowSvg />
+                    <WorksrcSvg />
+                    <span>my work</span>
+                </div>
+            }
             <div className="flex flex-col gap-4 pl-6">
-                {directory.map((item,index)=>(
+                {directory.map((item, index) => (
                     <div key={index} className="flex gap-4">
                         {item.svg}
                         <span>{item.title}</span>

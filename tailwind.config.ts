@@ -41,12 +41,43 @@ export default {
       },
       keyframes:{
         wave:{
-          to:{transform:'rotate(-10deg)'}
+          '0%': {
+            transform:'rotate(0deg)'
+          },
+    
+        '10%': {
+            transform: 'rotate(14deg)'
+        },
+    
+        '20%': {
+            transform: 'rotate(-8deg)'
+        },
+    
+        '30%': {
+            transform:'rotate(14deg)'
+        },
+    
+       ' 40%': {
+            transform:' rotate(-4deg)'
+        },
+    
+        '50%': {
+            transform: 'rotate(10deg)'
+        },
+    
+        '60%': {
+            transform:' rotate(0deg)'
+        }
+    
+       
         }
       },
       animation:{
-        wave:'wave 400ms ease infinite'
-      }
+        wave:'wave 2s ease infinite'
+      },
+      boxShadow:{
+         buttonshadow:'0px 4px 7px 0px rgba(0, 0, 0,0.15)'
+      },
     },
   },
   plugins: [],

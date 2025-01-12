@@ -31,6 +31,8 @@ import SidewindowSvg from'./sidewindow.svg';
 import HorizWindowSvg from './horizwindow.svg';
 import ActiveWindowSvg from "./activwindow.svg";
 import BackgroundSvg from './background.svg';
+import SrcSvg from'./src.svg';
+import WorksrcSvg from './worksrc.svg';
 
 export { ArowSvg,AboutSvg,BranchSvg,ContactSvg
     ,ExtentionSvg,FileSvg,GithubSvg,
@@ -40,7 +42,7 @@ export { ArowSvg,AboutSvg,BranchSvg,ContactSvg
     SuitcaSvg,Skillitem,GiticonSvg,EsllintSvg,
     GitignoreSvg,JsonpakageSvg,NextSvg,TailwindSvg,
     TsconfigSvg,HorizWindowSvg,SidewindowSvg,ActiveWindowSvg,
-    BackgroundSvg,
+    BackgroundSvg,SrcSvg,WorksrcSvg,
     
 
 }
