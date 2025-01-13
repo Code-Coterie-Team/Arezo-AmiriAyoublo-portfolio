@@ -6,7 +6,7 @@ import Skillitem from './skillitem.svg'
 import ExtentionSvg from './extentionitem.svg';
 import  FileSvg from './file.svg';
 import GithubSvg from './github.svg';
-
+import MyworkiconSvg from './myworicon.svg'
 import MywokrSvg from './mywork.svg';
 import NextitemSvg from './nextitem.svg';
 import NodeitemSvg from './nodeitem.svg';
@@ -42,7 +42,7 @@ export { ArowSvg,AboutSvg,BranchSvg,ContactSvg
     SuitcaSvg,Skillitem,GiticonSvg,EsllintSvg,
     GitignoreSvg,JsonpakageSvg,NextSvg,TailwindSvg,
     TsconfigSvg,HorizWindowSvg,SidewindowSvg,ActiveWindowSvg,
-    BackgroundSvg,SrcSvg,WorksrcSvg,
+    BackgroundSvg,SrcSvg,WorksrcSvg,MyworkiconSvg
     
 
 }

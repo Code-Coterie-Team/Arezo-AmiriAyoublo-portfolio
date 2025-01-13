@@ -29,7 +29,7 @@ const Explore = () => {
                 {exploreitem.map((item, index) => (
                     <>
                         <div key={index} className="flex flex-col gap-1  hover:border-[0.5px] hover:border-fontcolor" onClick={item === 'PORTFOLIO' ? togglePortfolio : undefined}  >
-                            <div className="flex">
+                            <div className="flex" key={index}>
                                 {item === 'PORTFOLIO' && (
                                     <ArowSvg style={arowStyle} />
                                 )}

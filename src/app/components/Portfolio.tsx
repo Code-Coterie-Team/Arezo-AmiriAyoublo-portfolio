@@ -87,15 +87,21 @@ const Portfolio = () => {
                 {showPublic && <AboutMets />}
             </div>
             <div className="pl-2 flex gap-1 " onClick={toggleSrc}>
-                <ArowSvg />
-                <SrcSvg />
-                <span>src</span>
+
+                <div className="flex gap-1">
+                    <ArowSvg />
+                    <SrcSvg />
+                    <span>src</span>
+                </div>
             </div>
             {showSrc &&
-                <div className="flex gap-1 pl-8">
-                    <ArowSvg />
-                    <WorksrcSvg />
-                    <span>my work</span>
+                <div className="flex pl-4 ">
+                    <div className="border-l-[0.4px] border-fontcolor"></div>
+                    <div className="flex gap-1 pl-8">
+                        <ArowSvg />
+                        <WorksrcSvg />
+                        <span>my work</span>
+                    </div>
                 </div>
             }
             <div className="flex flex-col gap-4 pl-6">

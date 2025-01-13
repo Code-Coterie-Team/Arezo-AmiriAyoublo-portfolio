@@ -1,5 +1,6 @@
 import { SuitcaSvg } from "@/assets";
 import Experience from "./Experience";
+import BorderTop from "./Bordertop";
 
 
 
@@ -8,13 +9,10 @@ const WorkExperience=()=>{
 
     return(
         <div id='work-experience' className="flex flex-col gap-6 overflow-auto">
-            <div className="flex gap-2 w-full">
-                <div className="w-4 border-t-4 border-white"></div>
-                <div className=" w-full border-t border-fontcolor p-2"></div>
-            </div>
-            <div className="flex gap-8">
-                <div className="  blur"></div>
-                <SuitcaSvg className=" " />
+           <BorderTop/>
+            <div className="flex gap-8  relative ">
+                <div className=" size-8 rounded-full bg-red-400 blur-lg "></div>
+                <SuitcaSvg className=" absolute " />
                 <span className="text-2xl text-white">work experience </span>
             </div>
             <h2 className="font-extrabold  text-white  text-3xl "> <span className="text-red-400"> Junior Frontend </span> with  <span className="text-red-400">1 years</span> of <br /> experience in the software industry</h2>

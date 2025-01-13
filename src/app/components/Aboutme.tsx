@@ -4,6 +4,7 @@ import Link from "next/link";
 import WorkExperience from "./Workexperience";
 import PersonalInformation from "./Personinformation";
 import Skills from "./Skills";
+import Mywokr from "./Mywork";
 
 const AboutMe = () => {
 
@@ -12,6 +13,7 @@ const AboutMe = () => {
             <PersonalInformation />
             <WorkExperience />
             <Skills />
+            <Mywokr/>
         </div>
     )
 }

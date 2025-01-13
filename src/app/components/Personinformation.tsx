@@ -1,8 +1,14 @@
+
 import { AboutSvg, BackgroundSvg, ContactSvg, GiticonSvg } from "@/assets"
 import Link from "next/link"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
+import BorderTop from "./Bordertop"
 
 export default  function PersonalInformation(){
+ 
+    
+   
+
    
     return (
         <>  
@@ -34,12 +40,10 @@ export default  function PersonalInformation(){
             </div>
             
             <div className="flex flex-col gap-10 text-white">
-                <div className="flex gap-2 w-full">
-                    <div className="w-4 border-t-4 border-white"></div>
-                    <div className=" w-full border-t border-fontcolor p-2"></div>
-                </div>
-                <div className="flex items-center gap-4">
-                    <ContactSvg className="fill-white" />
+                <BorderTop/>
+                <div className="flex items-center gap-4 relative">
+                    <div className="size-10 rounded-full bg-green-300 blur-lg "></div>
+                    <ContactSvg className="fill-white absolute  left-4 "  />
                     <h2 className="text-2xl">About Me</h2>
 
                 </div>
