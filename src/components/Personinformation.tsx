@@ -4,6 +4,7 @@ import Link from "next/link"
 import { useEffect, useState } from "react"
 import BorderTop from "./Bordertop"
 import Image from "next/image"
+import College from "./College"
 export default  function PersonalInformation(){
  
     
@@ -60,24 +61,7 @@ export default  function PersonalInformation(){
                     </div>
                     <Image src="/arezoo.jpeg" alt="" className="rounded-full "  height={300} width={300}/>
                 </div>
-                <div className="flex gap-10">
-                    <div className="flex flex-col gap-4">
-                        <span className="text-green-500 border-b border-fontcolor">Language</span>
-                        <div className="flex flex-col gap-4 font-extrabold pb-2 border-b border-fontcolor">
-                            <p >Persian-Native</p>
-                            <p >English-Intermaidate</p>
-                            <p >Turkish-Advance</p>
-                        </div>
-                        <div className="flex font-bold text-borderdark gap-4">
-                            <Link href="https://www.linkedin.com/in/arezoo-amiri-ayoblo/"> <button className="bg-white w-8 text-xl  rounded font-extrabold">in</button></Link>
-                            <button className="bg-white w-6 rounded-full"> <GiticonSvg/> </button>
-                            <button className="h-8 w-36 rounded-xl bg-white  ">contact me</button>
-                        </div>
-
-                    </div>
-                    <div className="w-full border-[0.2px] border-fontcolor rounded-lg hover:shadow-md  hover:shadow-green-400 hover:skew-x-3"></div>
-                    
-                </div>
+                <College/>
 
 
             </div>

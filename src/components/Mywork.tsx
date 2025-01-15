@@ -15,8 +15,9 @@ export default function Mywokr(){
                 
             </div>
             <p className="font-extrabold  text-white  text-3xl "> Some of my work as a <span className="text-workfont">Frontend developer</span></p>
-            <div className="gird grid-cols-1 gap-4 pt-20">
-                <Samplework/>
+            <div className="grid grid-cols-1 gap-8 pt-20">
+                <Samplework project={'Kanban task management web app'} image={'/kanban.jpg'} link={'/apps/kanban'}/>
+                <Samplework project={'Home Landing Page'} image={'/real-estate.png'} link={'/apps/real-state'}/>
             </div>
         </div>
     )
