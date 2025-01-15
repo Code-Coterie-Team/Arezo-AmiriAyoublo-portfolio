@@ -33,7 +33,7 @@ import ActiveWindowSvg from "./activwindow.svg";
 import BackgroundSvg from './background.svg';
 import SrcSvg from'./src.svg';
 import WorksrcSvg from './worksrc.svg';
-
+import ContactMeSvg from './contacttome.svg'
 export { ArowSvg,AboutSvg,BranchSvg,ContactSvg
     ,ExtentionSvg,FileSvg,GithubSvg,
     MywokrSvg,NextitemSvg,NodeitemSvg,ProjectSvg,
@@ -42,7 +42,7 @@ export { ArowSvg,AboutSvg,BranchSvg,ContactSvg
     SuitcaSvg,Skillitem,GiticonSvg,EsllintSvg,
     GitignoreSvg,JsonpakageSvg,NextSvg,TailwindSvg,
     TsconfigSvg,HorizWindowSvg,SidewindowSvg,ActiveWindowSvg,
-    BackgroundSvg,SrcSvg,WorksrcSvg,MyworkiconSvg
+    BackgroundSvg,SrcSvg,WorksrcSvg,MyworkiconSvg,ContactMeSvg,
     
 
 }

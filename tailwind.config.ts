@@ -15,7 +15,8 @@ export default {
         borderdark:"rgb(27 ,30 ,46 )",
         linkcolor:"rgb(61, 185, 201)",
         skillcolor:"rgb(147 154 255 / var(--tw-text-opacity))",
-        workfont:'rgb(255 220 139)'
+        workfont:'rgb(255 220 139)',
+        contactcolor:'rgb(96 ,165 ,250)'
       },
       gridTemplateColumns:{
         '16':'repeat(16,minmax(0,1fr))',
