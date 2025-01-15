@@ -1,5 +1,6 @@
 import { MywokrSvg, MyworkiconSvg, WorkSvg } from "@/assets";
 import BorderTop from "./Bordertop";
+import Samplework from "./Samplework";
 
 
 export default function Mywokr(){
@@ -15,8 +16,7 @@ export default function Mywokr(){
             </div>
             <p className="font-extrabold  text-white  text-3xl "> Some of my work as a <span className="text-workfont">Frontend developer</span></p>
             <div className="gird grid-cols-1 gap-4 pt-20">
-                <div className="w-full p-6 border-[0.5px]  rounded-lg border-fontcolor h-[300px] hover:shadow-md hover:shadow-workfont"></div>
-
+                <Samplework/>
             </div>
         </div>
     )

@@ -9,7 +9,7 @@ import { transform } from "next/dist/build/swc/generated-native";
 
 const Explore = () => {
     const [arowStyle, setArowStyle] = useState({ transform: 'rotate (0deg)' });
-    console.log(arowStyle);
+    
     const [showPortfolio, setShowPortfolio] = useState(true);
     const exploreitem = ['OPEN EDITORS', 'PORTFOLIO', 'OUTLINE', 'TIMELINE', 'SCRIPTS']
     const togglePortfolio = () => {
@@ -27,9 +27,9 @@ const Explore = () => {
             <div className="font-light ">EXPLORER</div>
             <div className="flex font-bold bordr-b-2 border-borderdark text-sm flex-col gap-2 ">
                 {exploreitem.map((item, index) => (
-                    <>
-                        <div key={index} className="flex flex-col gap-1  hover:border-[0.5px] hover:border-fontcolor" onClick={item === 'PORTFOLIO' ? togglePortfolio : undefined}  >
-                            <div className="flex" key={index}>
+                    <div className="border-b border-borderdark" key={index}>
+                        <div  className="flex flex-col gap-1  hover:border-[0.5px] hover:border-fontcolor" onClick={item === 'PORTFOLIO' ? togglePortfolio : undefined}  >
+                            <div className="flex">
                                 {item === 'PORTFOLIO' && (
                                     <ArowSvg style={arowStyle} />
                                 )}
@@ -39,7 +39,7 @@ const Explore = () => {
                         </div>
                         {item === 'PORTFOLIO' && showPortfolio && <Portfolio />}
 
-                    </>
+                    </div>
 
                 ))}
 

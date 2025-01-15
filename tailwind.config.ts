@@ -15,7 +15,6 @@ export default {
         borderdark:"rgb(27 ,30 ,46 )",
         linkcolor:"rgb(61, 185, 201)",
         skillcolor:"rgb(147 154 255 / var(--tw-text-opacity))",
-       
         workfont:'rgb(255 220 139)'
       },
       gridTemplateColumns:{

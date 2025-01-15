@@ -12,8 +12,8 @@ const  Activiybar=()=>{
     return(
         <div className=" col-span-1 flex flex-col gap-16 ">
             <div className="flex flex-col  gap-2 pt-2 cursor-pointer">
-                {svgitem.map((item)=>(
-                    <button className="  p-4 focus:border-l-2 border-fontcolor focus:fill-fontcolor ">{item }</button>
+                {svgitem.map((item,index)=>(
+                    <button key={index} className="  p-4 focus:border-l-2 border-fontcolor focus:fill-fontcolor ">{item }</button>
                 ))}
                 
                 

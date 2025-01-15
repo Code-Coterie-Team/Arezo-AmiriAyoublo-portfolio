@@ -69,7 +69,7 @@ const Portfolio = () => {
     return (
         <div className="flex flex-col gap-2  h-screen overflow-y-auto" style={{ maxHeight: '300px' }}>
             {firstDirectory.map((item, index) => (
-                <div className="flex gap-1  hover:bg-borderdark pl-2">
+                <div key={index} className="flex gap-1  hover:bg-borderdark pl-2">
                     <ArowSvg />
                     {item.svg}
                     <span className="text-gray-500">{item.title}</span>

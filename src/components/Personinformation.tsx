@@ -3,7 +3,7 @@ import { AboutSvg, BackgroundSvg, ContactSvg, GiticonSvg } from "@/assets"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 import BorderTop from "./Bordertop"
-
+import Image from "next/image"
 export default  function PersonalInformation(){
  
     
@@ -58,7 +58,7 @@ export default  function PersonalInformation(){
                             I'm an experienced software engineer who constantly seeks out innovative solutions to everyday problems.</p>
                         <p className="text-fontcolor">After 4 years in this industry I have worked with multiple front-end and back-end technologies.</p>
                     </div>
-                    <div><img src="arezoo.jpeg" alt="" className=" rounded-full size-[200px] " /></div>
+                    <Image src="/arezoo.jpeg" alt="" className="rounded-full "  height={300} width={300}/>
                 </div>
                 <div className="flex gap-10">
                     <div className="flex flex-col gap-4">
