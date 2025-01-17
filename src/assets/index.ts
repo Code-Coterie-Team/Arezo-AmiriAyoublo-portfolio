@@ -33,7 +33,8 @@ import ActiveWindowSvg from "./activwindow.svg";
 import BackgroundSvg from './background.svg';
 import SrcSvg from'./src.svg';
 import WorksrcSvg from './worksrc.svg';
-import ContactMeSvg from './contacttome.svg'
+import ContactMeSvg from './contacttome.svg';
+import ReactItemSvg from './reactItem.svg';
 export { ArowSvg,AboutSvg,BranchSvg,ContactSvg
     ,ExtentionSvg,FileSvg,GithubSvg,
     MywokrSvg,NextitemSvg,NodeitemSvg,ProjectSvg,
@@ -43,6 +44,7 @@ export { ArowSvg,AboutSvg,BranchSvg,ContactSvg
     GitignoreSvg,JsonpakageSvg,NextSvg,TailwindSvg,
     TsconfigSvg,HorizWindowSvg,SidewindowSvg,ActiveWindowSvg,
     BackgroundSvg,SrcSvg,WorksrcSvg,MyworkiconSvg,ContactMeSvg,
+    ReactItemSvg,
     
 
 }

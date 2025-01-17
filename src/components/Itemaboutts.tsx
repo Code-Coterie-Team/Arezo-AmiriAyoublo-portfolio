@@ -1,10 +1,13 @@
+'use client'
 import { AboutSvg, ContactSvg, MywokrSvg, SkillsSvg, WorkSvg } from "@/assets";
 import Link from "next/link";
 import React from "react";
 import { useStore } from '../store';
+import { usePathname } from "next/navigation";
 
 export default function AboutTs() {
     const { stylePublic, changeStyle } = useStore();
+    const pathName = usePathname();
     const navs = [
         {
             title: 'About Me',
@@ -37,13 +40,15 @@ export default function AboutTs() {
         <div className="flex flex-col gap-2 pl-6" >
 
             {navs.map((item, index) => (
-                <Link key={index} href={item.link} style={stylePublic}>
-                    <button className="flex  gap-2">
+                <Link key={index} href={item.link} style={stylePublic} className="flex  gap-2">
                         {item.svg}
-                        <span>{item.title}</span>
+                        {item.title}
+                        <span></span>
+                    
 
 
-                    </button>
+
+
                 </Link>
             )
 
