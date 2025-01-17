@@ -1,3 +1,4 @@
+import { link } from 'fs';
 import { create } from 'zustand';
 
 interface StoreState{
@@ -6,7 +7,10 @@ interface StoreState{
         transition: string;
         opacity:string
     },
-    changeStyle:()=>void
+    changeStyle:()=>void;
+
+  links:{name:string,href:string}[];
+  addLink:(link:{name:string ; href:string})=>void;
 }
 
 export const useStore=create<StoreState>((set)=>({
@@ -24,4 +28,14 @@ export const useStore=create<StoreState>((set)=>({
                 opacity:'1'
             },
         })),
+        links:[],         
+        addLink: (link) =>
+            set((state) => {
+              if (!state.links.find((l) => l.href === link.href)) {
+                return { links: [...state.links, link] };
+              }
+              return state;
+            }),
+         
 }))
+
