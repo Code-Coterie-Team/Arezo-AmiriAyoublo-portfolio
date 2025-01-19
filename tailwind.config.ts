@@ -18,6 +18,7 @@ export default {
         workfont:'rgb(255 220 139)',
         contactcolor:'rgb(96 ,165 ,250)',
         bordercolor:'#31374e',
+        maincolor:'rgb(30 ,35 ,54 )',
       },
       gridTemplateColumns:{
         '16':'repeat(16,minmax(0,1fr))',

@@ -1,10 +1,14 @@
+"use client"
+import { useStore } from "@/store";
 import { ActiveWindowSvg, ArowSvg, HorizWindowSvg, SidewindowSvg, VscodeSvg } from "../assets";
-import Explore from "./Explore";
+
 
 
 
 const Header = () => {
+    const setVisibileExplore=useStore((state)=> state.setVisibileExplore)
 
+    
     return (
         <div className="   flex row-span-1  justify-between  border-b-2 border-borderdark text-sm p-2  ">
             <div className="flex gap-20 text-base">
@@ -25,13 +29,11 @@ const Header = () => {
 
             <div className="flex gap-6 ">
                 <div className="flex gap-2">
-                    <button ><ActiveWindowSvg /> </button>
+                    <button  ><ActiveWindowSvg /> </button>
                     <button><HorizWindowSvg /></button>
                     <button> <SidewindowSvg /></button>
                 </div>
-                <div className="size-3  rounded-full bg-yellow-200"></div>
-                <div className=" size-3 rounded-full bg-green-400 "></div>
-                <div className="size-3 rounded-full bg-red-500"></div>
+                
             </div>
         </div>
     )

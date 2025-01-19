@@ -1,8 +1,8 @@
-import { jetBrainsMono } from "../ui/font";
+
 
 const Theme=()=>{
     return (
-        <div className={`grid grid-cols-1  p-10 md:flex md:flex-col md:gap-20 text-white ${jetBrainsMono.className}`} >
+        <div className={`grid grid-cols-1  p-10 md:flex md:flex-col md:gap-20 text-white `} >
             <p className="text-white font-semibold text-2xl">Manage Theme</p>
             <div className="grid grid-cols-1 md:flex md:gap-20">
                 <div className="flex flex-col gap-2  content-center">

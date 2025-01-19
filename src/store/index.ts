@@ -1,4 +1,4 @@
-import { link } from 'fs';
+import { link, stat } from 'fs';
 import { create } from 'zustand';
 
 interface StoreState{
@@ -11,6 +11,8 @@ interface StoreState{
 
   links:{name:string,href:string}[];
   addLink:(link:{name:string ; href:string})=>void;
+  visibleExplore:boolean;
+  setVisibileExplore:(value:boolean)=> void;
 }
 
 export const useStore=create<StoreState>((set)=>({
@@ -36,6 +38,9 @@ export const useStore=create<StoreState>((set)=>({
               }
               return state;
             }),
+            visibleExplore:true,
+            setVisibileExplore:(value)=>set({visibleExplore: value})
+
          
 }))
 

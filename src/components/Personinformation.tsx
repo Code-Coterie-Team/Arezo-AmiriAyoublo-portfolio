@@ -15,7 +15,7 @@ export default  function PersonalInformation(){
         <>  
            
  
-            <div id="aboutme" className="flex flex-col pt-20 gap-4 justify-center content-center  text-white">
+            <div id="aboutme" className="flex flex-col pt-20 gap-4 justify-center content-center  text-white scroll-smooth">
                 
                 <div className="flex text-5xl gap-4 relative">
                     <h1 className=" font-semibold ">Arezoo AmiriAyoubloo</h1>

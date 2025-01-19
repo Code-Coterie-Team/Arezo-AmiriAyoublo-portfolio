@@ -1,21 +1,24 @@
 'use client'
 import Link from "next/link"
 import Home from "./Aboutitem"
-import { StarSvg } from "@/assets"
+import { DeletSvg, StarSvg } from "@/assets"
 import React from "react"
 import { useStore } from "@/store"
 import { useStoreWithEqualityFn } from "zustand/traditional"
+import { usePathname } from "next/navigation"
 
 const Headermain=() => {
     const {links}=useStore();
+    const path=usePathname();
     return (
-        <div className="w-full h-8 border-b-2 border-borderdark flex  text-sm ">
-            <Link href={'/'} className="w-36  flex  justify-center gap-1  text-center font-semibold text-linkcolor border-b-2 ">
+        <div className="w-full h-10 border-b-2 border-borderdark flex  bg-maincolor text-sm  fixed ">
+            <Link href={'/'} className={`w-36  flex   justify-around items-center gap-1  text-center font-semibold ${'/'===path ? 'border-b-2 border-white text-linkcolor' :'text-fontcolor'} `}>
                 <StarSvg/>
-                About Me
+                About Me 
+                <DeletSvg/>
             </Link>
             {links?.map((item,index)=>(
-                 <Link key={index} href={item.href } className="w-36  flex  justify-center gap-1  text-center font-semibold text-linkcolor  border-r border-borderdark "> {item.name}</Link>
+                 <Link key={index} href={item.href } className={`w-36  flex  gap-2 items-center justify-around text-center font-semibold  border-r border-borderdark ${item.href===path ? 'border-b-2 border-b-white text-linkcolor' :'text-fontcolor'}`} > {item.name} <DeletSvg/></Link>
             ))}
             
              

@@ -37,18 +37,13 @@ export default function AboutTs() {
 
     ]
     return (
-        <div className="flex flex-col gap-2 pl-6" >
+        <div className="flex flex-col gap-2 pl-6 " >
 
             {navs.map((item, index) => (
                 <Link key={index} href={item.link} style={stylePublic} className="flex  gap-2">
                         {item.svg}
                         {item.title}
                         <span></span>
-                    
-
-
-
-
                 </Link>
             )
 

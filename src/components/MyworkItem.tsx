@@ -1,45 +1,51 @@
 'use client'
 import { ReactItemSvg } from "@/assets";
 import Link from "next/link"
-import { useState } from "react";
-import Headermain from "./Headermain";
+
 import { useStore } from "@/store";
+import ProjectItem from "./Projectitem";
+import { useState } from "react";
 
 const MyWorkItem = () => {
-    const{ addLink}=useStore();
-     const handleAddLink=(name:string,href:string)=>{
-         addLink({name,href})
-     }
+    const { addLink } = useStore();
+    const [showDetail, setShowDetail] = useState<{ [key: number]: boolean }>({})
+    const navProject = [
+        {
+            path: '/apps/kanban',
+            name: 'Kanban',
+
+        },
+        {
+            path: '/apps/real-state',
+            name: 'Real State'
+        },
+        {
+            path: '/apps/calculator',
+            name: 'Calculator',
+        }
+    ]
+    const handleAddLink = (name: string, href: string, index: number) => {
+        addLink({ name, href });
+        setShowDetail((prev) => ({ ...prev, [index]: !prev[index] }));
+    }
     return (
-        <div className="flex gap-6  pl-1 ">
+        <div className="flex gap-4 pl-4 ">
             <div className="border-[0.1px] border-bordercolor"></div>
             <div className="flex flex-col gap-4 ">
-                <Link href={'/apps/kanban'} onClick={(e) => {
-                    e.preventDefault();
-                    handleAddLink('Kanban', '/apps/kanban');
-                }} >
-                    <div className="flex gap-2">
-                        <ReactItemSvg />
-                        Kanban
+                {navProject.map((item, index) => (
+                    <div key={index} className="flex flex-col">
+                        <Link  href={item.path} className="flex gap-2 text-base" onClick={(e) => {
+                            
+                            handleAddLink(item.name, item.path, index);}}>
+                            <ReactItemSvg />
+                            {item.name}
+                        </Link>
+                        {showDetail[index] && <ProjectItem  />}
                     </div>
-                </Link>
+                ))
 
-                <Link href={'/apps/real-state'} onClick={(e)=>{e.preventDefault();
-                    handleAddLink('real state','/apps/real-state')}}>
-                    <div className="flex gap-2">
-                        <ReactItemSvg />
-                        real state
-                    </div>
-                </Link>
-                <Link href={'/apps/calculator'} onClick={(e)=>{
-                    e.preventDefault();
-                    handleAddLink('calculator','/apps/calculator')
-                }}>
-                    <div className="flex gap-2">
-                        <ReactItemSvg />
-                        calculator
-                    </div>
-                </Link>
+                }
+
             </div>
         </div>
     )

@@ -1,55 +1,18 @@
 
 "use client"
-import { useState } from "react";
-import Portfolio from "./Portfolio";
-import { ArowSvg } from "@/assets";
-import { transform } from "next/dist/build/swc/generated-native";
-
-
+import { useStore } from "@/store";
+import FileExplore from "./FileExplore";
 
 const Explore = () => {
-    const [arowStyle, setArowStyle] = useState({ transform: 'rotate (0deg)' });
-    
-    const [showPortfolio, setShowPortfolio] = useState(true);
-    const exploreitem = ['OPEN EDITORS', 'PORTFOLIO', 'OUTLINE', 'TIMELINE', 'SCRIPTS']
-    const togglePortfolio = () => {
-        setShowPortfolio((prev) => !prev);
-        setArowStyle((prev) => ({
-
-            transform: prev.transform === 'rotate(0deg)' ? 'rotate(90deg)' : 'rotate(0deg)'
-        }
-        ))
-
-    }
-
+  
+    const visibleExplore=useStore((state)=> state.visibleExplore)
     return (
-        <div className="  col-start-2 col-end-6 flex flex-col gap-6  border-r-2 border-borderdark  ">
+        <div className= {` flex flex-col col-start-2 col-end-6 gap-6  border-r-2 border-borderdark ` }>
             <div className="font-light ">EXPLORER</div>
-            <div className="flex font-bold bordr-b-2 border-borderdark text-sm flex-col gap-2 ">
-                {exploreitem.map((item, index) => (
-                    <div className="border-b border-borderdark" key={index}>
-                        <div  className="flex flex-col gap-1  hover:border-[0.5px] hover:border-fontcolor" onClick={item === 'PORTFOLIO' ? togglePortfolio : undefined}  >
-                            <div className="flex">
-                                {item === 'PORTFOLIO' && (
-                                    <ArowSvg style={arowStyle} />
-                                )}
-                                <span>{item}</span>
-                            </div>
-                            
-                        </div>
-                        {item === 'PORTFOLIO' && showPortfolio && <Portfolio />}
-
-                    </div>
-
-                ))}
-
-
-            </div>
-
-
-
-
+            {visibleExplore && <FileExplore/>}
         </div>
+        
+       
     )
 }
 
