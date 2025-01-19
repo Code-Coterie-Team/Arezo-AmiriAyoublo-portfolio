@@ -21,7 +21,7 @@ export default  function PersonalInformation(){
                     <h1 className=" font-semibold ">Arezoo AmiriAyoubloo</h1>
                     <span className="  animation animate-wave" >👋</span>
                 </div>
-                <div className="flex gap-2 ">
+                <div className="flex gap-2  items-center">
                     <span>Looking for job</span>
                     <div className="size-2 bg-red-600 animate-pulse rounded-full"></div>
                     <span className="text-linkcolor animate-pulse">/Frontend Developer</span>
@@ -33,10 +33,10 @@ export default  function PersonalInformation(){
                     <button className="h-8 w-36 rounded-xl bg-white shadow-buttonshadow  ">contact me</button>
                 </div>
             </div>
-            <div className="scroll flex justify-center ">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div className=" flex flex-col justify-center items-center ">
+                <span className="size-4  border-white border-r border-b rotate-45 animate-scroll   "></span>
+                <span className="size-4  border-white border-r border-b  rotate-45 animate-scroll  delay-150 "></span>
+                <span className="size-4  border-white border-r border-b rotate-45 animate-scroll  delay-300 "></span>
                 
             </div>
             

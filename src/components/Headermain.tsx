@@ -12,13 +12,13 @@ const Headermain=() => {
     const path=usePathname();
     return (
         <div className="w-full h-10 border-b-2 border-borderdark flex  bg-maincolor text-sm  fixed ">
-            <Link href={'/'} className={`w-36  flex   justify-around items-center gap-1  text-center font-semibold ${'/'===path ? 'border-b-2 border-white text-linkcolor' :'text-fontcolor'} `}>
+            <Link href={'/'} className={`w-36  flex   justify-around items-center gap-1  text-center font-semibold ${'/'===path ? 'border-b-2 border-headerborder text-linkcolor' :'text-fontcolor'} `}>
                 <StarSvg/>
                 About Me 
                 <DeletSvg/>
             </Link>
             {links?.map((item,index)=>(
-                 <Link key={index} href={item.href } className={`w-36  flex  gap-2 items-center justify-around text-center font-semibold  border-r border-borderdark ${item.href===path ? 'border-b-2 border-b-white text-linkcolor' :'text-fontcolor'}`} > {item.name} <DeletSvg/></Link>
+                 <Link key={index} href={item.href } className={`w-36  flex  gap-2 items-center justify-around text-center font-semibold  border-r border-borderdark ${item.href===path ? 'border-b-2 border-b-headerborder text-linkcolor' :'text-fontcolor'}`} > {item.name} <DeletSvg/></Link>
             ))}
             
              

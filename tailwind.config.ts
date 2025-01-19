@@ -1,3 +1,4 @@
+import { transform } from "next/dist/build/swc/generated-native";
 import type { Config } from "tailwindcss";
 
 export default {
@@ -19,6 +20,7 @@ export default {
         contactcolor:'rgb(96 ,165 ,250)',
         bordercolor:'#31374e',
         maincolor:'rgb(30 ,35 ,54 )',
+        headerborder:'rgb(61, 89, 161)',
       },
       gridTemplateColumns:{
         '16':'repeat(16,minmax(0,1fr))',
@@ -71,16 +73,23 @@ export default {
         '60%': {
             transform:' rotate(0deg)'
         }
-    
-       
+        },
+        scroll:{
+          '0%': { transform: 'translateY(2px) rotate-45 ', opacity: '1' },
+          '50%': { transform: 'translateY(15px) rotate-45 ', opacity: '0.5' },
+          '100%': { transform: 'translateY(30px) rotate-45 ', opacity: '1' },
         }
       },
       animation:{
-        wave:'wave 2s ease infinite'
+        wave:'wave 2s ease infinite',
+        scroll:'scroll 0.5s  ease-in-out infinite',
       },
+      
+      
       boxShadow:{
          buttonshadow:'0px 4px 7px 0px rgba(0, 0, 0,0.15)'
       },
+      
     },
   },
   plugins: [],

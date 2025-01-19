@@ -39,7 +39,8 @@ import ProjectAboutSvg from './aboutproject.svg';
 import ChallengeSvg from './challenge.svg';
 import SolutionSvg from './solution.svg';
 import TechnologySvg from './Thechnology.svg';
-import DeletSvg from './delete.svg'
+import DeletSvg from './delete.svg';
+import BorderSvg from './border.svg';
 export { ArowSvg,AboutSvg,BranchSvg,ContactSvg
     ,ExtentionSvg,FileSvg,GithubSvg,
     MywokrSvg,NextitemSvg,NodeitemSvg,ProjectSvg,
@@ -50,7 +51,7 @@ export { ArowSvg,AboutSvg,BranchSvg,ContactSvg
     TsconfigSvg,HorizWindowSvg,SidewindowSvg,ActiveWindowSvg,
     BackgroundSvg,SrcSvg,WorksrcSvg,MyworkiconSvg,ContactMeSvg,
     ReactItemSvg,ProjectAboutSvg,ChallengeSvg,SolutionSvg,TechnologySvg
-    ,DeletSvg,
+    ,DeletSvg,BorderSvg,
     
 
 }
