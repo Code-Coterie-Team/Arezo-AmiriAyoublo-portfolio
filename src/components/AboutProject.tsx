@@ -1,12 +1,17 @@
 import Image from "next/image"
+interface IData{
+    project:string;
+    description:string;
+    imageproject:string;
 
-export default function AboutKanban() {
+}
+export default function AboutKanban({project,description,imageproject}:IData) {
     return (
         <div id='about' className="flex flex-col gap-20 justify-center items-center pt-20 pb-10">
             <div className="flex flex-col gap-6 justify-center items-center">
                 <span className="text-linkcolor font-bold">case study</span>
-                <h3 className="text-5xl font-medium text-white">Kanban</h3>
-                <p className="text-fontcolor p-10 text-center text-lg">A Kanban project built using React,Redux, and Tailwind CSS is a modern, responsive task management application. </p>
+                <h3 className="text-5xl font-medium text-white">{project}</h3>
+                <p className="text-fontcolor p-10 text-center text-lg">{description} </p>
             </div>
             <div className=" border-[0.5px] border-fontcolor w-full flex flex-col">
                 <div className="flex w-full h-20">
@@ -24,7 +29,7 @@ export default function AboutKanban() {
                     </div>
                 </div>
                 <div>
-                      <Image src="/kanban.jpg" alt="" width={1200} height={600}/>
+                      <Image src={imageproject} alt="" width={1200} height={600}/>
                 </div>
             </div>
         </div>

@@ -3,12 +3,12 @@ import { useState } from "react";
 import Portfolio from "./Portfolio";
 import { ArowSvg } from "@/assets";
 import { transform } from "next/dist/build/swc/generated-native";
-import { useStore } from "@/store";
+import { useStore } from '@/assets';
 
 
 const FileExplore = () => {
     const [arowStyle, setArowStyle] = useState({ transform: 'rotate (0deg)' });
-    
+
     const [showPortfolio, setShowPortfolio] = useState(true);
     const exploreitem = ['OPEN EDITORS', 'PORTFOLIO', 'OUTLINE', 'TIMELINE', 'SCRIPTS']
     const togglePortfolio = () => {
@@ -23,7 +23,7 @@ const FileExplore = () => {
 
     return (
         <div className="flex flex-col ">
-
+            <div className="font-light ">EXPLORER</div>
             <div className="flex font-bold bordr-b-2 border-borderdark text-sm flex-col gap-2 ">
                 {exploreitem.map((item, index) => (
                     <div className="border-b border-borderdark" key={index}>

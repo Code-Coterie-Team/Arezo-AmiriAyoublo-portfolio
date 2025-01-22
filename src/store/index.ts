@@ -10,7 +10,8 @@ interface StoreState{
     changeStyle:()=>void;
 
   links:{name:string,href:string}[];
-  addLink:(link:{name:string ; href:string})=>void;
+  addLink:(newlink:{name:string,href:string})=>void;
+  setLinks: (newLinks: { name: string; href: string }[]) => void;
   visibleExplore:boolean;
   setVisibileExplore:(value:boolean)=> void;
 }
@@ -31,13 +32,14 @@ export const useStore=create<StoreState>((set)=>({
             },
         })),
         links:[],         
-        addLink: (link) =>
-            set((state) => {
-              if (!state.links.find((l) => l.href === link.href)) {
-                return { links: [...state.links, link] };
-              }
-              return state;
-            }),
+        addLink: (newlink) =>
+          set((state) => ({
+              links: [...state.links, newlink]
+          })),
+        setLinks: (newLinks) => 
+              set(() => ({
+                  links: newLinks
+              })),
             visibleExplore:true,
             setVisibileExplore:(value)=>set({visibleExplore: value})
 

@@ -1,11 +1,11 @@
-import {  ReactElement } from "react"
+import {  ReactElement, useState } from "react"
 import Image from "next/image";
 interface ISkill {
     title: string,
     icon:{image:string,name:string}[]
 }
 export default function CircleSkill({ title,icon }: ISkill) {
-
+    const [aciveItem,setAcitveItem]=useState()
     return (
         <div className="flex flex-col gap-8 items-center justify-center">
             <div className="text-3xl font-semibold text-white">{title}</div>

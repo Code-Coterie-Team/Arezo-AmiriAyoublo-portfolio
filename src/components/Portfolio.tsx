@@ -6,7 +6,7 @@ import AboutMets from "./Aboutitem"
 import { ArowSvg, EsllintSvg, GitignoreSvg, JsonpakageSvg, NextitemSvg, NodeitemSvg, PublicitemSvg, SearchSvg, SrcSvg, TailwindSvg, TsconfigSvg, WorksrcSvg } from "@/assets"
 import { title } from "process"
 import { transform } from "next/dist/build/swc/generated-native"
-import { useStore } from "@/store"
+import { useStore } from '@/assets'
 import MyWorkItem from "./MyworkItem"
 
 

@@ -1,6 +1,6 @@
 "use client"
 import { Skillitem } from "@/assets";
-import { useEffect, useState } from "react";
+import { act, useEffect, useState } from "react";
 import BorderTop from "./Bordertop";
 import CircleSkill from "./Circleskill";
 
@@ -9,9 +9,10 @@ const Skills=()=>{
     const [styleTitle,setyleTitle]=useState(
        {opacity:0}
     )
-    const[Language,setLanguage]=useState(true);
+    const [activeSkill,setActiveSkill]=useState('Language')
+    
     const [randomColor,setColor]=useState('rgb(255,255,255)');
-    const [tools,setTools]=useState(false);
+    
     const change=()=>{
         setyleTitle({opacity:1})
     }
@@ -49,18 +50,20 @@ const Skills=()=>{
                         
                         <div className="size-60 bg-transparent  border-b-[12px] absolute top-8 left-8  -translate-x-1/2  -translate-y-1/2 rounded-xl -rotate-45" style={{borderBottom:`12px solid ${randomColor}`}}></div>
                         
-                        <button className=" absolute top-6 left-16 font-semibold text-xl border-b border-skillcolor "  onClick={()=>setLanguage(!Language)}>Language</button>
-                        <button className="absolute bottom-6 left-20 font-semibold text-xl border-b border-skillcolor" onClick={()=>setTools(!tools)}>Tools</button>
-                        <button className=" absolute top-24 left-6 font-semibold text-xl border-b border-skillcolor">Back</button>
-                        <button className="absolute top-24  right-6 font-semibold text-xl border-b border-skillcolor">Front</button>
+                        <button className={`absolute top-6 left-16 font-semibold text-xl border-b border-skillcolor ${activeSkill==='Language'? 'border-b-4' :''} `} onClick={()=>setActiveSkill('Language')}>Language</button>
+                        <button className={`absolute bottom-6 left-20 font-semibold text-xl border-b border-skillcolor ${activeSkill==='Tools'? 'border-b-4':''}`} onClick={()=>setActiveSkill('Tools')}>Tools</button>
+                        <button className={`absolute top-24  right-6 font-semibold text-xl border-b border-skillcolor ${activeSkill==='Front'?'border-b-4':''}`} onClick={()=>setActiveSkill('Front')}>Front</button>
+                        <button className={` absolute top-24 left-6 font-semibold text-xl border-b border-skillcolor ${activeSkill==='Back'?'border-b-4':''}`}  onClick={()=>{setActiveSkill('Back')}}>Back</button>
                         
 
                     </div>
                 </div>
                 
-               { Language && <CircleSkill title="Programming Languages" icon={[{image:'/js-logo.webp',name:'JavaScript'},{image:'/python-logo.webp',name:'Python'},{image:'/ts-logo.webp',name:'TypeScript'}]} />}
-               {tools && <CircleSkill title="Tools" icon={[{image:'/gti-logo-webp',name:'git'}]} />}
-            
+               { activeSkill=== 'Language' && (<CircleSkill title="Programming Languages" icon={[{image:'/js-logo.webp',name:'JavaScript'},{image:'/python-logo.webp',name:'Python'},{image:'/ts-logo.webp',name:'TypeScript'}]} />)}
+               {activeSkill=='Tools' && (<CircleSkill title="Tools" icon={[{image:'/git-logo.webp',name:'git'},{image:'/github-logo.webp',name:'Github'},{image:'/figma-logo.webp',name:'Figma'},{image:'/redux-logo.webp',name:'Redux'}]} />)}
+               {activeSkill==='Front' && (<CircleSkill title='Front' icon={[{image:'/html5-logo.webp',name:'HTML'},{image:'/css-logo.png',name:'CSS'},{image:'/react-logo.webp',name:'REACT'},{image:'/nextjs-logo.webp',name:'NextJS'},
+
+                 {image:'/tailwindcss-logo.webp',name:'Tailwind'}]}/>)}
             </div>
         </div>
     )
