@@ -23,10 +23,10 @@ const AboutMets = () => {
         <div className=" flex gap-6 text-base">
             <div className="border-l-[0.3px] border-bordercolor"></div>
             <div className="flex flex-col gap-2 text-fontcolor ">
-                <div className="flex gap-1  hover:bg-borderdark  " onClick={toggleAboutMe}  >
+                <div className="flex gap-1  hover:bg-borderdark  font-medium text-base " onClick={toggleAboutMe}  >
 
                     <StarSvg />
-                    <span className="">about_me.ts</span>
+                    <span className=" ">about_me.ts</span>
                 </div>
                 {showAboutme && <AboutTs />}
             </div>

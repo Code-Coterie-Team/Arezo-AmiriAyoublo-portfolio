@@ -4,15 +4,17 @@ import Home from "./Aboutitem"
 import { DeletSvg, StarSvg } from "@/assets"
 import React from "react"
 import { useStore } from '@/assets'
-import { useStoreWithEqualityFn } from "zustand/traditional"
+
 import { usePathname } from "next/navigation"
 
-const Headermain = () => {
-    const { links, setLinks} = useStore();
-    const path = usePathname();
 
+const Headermain = () => {
+    const { links, setLinks, addLink } = useStore();
+    const path = usePathname();
+    console.log(links);
+    console.log(addLink);
     const handelDelete = (item: { name: string, href: string }) => {
-        const filterLink = links.filter((ti:any) => ti.name !== item.name);
+        const filterLink = links.filter((ti: any) => ti.name !== item.name);
         setLinks(filterLink)
     }
     return (
@@ -22,10 +24,13 @@ const Headermain = () => {
                 About Me
                 <button><DeletSvg className="fill-white " /></button>
             </Link>
-            {links?.map((item:{name:string,href:string}, index:number) => (
-                <Link key={index} href={item.href} className={`w-36  flex  gap-2 items-center justify-around text-center font-semibold  border-r border-borderdark ${item.href === path ? 'border-b-2 border-b-headerborder text-linkcolor' : 'text-fontcolor'}`} > {item.name}
+            {links?.map((item: { name: string, href: string }, index: number) => (
+                <div className={`w-36  flex  gap-2 items-center justify-around text-center font-semibold  border-r border-borderdark ${item.href === path ? 'border-b-2 border-b-headerborder text-linkcolor' : 'text-fontcolor'}`}>
+
+
+                    <Link key={index} href={item.href}   > {item.name}</Link>
                     <button onClick={() => { handelDelete(item) }}><DeletSvg className="fill-white" /></button>
-                </Link>
+                </div>
             ))}
 
 

@@ -1,6 +1,9 @@
 import { link, stat } from 'fs';
 import { create } from 'zustand';
-
+ interface Link{
+    name:string;
+    href:string;
+ }
 interface StoreState{
     stylePublic:{
         transform: string;
@@ -9,9 +12,9 @@ interface StoreState{
     },
     changeStyle:()=>void;
 
-  links:{name:string,href:string}[];
-  addLink:(newlink:{name:string,href:string})=>void;
-  setLinks: (newLinks: { name: string; href: string }[]) => void;
+  links:Link[];
+  addLink:(newlink:Link)=>void;
+  setLinks: (newLinks:Link[]) => void;
   visibleExplore:boolean;
   setVisibileExplore:(value:boolean)=> void;
 }
@@ -24,7 +27,7 @@ export const useStore=create<StoreState>((set)=>({
 
     },
     changeStyle: () =>
-        set((state) => ({
+        set(() => ({
             stylePublic: {
                 transform: 'translateY(0%)',
                 transition: 'all 1s ease-in-out',
@@ -33,12 +36,15 @@ export const useStore=create<StoreState>((set)=>({
         })),
         links:[],         
         addLink: (newlink) =>
-          set((state) => ({
-              links: [...state.links, newlink]
-          })),
+            set((state) => {
+                if (!state.links.find((l) => l.href === newlink.href)) {
+                  return { links: [...state.links,newlink] };
+                }
+                return state;
+              }),
         setLinks: (newLinks) => 
               set(() => ({
-                  links: newLinks
+                  links: newLinks,
               })),
             visibleExplore:true,
             setVisibileExplore:(value)=>set({visibleExplore: value})

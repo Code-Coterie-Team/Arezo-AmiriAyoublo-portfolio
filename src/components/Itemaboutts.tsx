@@ -1,9 +1,10 @@
 'use client'
-import { AboutSvg, BorderSvg, ContactSvg, MywokrSvg, SkillsSvg, WorkSvg } from "@/assets";
+import { AboutSvg, BorderSvg, ContactMeSvg, ContactSvg, MywokrSvg, SkillsSvg, WorkSvg } from "@/assets";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { useStore } from '@/assets';
 import { usePathname } from "next/navigation";
+import ContactToMe from "./Contacttome";
 
 export default function AboutTs() {
     const { stylePublic, changeStyle } = useStore();
@@ -34,7 +35,7 @@ export default function AboutTs() {
         {
             title: 'Contact Me',
             link: '/#contact-me',
-            svg: <ContactSvg />
+            svg: <ContactMeSvg />
         },
 
     ]
@@ -55,7 +56,7 @@ export default function AboutTs() {
             {navs.map((item, index) => {
                 const itemHash = item.link.split('#')[1]
                 return (
-                    <Link key={index} href={item.link} style={stylePublic} className="flex relative gap-2">
+                    <Link key={index} href={item.link} style={stylePublic} className="flex relative  text-base font-medium gap-2">
 
                         {item.svg}
                         {item.title}
