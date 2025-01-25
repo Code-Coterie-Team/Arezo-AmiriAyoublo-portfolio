@@ -2,11 +2,12 @@
 import { JsonpakageSvg, ReactItemSvg } from "@/assets";
 import Link from "next/link"
 
-import { useStore } from '@/assets';
+import { useStore } from '@/store';
 import ProjectItem from "./Projectitem";
 import { useState } from "react";
 
 const MyWorkItem = () => {
+    const links=useStore((state)=>state.links)
     const { addLink } = useStore();
     const [showDetail, setShowDetail] = useState<{ [key: number]: boolean }>({})
     const [activeProject, setActiveProject] = useState<string>('')
@@ -26,10 +27,13 @@ const MyWorkItem = () => {
         },
     ]
     const handleAddLink = (name: string, href: string) => {
-        if (name && href) {
-            addLink({ name, href });
+            const existlink=links.some((l:any)=>l.href===href);
+            if(!existlink){
+                addLink({ name, href });
+            }
+           
             setActiveProject(name)
-        }
+        
     }
 
     return (

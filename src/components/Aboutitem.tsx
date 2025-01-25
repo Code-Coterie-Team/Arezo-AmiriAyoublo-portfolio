@@ -11,7 +11,7 @@ const AboutMets = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             changeStyle();
-        }, 1000);
+        }, 10);
 
     }, [])
     const [showAboutme, setShowAboutme] = useState(true);
@@ -26,7 +26,7 @@ const AboutMets = () => {
                 <div className="flex gap-1  hover:bg-borderdark  font-medium text-base " onClick={toggleAboutMe}  >
 
                     <StarSvg />
-                    <span className=" ">about_me.ts</span>
+                    <span className=" "  onClick={toggleAboutMe}>about_me.ts</span>
                 </div>
                 {showAboutme && <AboutTs />}
             </div>

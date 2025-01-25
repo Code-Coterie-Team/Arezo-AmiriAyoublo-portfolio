@@ -13,7 +13,7 @@ const Technologies = ({ item }: IData) => {
             <div className="flex gap-4 pb-20  items-center">
                 {item.map((item, index) => (
 
-                    <div className="flex flex-col items-center gap-2">
+                    <div key={index} className="flex flex-col items-center gap-2">
                         <Image src={item.image} alt="" width={50} height={50} />
                         <span className="text-white font-bold "> {item.name}</span>
                     </div>

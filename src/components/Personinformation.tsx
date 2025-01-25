@@ -1,21 +1,33 @@
-
+"use client"
 import { AboutSvg, BackgroundSvg, ContactSvg, GiticonSvg } from "@/assets"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 import BorderTop from "./Bordertop"
 import Image from "next/image"
 import College from "./College"
+
+
 export default  function PersonalInformation(){
- 
+    const [styleChange,setStyleChange]=useState({
+        transform:'translateY(20%)',
+        transition:'all 10ms ease-in-out',
+        opactiy:0.5
+    })
+    useEffect(()=>{
+        const timer=setTimeout(() => {
+            setStyleChange({transform:'translateY(0%)',opactiy:1,transition:'transform 1s ease-in-out'})
+        },10);
+        return()=>clearTimeout(timer)
+        },[])
     
    
-
+     
    
     return (
         <>  
            
  
-            <div id="aboutme" className="flex flex-col pt-20 gap-4 justify-center content-center  text-white scroll-smooth">
+            <div id="aboutme" className="flex flex-col pt-20 gap-4 justify-center content-center  text-white scroll-smooth" >
                 
                 <div className="flex text-5xl gap-4 relative">
                     <h1 className=" font-semibold ">Arezoo AmiriAyoubloo</h1>
@@ -27,8 +39,9 @@ export default  function PersonalInformation(){
                     <span className="text-linkcolor animate-pulse">/Frontend Developer</span>
                 </div>
                 <p>I'm a developer with experience in backend development using Python and the Django framework. Recently, I've developed a strong interest in frontend development, and I've been working on frontend projects for a while now. I love learning new technologies and challenging myself.</p>
-                <div className="flex font-bold text-borderdark gap-4">
-                    <Link href="https://www.linkedin.com/in/arezoo-amiri-ayoblo/"> <button className="bg-white w-8 text-xl  rounded font-extrabold">in</button></Link>
+                <div className="flex font-bold text-borderdark gap-4" >
+                    <Link href="https://www.linkedin.com/in/arezoo-amiri-ayoblo/" > 
+                    <button className="bg-white w-8 text-xl  rounded font-extrabold" style={styleChange}>in</button></Link>
                     <button className=" w-6 rounded-full"><GiticonSvg   className="bg-white rounded-full"/></button>
                     <button className="h-8 w-36 rounded-xl bg-white shadow-buttonshadow  ">contact me</button>
                 </div>
@@ -44,7 +57,7 @@ export default  function PersonalInformation(){
                 <BorderTop/>
                 <div className="flex items-center gap-4 relative">
                     <div className="size-10 rounded-full bg-green-300 blur-lg "></div>
-                    <ContactSvg className="fill-white absolute  left-4 "  />
+                    <ContactSvg className="fill-white absolute  left-4 " width={32} height={32}  />
                     <h2 className="text-2xl">About Me</h2>
 
                 </div>

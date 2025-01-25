@@ -10,7 +10,7 @@ const Header = () => {
     const visibleExplore = useStore((state) => state.visibleExplore)
 
     return (
-        <div className="   flex row-span-1  justify-between  border-b-2 border-borderdark text-sm p-2  ">
+        <div className="   flex   justify-between  border-b-2 border-borderdark text-sm p-2  ">
             <div className="flex gap-20 text-base">
 
                 <ul className="flex gap-4   ">

@@ -25,12 +25,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={` antialiased min-h-screen max-h-screen text-fontcolor`} >
 
-        <div className=" grid grid-rows-16 h-screen  ">
+        <div className="  h-screen  ">
           <Header />
-          <div className="grid row-start-2 row-end-16 grid-cols-12   md:grid-cols-16  ">
+          <div className="grid h-[88%]   grid-cols-16  ">
             <Activiybar />
             <Explore />
-            <div className={`col-start-6  col-end-17 overflow-hidden scroll-smooth ` }>
+            <div className={`  col-start-2 col-end-17 md:col-start-6  md:col-end-17 overflow-hidden scroll-smooth ` }>
               <Headermain />
               <div className= {`overflow-y-auto h-screen ` }  style={{ minHeight: '1500 px' }} >{children}</div>
             </div>

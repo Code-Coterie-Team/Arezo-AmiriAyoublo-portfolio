@@ -16,11 +16,11 @@ export default function Mywokr(){
             </div>
             <p className="font-extrabold  text-white  text-3xl "> Some of my work as a <span className="text-workfont">Frontend developer</span></p>
             <div className="grid grid-cols-1 gap-8 pt-20">
-                <Samplework project={'Kanban task management web app'} image={'/kanban.jpg'} link={'/apps/kanban'}/>
-                <Samplework project={'Home Landing Page'} image={'/real-estate.png'} link={'/apps/real-state'}/>
+                <Samplework project={'Kanban '} image={'/kanban.jpg'} link={'/apps/kanban'} projectlink=""/>
+                <Samplework project={'real-state'} image={'/real-estate.png'} link={'/apps/real-state'} projectlink=""/>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <Samplework project={'Calculator React App'} image={'/calculator.png'} link={'/apps/calculator'}/>
-                    <Samplework project={'Product list with cart'} image={'/productlist.webp'} link={'/apps/product-list'}/>
+                    <Samplework project={'Calculator'} image={'/calculator.png'} link={'/apps/calculator'} projectlink={'https://calculator-react-app-arezoo.netlify.app/'}/>
+                    <Samplework project={'Product list'} image={'/productlist.webp'} link={'/apps/product-list'} projectlink=""/>
 
                 </div>
             </div>

@@ -1,14 +1,19 @@
+"use client"
+
 import { SuitcaSvg } from "@/assets";
 import Experience from "./Experience";
 import BorderTop from "./Bordertop";
-
+import { useState,useEffect } from "react";
+import { useStore } from "@/store";
 
 
 const WorkExperience=()=>{
-     
-
+    const {styleChange}=useStore(state=>state)
+    
+    
+    
     return(
-        <div id='work-experience' className="flex flex-col gap-6 scroll-smooth">
+        <div id='work-experience' className="flex flex-col gap-10" style={styleChange}>
            <BorderTop/>
             <div className="flex gap-8  relative ">
                 <div className=" size-10 rounded-full bg-red-400 blur-lg "></div>

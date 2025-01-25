@@ -7,7 +7,7 @@ const Explore = () => {
 
     const visibleExplore = useStore((state) => state.visibleExplore)
     return (
-        <div className={` flex flex-col col-start-2 col-end-6 gap-6  border-r-2 border-borderdark }`}>
+        <div className={` hidden md:flex md:flex-col md:col-start-2 md:col-end-6 gap-6  border-r-2 border-borderdark }`}>
 
             {visibleExplore && <FileExplore />}
         </div>

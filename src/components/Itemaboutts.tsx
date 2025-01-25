@@ -2,15 +2,14 @@
 import { AboutSvg, BorderSvg, ContactMeSvg, ContactSvg, MywokrSvg, SkillsSvg, WorkSvg } from "@/assets";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { useStore } from '@/assets';
-import { usePathname } from "next/navigation";
-import ContactToMe from "./Contacttome";
+import { useStore } from "@/store";
+
 
 export default function AboutTs() {
-    const { stylePublic, changeStyle } = useStore();
+    const { stylePublic} = useStore(state=>state);
+    const styleChangeMain= useStore(state=>state.styleChangeMain);
 
-    const [pathName, setPathName] = useState<string>('/#aboutme')
-    console.log(pathName);
+    
     const navs = [
         {
             title: 'About Me',
@@ -39,37 +38,31 @@ export default function AboutTs() {
         },
 
     ]
-    useEffect(() => {
-        const HandelHashChange = () => {
-            setPathName(window.location.hash || '#aboutme');
-        }
-        window.addEventListener('hashchange', HandelHashChange);
-        setPathName(window.location.hash);
-        return () => {
-            window.removeEventListener('hashchange', HandelHashChange)
-        }
-    }, [])
 
     return (
         <div className="flex flex-col gap-2 pl-6 " >
 
             {navs.map((item, index) => {
                 const itemHash = item.link.split('#')[1]
+                
                 return (
-                    <Link key={index} href={item.link} style={stylePublic} className="flex relative  text-base font-medium gap-2">
+                    <div  key={index}   >
+                        <Link href={item.link} className="flex relative  text-base font-medium gap-2">
 
-                        {item.svg}
-                        {item.title}
-                        {`#${itemHash}` === pathName && (
-                            <div className="flex  gap-10">
-                                <BorderSvg />
-                                <BorderSvg className=" absolute top-0 -left-4 -rotate-90" />
-                                <BorderSvg className="rotate-90 absolute top-4 " />
-                                <BorderSvg className=" -rotate-180 absolute top-4 -left-4" />
-                            </div>)
-                        }
+                            {item.svg}
+                            {item.title}
+                            
 
-                    </Link>
+                        </Link>
+                        {`#${itemHash}` && (
+                                <div className="flex  gap-10">
+                                    <BorderSvg />
+                                    <BorderSvg className=" absolute top-0 -left-4 -rotate-90" />
+                                    <BorderSvg className="rotate-90 absolute top-4 " />
+                                    <BorderSvg className=" -rotate-180 absolute top-4 -left-4" />
+                                </div>)
+                            }
+                    </div>
                 )
 
             })}
