@@ -5,7 +5,7 @@ const Footer=()=>{
     return(
         <div className="flex  bg-borderdark border-t-2 justify-between border-borderdark ">
             <div className="flex hover:bg-slate-800 ">
-                <div className="w-10 h-full   opacity-35 hover:bg-blue-300"></div>
+                <div className="w-10    opacity-35 hover:bg-blue-300"></div>
                 <div className="flex pl-2  pt-1 ">
                     <BranchSvg/>
                     <span className=" pl-4 text-sm">main</span>

@@ -1,7 +1,7 @@
-"use client "
+'use client'
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect, useState } from "react"
+import {  useState } from "react"
 import { useStore } from "@/store"
 interface Idata {
     project: string,

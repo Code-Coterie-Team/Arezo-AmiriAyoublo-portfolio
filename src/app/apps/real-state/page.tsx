@@ -2,7 +2,7 @@ import AboutKanban from "@/components/AboutProject";
 import Technologies from "@/components/Technology";
 const RealState = () => {
     return (
-        <div className="grid grid-cols-1 gap-4">
+        <div className="grid grid-cols-1 gap-4 h-full">
             <AboutKanban project={'Real State'} description={`
             This project is a feature-rich real estate management platform developed using React Redux
              and Tailwind CSS It is designed to provide a seamless and

@@ -15,17 +15,27 @@ const MyWorkItem = () => {
         {
             path: '/apps/kanban',
             name: 'Kanban',
+            svg:<ReactItemSvg />,
 
         },
         {
             path: '/apps/real-state',
-            name: 'Real State'
+            name: 'Real State',
+            svg:<ReactItemSvg />,
         },
         {
             path: '/apps/calculator',
             name: 'Calculator',
+            svg:<ReactItemSvg />,
         },
+        {
+            path:'/apps/product-list',
+            name:'product-list',
+            svg:<JsonpakageSvg/>,
+        }
     ]
+   
+
     const handleAddLink = (name: string, href: string) => {
             const existlink=links.some((l:any)=>l.href===href);
             if(!existlink){
@@ -46,7 +56,8 @@ const MyWorkItem = () => {
 
                             handleAddLink(item.name, item.path);
                         }}>
-                            <ReactItemSvg />
+                            {item.svg}
+                            
                             {item.name}
                         </Link>
                         {activeProject === item.name && <ProjectItem />}
@@ -54,16 +65,8 @@ const MyWorkItem = () => {
                 ))
 
                 }
-                <div className="flex flex-col">
-                    <Link href='/apps/prdocut-list' className={`flex gap-2 text-base font-medium ${activeProject ==='product-list' ? 'bg-gray-800' : ''}`} onClick={() => {
-
-                        handleAddLink('prdocut-list', '/apps/prdocut-list');
-                    }}>
-                        <JsonpakageSvg/>
-                        Prdouct List
-                    </Link>
-
-                </div>
+               
+                
 
             </div>
         </div>

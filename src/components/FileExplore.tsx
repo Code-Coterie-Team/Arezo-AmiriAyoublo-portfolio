@@ -3,7 +3,7 @@ import { useState } from "react";
 import Portfolio from "./Portfolio";
 import { ArowSvg } from "@/assets";
 import { transform } from "next/dist/build/swc/generated-native";
-import { useStore } from '@/assets';
+
 
 
 const FileExplore = () => {

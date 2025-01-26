@@ -4,7 +4,7 @@ import { StarSvg } from "@/assets";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import AboutTs from "./Itemaboutts";
-import { useStore } from '@/assets';
+import { useStore } from "@/store";
 
 const AboutMets = () => {
     const { stylePublic, changeStyle } = useStore();

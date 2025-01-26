@@ -3,12 +3,11 @@ import { AboutSvg, BorderSvg, ContactMeSvg, ContactSvg, MywokrSvg, SkillsSvg, Wo
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { useStore } from "@/store";
-
+import { motion } from "framer-motion";
 
 export default function AboutTs() {
     const { stylePublic} = useStore(state=>state);
     const styleChangeMain= useStore(state=>state.styleChangeMain);
-
     
     const navs = [
         {
@@ -38,34 +37,45 @@ export default function AboutTs() {
         },
 
     ]
+    const animationlink={
+        hidden:{opacity:0},
+        visible:{
+            opacity:1,
+            transition:{ staggerChildren:0.2}
+        }
+    }
+   const itemMotion={
+    hidden:{opacity:0,y:20},
+    visible:{opacity:1,y:0, transition:{duration:0.5}}
+   }
 
     return (
-        <div className="flex flex-col gap-2 pl-6 " >
+        < motion.div className="flex flex-col gap-2 pl-6 "  variants={animationlink} initial="hidden" animate="visible">
 
             {navs.map((item, index) => {
                 const itemHash = item.link.split('#')[1]
                 
                 return (
-                    <div  key={index}   >
-                        <Link href={item.link} className="flex relative  text-base font-medium gap-2">
+                    <motion.div  key={index}  variants={itemMotion}  >
+                        <Link href={item.link} className={`flex relative  text-base font-medium gap-2 `} style={stylePublic} >
 
                             {item.svg}
                             {item.title}
                             
 
                         </Link>
-                        {`#${itemHash}` && (
+                        {/* {`#${itemHash}` && (
                                 <div className="flex  gap-10">
                                     <BorderSvg />
                                     <BorderSvg className=" absolute top-0 -left-4 -rotate-90" />
                                     <BorderSvg className="rotate-90 absolute top-4 " />
                                     <BorderSvg className=" -rotate-180 absolute top-4 -left-4" />
                                 </div>)
-                            }
-                    </div>
+                            } */}
+                    </motion.div>
                 )
 
             })}
-        </div>
+        </motion.div>
     )
 }

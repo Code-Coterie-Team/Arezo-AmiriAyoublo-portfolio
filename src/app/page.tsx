@@ -10,7 +10,7 @@ export default function Home() {
 
   return (
 
-    <div className=" scroll-smooth  ">
+    <div className="h-full ">
       <AboutMe />
     </div>
 

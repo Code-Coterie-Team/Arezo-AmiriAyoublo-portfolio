@@ -33,6 +33,7 @@ export const useStore=create<StoreState>((set)=>({
         transform:'translateY(20px)',
         transition:"all 0.6 ease-in-out forwards",
         opacity:'0.1'
+        
 
     },
     

@@ -41,8 +41,8 @@ import SolutionSvg from "./solution.svg";
 import TechnologySvg from "./Thechnology.svg";
 import DeletSvg from "./delete.svg";
 import BorderSvg from "./border.svg";
-import { StoreState } from "@/store";
-import { create } from "zustand";
+import LoadBranchSvg from './loadBranch.svg';
+import ToggleSvg from './toggle.svg';
 export {
   ArowSvg,
   AboutSvg,
@@ -87,30 +87,6 @@ export {
   TechnologySvg,
   DeletSvg,
   BorderSvg,
+  LoadBranchSvg,
+  ToggleSvg
 };
-export const useStore = create<StoreState>((set) => ({
-  stylePublic: {
-    transform: "translateY(50%)",
-    transition: "all 1s ease-in-out",
-    opacity: "0.1",
-  },
-  changeStyle: () =>
-    set((state) => ({
-      stylePublic: {
-        transform: "translateY(0%)",
-        transition: "all 1s ease-in-out",
-        opacity: "1",
-      },
-    })),
-  links: [],
-  addLink: (newlink) =>
-    set((state) => ({
-      links: [...state.links, newlink],
-    })),
-  setLinks: (newLinks) =>
-    set(() => ({
-      links: newLinks,
-    })),
-  visibleExplore: true,
-  setVisibileExplore: (value) => set({ visibleExplore: value }),
-}));

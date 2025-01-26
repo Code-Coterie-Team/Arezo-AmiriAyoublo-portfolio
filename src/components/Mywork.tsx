@@ -1,9 +1,10 @@
 import { MywokrSvg, MyworkiconSvg, WorkSvg } from "@/assets";
 import BorderTop from "./Bordertop";
 import Samplework from "./Samplework";
+import SampleMini from "./SampleMini";
 
 
-export default function Mywokr(){
+export default function Mywork(){
 
     return(
         <div id="mywork" className="grid grid-cols-1 gap-10 ">
@@ -19,8 +20,8 @@ export default function Mywokr(){
                 <Samplework project={'Kanban '} image={'/kanban.jpg'} link={'/apps/kanban'} projectlink=""/>
                 <Samplework project={'real-state'} image={'/real-estate.png'} link={'/apps/real-state'} projectlink=""/>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <Samplework project={'Calculator'} image={'/calculator.png'} link={'/apps/calculator'} projectlink={'https://calculator-react-app-arezoo.netlify.app/'}/>
-                    <Samplework project={'Product list'} image={'/productlist.webp'} link={'/apps/product-list'} projectlink=""/>
+                    <SampleMini project={'Calculator'} image={'/calculator.png'} link={'/apps/calculator'} projectlink={'https://calculator-react-app-arezoo.netlify.app/'}/>
+                    <SampleMini project={'Product list'} image={'/productlist.webp'} link={'/apps/product-list'} projectlink={'https://product-list-card-js.netlify.app/'}/>
 
                 </div>
             </div>

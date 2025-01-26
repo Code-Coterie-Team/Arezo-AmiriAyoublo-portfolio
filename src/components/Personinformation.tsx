@@ -38,12 +38,12 @@ export default  function PersonalInformation(){
                     <div className="size-2 bg-red-600 animate-pulse rounded-full"></div>
                     <span className="text-linkcolor animate-pulse">/Frontend Developer</span>
                 </div>
-                <p>I'm a developer with experience in backend development using Python and the Django framework. Recently, I've developed a strong interest in frontend development, and I've been working on frontend projects for a while now. I love learning new technologies and challenging myself.</p>
+                <p>I’m a frontend developer passionate about creating engaging and visually appealing user interfaces. With a background in backend development using Python and Django, I bring valuable problem-solving skills and a broad perspective to my work. Lately, I’ve been fully immersed in frontend projects, continuously honing my skills and staying updated with the latest technologies to deliver seamless user experiences. </p>
                 <div className="flex font-bold text-borderdark gap-4" >
-                    <Link href="https://www.linkedin.com/in/arezoo-amiri-ayoblo/" > 
+                    <Link href="https://www.linkedin.com/in/arezoo-amiri-ayoblo/" target="_blank" > 
                     <button className="bg-white w-8 text-xl  rounded font-extrabold" style={styleChange}>in</button></Link>
-                    <button className=" w-6 rounded-full"><GiticonSvg   className="bg-white rounded-full"/></button>
-                    <button className="h-8 w-36 rounded-xl bg-white shadow-buttonshadow  ">contact me</button>
+                    <Link href={'https://github.com/arezooamiri'} target="_blank"> <button className=" w-6 rounded-full" ><GiticonSvg   className="bg-white rounded-full"/></button></Link>
+                    <Link href={'/#contact-me'}className="h-8  w-36 text-center rounded-xl bg-white shadow-buttonshadow  ">contact me</Link>
                 </div>
             </div>
             <div className=" flex flex-col justify-center items-center ">
@@ -69,8 +69,8 @@ export default  function PersonalInformation(){
                         <h3 className="text-2xl">Arezoo AmiriAyoubloo</h3>
                         <span className="text-green-500">Frontend Developer</span>
                         <p className="text-fontcolor">
-                            I'm an experienced software engineer who constantly seeks out innovative solutions to everyday problems.</p>
-                        <p className="text-fontcolor">After 4 years in this industry I have worked with multiple front-end and back-end technologies.</p>
+                        I’m a junior software developer , passionate about honing my skills and always eager to learn new technologies</p>
+                   
                     </div>
                     <Image src="/arezoo.jpeg" alt="" className="rounded-full "  height={300} width={300}/>
                 </div>

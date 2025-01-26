@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+
 import "./globals.css";
 
 import Header from "../components/Header";
@@ -23,20 +23,20 @@ export default function RootLayout({
   return (
     
     <html lang="en">
-      <body className={` antialiased min-h-screen max-h-screen text-fontcolor`} >
+      <body className={` antialiased  h-screen w-screen text-fontcolor`} >
 
-        <div className="  h-screen  ">
-          <Header />
-          <div className="grid h-[88%]   grid-cols-16  ">
+      <div className="  grid grid-rows-16 w-screen h-screen ">
+          <Header   />
+          <div className="grid row-start-2 row-end-16   grid-cols-6 md:grid-cols-16 w-full h-full   ">
             <Activiybar />
             <Explore />
-            <div className={`  col-start-2 col-end-17 md:col-start-6  md:col-end-17 overflow-hidden scroll-smooth ` }>
+            <div className={`col-start-2 col-end-7 w-full md:col-start-6  md:col-end-16  overflow-hidden h-full  ` }>
               <Headermain />
-              <div className= {`overflow-y-auto h-screen ` }  style={{ minHeight: '1500 px' }} >{children}</div>
+              <div className= {`overflow-y-auto h-full ` }   >{children}</div>
             </div>
           </div>
           <Footer />
-        </div>
+       </div> 
 
 
       </body>

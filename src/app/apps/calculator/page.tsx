@@ -5,7 +5,7 @@ import Technologies from "@/components/Technology";
 
 const Calculator=()=>{
     return(
-        <div  className="grid grid-cols-1 gap-4">
+        <div  className="grid grid-cols-1 gap-4 h-full">
             <AboutKanban project={'Calculator'} description={"This project is a modern and responsive calculator application built using React and Tailwind CSS, designed to perform basic arithmetic operations with an intuitive and user-friendly interface."}  imageproject={"/calculator.png"}/>
             <Challenge/>
             <Soultion/>
