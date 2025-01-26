@@ -1,26 +1,17 @@
-"use client"
+
 import { AboutSvg, BackgroundSvg, ContactSvg, GiticonSvg } from "@/assets"
 import Link from "next/link"
-import { useEffect, useState } from "react"
+
 import BorderTop from "./Bordertop"
 import Image from "next/image"
 import College from "./College"
+import Social from "./Social"
 
 
 export default  function PersonalInformation(){
-    const [styleChange,setStyleChange]=useState({
-        transform:'translateY(20%)',
-        transition:'all 10ms ease-in-out',
-        opactiy:0.5
-    })
-    useEffect(()=>{
-        const timer=setTimeout(() => {
-            setStyleChange({transform:'translateY(0%)',opactiy:1,transition:'transform 1s ease-in-out'})
-        },10);
-        return()=>clearTimeout(timer)
-        },[])
     
-   
+     
+    
      
    
     return (
@@ -39,12 +30,7 @@ export default  function PersonalInformation(){
                     <span className="text-linkcolor animate-pulse">/Frontend Developer</span>
                 </div>
                 <p>I’m a frontend developer passionate about creating engaging and visually appealing user interfaces. With a background in backend development using Python and Django, I bring valuable problem-solving skills and a broad perspective to my work. Lately, I’ve been fully immersed in frontend projects, continuously honing my skills and staying updated with the latest technologies to deliver seamless user experiences. </p>
-                <div className="flex font-bold text-borderdark gap-4" >
-                    <Link href="https://www.linkedin.com/in/arezoo-amiri-ayoblo/" target="_blank" > 
-                    <button className="bg-white w-8 text-xl  rounded font-extrabold" style={styleChange}>in</button></Link>
-                    <Link href={'https://github.com/arezooamiri'} target="_blank"> <button className=" w-6 rounded-full" ><GiticonSvg   className="bg-white rounded-full"/></button></Link>
-                    <Link href={'/#contact-me'}className="h-8  w-36 text-center rounded-xl bg-white shadow-buttonshadow  ">contact me</Link>
-                </div>
+                <Social/>
             </div>
             <div className=" flex flex-col justify-center items-center ">
                 <span className="size-4  border-white border-r border-b rotate-45 animate-scroll   "></span>

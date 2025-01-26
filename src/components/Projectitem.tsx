@@ -39,8 +39,8 @@ const ProjectItem = () => {
     }
     return (
         <motion.div className="flex flex-col gap-2 pl-6 pt-1" initial='hidden' animate='visible' variants={animationlink}>
-            {projectItem.map((item) => (
-                <motion.div variants={itemMotion}>
+            {projectItem.map((item,index) => (
+                <motion.div key={index} variants={itemMotion}>
 
                     <Link href={item.href} className={`flex gap-2`} >
                         {item.svg}
