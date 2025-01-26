@@ -22,7 +22,7 @@ const FileExplore = () => {
     }
 
     return (
-        <div className="flex flex-col ">
+        <div className="flex flex-col gap-4 ">
             <div className="font-light ">EXPLORER</div>
             <div className="flex font-bold bordr-b-2 border-borderdark text-sm flex-col gap-2 ">
                 {exploreitem.map((item, index) => (

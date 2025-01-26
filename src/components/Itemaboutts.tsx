@@ -6,8 +6,7 @@ import { useStore } from "@/store";
 import { motion } from "framer-motion";
 
 export default function AboutTs() {
-    const { stylePublic} = useStore(state=>state);
-    const styleChangeMain= useStore(state=>state.styleChangeMain);
+   
     
     const navs = [
         {
@@ -50,14 +49,14 @@ export default function AboutTs() {
    }
 
     return (
-        < motion.div className="flex flex-col gap-2 pl-6 "  variants={animationlink} initial="hidden" animate="visible">
+        < motion.div className="flex flex-col gap-1 pl-6 "  variants={animationlink} initial="hidden" animate="visible">
 
             {navs.map((item, index) => {
                 const itemHash = item.link.split('#')[1]
                 
                 return (
                     <motion.div  key={index}  variants={itemMotion}  >
-                        <Link href={item.link} className={`flex relative  text-base font-medium gap-2 `} style={stylePublic} >
+                        <Link href={item.link} className={`flex relative  text-base font-medium gap-1 `}  >
 
                             {item.svg}
                             {item.title}

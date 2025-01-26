@@ -1,4 +1,4 @@
-
+"use clinet"
 import { AboutSvg, BackgroundSvg, ContactSvg, GiticonSvg } from "@/assets"
 import Link from "next/link"
 
@@ -6,11 +6,17 @@ import BorderTop from "./Bordertop"
 import Image from "next/image"
 import College from "./College"
 import Social from "./Social"
+import { useRef } from "react"
+import { motion,useInView } from "framer-motion"
 
 
 export default  function PersonalInformation(){
-    
-     
+    const activeRef=useRef(null);
+    const isView=useInView(activeRef,{once:false})
+    const animationVariants={
+        hidden:{opacity:0,x:-50},
+        visible:{opacity:1,x:0, transition:{duration:1}}
+    }
     
      
    
@@ -50,7 +56,7 @@ export default  function PersonalInformation(){
                 <p className="text-5xl">I'm a <span className="text-green-600">software developer</span>  specialized on 
                     <span className="text-green-600"> Web Applications</span>
                 </p>
-                <div className="flex gap-14" >
+                <motion.div ref={activeRef} className="flex gap-14" initial='hidden' animate={isView?'visible':'hidden'}  variants={animationVariants} >
                     <div className="flex flex-col gap-8 font-semibold">
                         <h3 className="text-2xl">Arezoo AmiriAyoubloo</h3>
                         <span className="text-green-500">Frontend Developer</span>
@@ -59,7 +65,7 @@ export default  function PersonalInformation(){
                    
                     </div>
                     <Image src="/arezoo.jpeg" alt="" className="rounded-full "  height={300} width={300}/>
-                </div>
+                </motion.div>
                 <College/>
 
 

@@ -7,17 +7,15 @@ import AboutTs from "./Itemaboutts";
 import { useStore } from "@/store";
 
 const AboutMets = () => {
-    const { stylePublic, changeStyle } = useStore();
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            changeStyle();
-        }, 10);
-
-    }, [])
+    const activeLink = useStore((state) => state.activeLink);
+    const {setActiveLink}=useStore();
     const [showAboutme, setShowAboutme] = useState(true);
+     
+    
     const toggleAboutMe = () => {
         setShowAboutme(!showAboutme);
-        changeStyle();
+        setActiveLink('/')
+        
     }
     return (
         <div className=" flex gap-6 text-base">

@@ -14,7 +14,7 @@ const Samplework = ({ project, image, link,projectlink }: Idata) => {
     const [bgPosition, setBgPosition] = useState({ x: 0, y: 0 });
     const links=useStore((state)=>state.links)
     const addLink=useStore(state=>state.addLink)
-    console.log(links,'saml');
+   
     const handelMouse = (e: any) => {
         const { offsetX, offsetY } = e.nativeEvent;
         setBgPosition({ x: offsetX, y: offsetY })

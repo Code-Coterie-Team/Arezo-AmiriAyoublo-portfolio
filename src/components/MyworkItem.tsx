@@ -9,8 +9,10 @@ import { useState } from "react";
 const MyWorkItem = () => {
     const links=useStore((state)=>state.links)
     const { addLink } = useStore();
-    const [showDetail, setShowDetail] = useState<{ [key: number]: boolean }>({})
-    const [activeProject, setActiveProject] = useState<string>('')
+    const activeProject=useStore((state)=>state.activeProject)
+    const {setActiveProject}=useStore()
+    const{setActiveLink}=useStore()
+   
     const navProject = [
         {
             path: '/apps/kanban',
@@ -40,6 +42,7 @@ const MyWorkItem = () => {
             const existlink=links.some((l:any)=>l.href===href);
             if(!existlink){
                 addLink({ name, href });
+                setActiveLink(href);
             }
            
             setActiveProject(name)
@@ -52,7 +55,7 @@ const MyWorkItem = () => {
             <div className="flex flex-col gap-4 ">
                 {navProject.map((item, index) => (
                     <div key={index} className="flex flex-col">
-                        <Link href={item.path} className={`flex gap-2 text-base font-medium ${activeProject === item.name ? 'bg-gray-800' : ''}`} onClick={() => {
+                        <Link href={item.path} className={`flex gap-1 text-base font-medium ${activeProject === item.name ? 'bg-gray-800' : ''}`} onClick={() => {
 
                             handleAddLink(item.name, item.path);
                         }}>

@@ -1,51 +1,37 @@
-import { link, stat } from 'fs';
+
+import { persist, createJSONStorage } from 'zustand/middleware'
+
 import { create } from 'zustand';
+import Link from 'next/link';
+
  interface Link{
     name:string;
     href:string;
  }
-interface StyleChange{
-    transform:string,
-    transition:string,
-    opacity:string,
-  }
+
 interface StoreState{
-    stylePublic:{
-        transform: string;
-        transition: string;
-        opacity:string
-    },
-    changeStyle:()=>void;
+    
 
   links:Link[];
+  activeLink:string|null;
   addLink:(newlink:Link)=>void;
   setLinks: (newLinks:Link[]) => void;
-
+  setActiveLink:(href:string)=>void;
+  
   visibleExplore:boolean;
   setVisibileExplore:(value:boolean)=> void;
-  
-  styleChange:StyleChange;
-  styleChangeMain:()=>void;
+  activeProject:string| null;
+  setActiveProject:(name:string)=>void
+ 
 }
 
-export const useStore=create<StoreState>((set)=>({
-    stylePublic:{
-        transform:'translateY(20px)',
-        transition:"all 0.6 ease-in-out forwards",
-        opacity:'0.1'
-        
-
-    },
-    
-    changeStyle: () =>
-        set(() => ({
-            stylePublic: {
-                transform: 'translateY(0px)',
-                transition: 'all 0.6s ease-in-out forwards',
-                opacity:'1'
-            },
-        })),
-        links:[],         
+export const useStore=create<StoreState>()(
+     persist(
+         (set)=>({
+            links:[],  
+            activeLink:null,  
+            activeProject:null,     
+        setActiveLink:(href)=>set({activeLink:href})  ,  
         addLink: (newlink) =>
             set((state) =>( {
                 links:[...state.links,newlink]
@@ -54,24 +40,23 @@ export const useStore=create<StoreState>((set)=>({
               set(() => ({
                   links: newLinks,
               })),
-
-
+        setActiveProject:(name)=>
+            set(()=>({
+                activeProject:name
+            })),
         visibleExplore:true,
         setVisibileExplore:(value)=>set({visibleExplore: value}),
          
-         styleChange:{
-            transform: "translateX(-20%)",
-            transition: "all 1s ease-in-out",
-            opacity: '0.8',
-         },
-         styleChangeMain:()=> set({styleChange:{
-            transform: "translateX(0%)",
-            transition: "all 1s ease-in-out",
-            opacity: '1',
-         }
-
-         })
-            
          
-}))
+    }),
+     {
+        name: "store-links",
+        partialize: (state) => ({ links: state.links,
+            activeProject:state.activeProject,
+            activeLink:state.activeLink,
+        }), 
+      }
+        
+         
+));
 

@@ -13,7 +13,7 @@ const Headermain = () => {
     const { setLinks } = useStore();
     const links = useStore((state) => state.links)
     const path = usePathname();
-    console.log(links, 'headermain');
+    
     const handelDelete = (item: { name: string, href: string }) => {
         const filterLink = links.filter((ti: any) => ti.name !== item.name);
         setLinks(filterLink);
@@ -21,7 +21,7 @@ const Headermain = () => {
     return (
         <div className=" w-full h-10 border-b-2 border-borderdark flex justify-between  items-center bg-maincolor text-sm  fixed z-10  pr-20">
             <div className="flex ">
-                <Link href={'/'} className={`w-36  flex   justify-around items-center gap-1  text-center font-semibold ${'/' === path ? 'border-b-2 border-headerborder text-linkcolor' : 'text-fontcolor'} `}>
+                <Link href={'/'} className={`w-36  flex   justify-around items-center gap-1  text-center font-semibold ${'/' === path ? 'border-b-2 border-headerborder text-linkcolor' : 'text-fontcolor'} `} >
                     <StarSvg />
                     About Me
                     <button><DeletSvg className="fill-white " /></button>
