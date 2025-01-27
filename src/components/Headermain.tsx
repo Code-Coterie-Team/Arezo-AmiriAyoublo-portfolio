@@ -4,19 +4,20 @@ import Home from "./Aboutitem"
 import { DeletSvg, LoadBranchSvg, SidewindowSvg, StarSvg, ToggleSvg } from "@/assets"
 import React from "react"
 import { useStore } from '@/store'
-
+import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation"
 
 
 
 const Headermain = () => {
-    const { setLinks } = useStore();
+    const {removeLink } = useStore();
     const links = useStore((state) => state.links)
     const path = usePathname();
-    
-    const handelDelete = (item: { name: string, href: string }) => {
-        const filterLink = links.filter((ti: any) => ti.name !== item.name);
-        setLinks(filterLink);
+    const router=useRouter();
+    const handelDelete = ( href: string) => {
+        const nextlink= removeLink(href);
+        
+        
     }
     return (
         <div className=" w-full h-10 border-b-2 border-borderdark flex justify-between  items-center bg-maincolor text-sm  fixed z-10  pr-20">
@@ -31,7 +32,7 @@ const Headermain = () => {
 
 
                         <Link href={item.href}   > {item.name}</Link>
-                        <button onClick={() => { handelDelete(item) }}><DeletSvg className="fill-white" /></button>
+                        <button onClick={() => { handelDelete(item.href) }}><DeletSvg className="fill-white" /></button>
                     </div>
                 ))}
             </div>

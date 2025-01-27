@@ -43,6 +43,7 @@ import DeletSvg from "./delete.svg";
 import BorderSvg from "./border.svg";
 import LoadBranchSvg from './loadBranch.svg';
 import ToggleSvg from './toggle.svg';
+import MailSvg from './mail.svg'
 export {
   ArowSvg,
   AboutSvg,
@@ -88,5 +89,6 @@ export {
   DeletSvg,
   BorderSvg,
   LoadBranchSvg,
-  ToggleSvg
+  ToggleSvg,
+  MailSvg
 };

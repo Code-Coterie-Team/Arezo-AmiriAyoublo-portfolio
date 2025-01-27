@@ -15,9 +15,9 @@ const Activiybar = () => {
     ]
     return (
         <div className=" col-span-1 flex flex-col justify-between h-full ">
-            <div className="flex flex-col   pt-2 items-center cursor-pointer">
+            <div className="flex flex-col   items-center cursor-pointer">
                 {svgitem.map((item, index) => (
-                    <button key={index} className="  p-4 focus:border-l-2 border-fontcolor focus:fill-fontcolor "  onClick={() => {
+                    <button key={index} className="  p-2 focus:border-l-2 border-fontcolor focus:fill-fontcolor "  onClick={() => {
                         if (index === 0) {
                             setVisibileExplore(true);
                         } else {

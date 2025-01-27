@@ -1,5 +1,5 @@
 'use client'
-import { AboutSvg, BorderSvg, ContactMeSvg, ContactSvg, MywokrSvg, SkillsSvg, WorkSvg } from "@/assets";
+import { AboutSvg, BorderSvg, ContactMeSvg, ContactSvg, MailSvg, MywokrSvg, SkillsSvg, WorkSvg } from "@/assets";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { useStore } from "@/store";
@@ -32,7 +32,7 @@ export default function AboutTs() {
         {
             title: 'Contact Me',
             link: '/#contact-me',
-            svg: <ContactMeSvg />
+            svg: <MailSvg/>
         },
 
     ]
