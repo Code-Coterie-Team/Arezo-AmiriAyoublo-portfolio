@@ -7,13 +7,14 @@ import AboutTs from "./Itemaboutts";
 import { useStore } from "@/store";
 
 const AboutMets = () => {
-    const activeLink = useStore((state) => state.activeLink);
-    const {setActiveLink}=useStore();
+   
+    const {setActiveLink,addLink}=useStore();
     const [showAboutme, setShowAboutme] = useState(true);
      
     
-    const toggleAboutMe = () => {
+    const toggleAboutMe = (name:string,href:string) => {
         setShowAboutme(!showAboutme);
+        addLink({name,href});
         setActiveLink('/')
         
     }
@@ -21,10 +22,10 @@ const AboutMets = () => {
         <div className=" flex gap-6 text-base">
             <div className="border-l-[0.3px] border-bordercolor"></div>
             <div className="flex flex-col gap-2 text-fontcolor ">
-                <div className="flex gap-1  hover:bg-borderdark  font-medium text-base " onClick={toggleAboutMe}  >
+                <div className="flex gap-1  hover:bg-borderdark  font-medium text-base " onClick={()=>setShowAboutme(!showAboutme)}  >
 
                     <StarSvg />
-                    <span className=" "  onClick={toggleAboutMe}>about_me.ts</span>
+                    <span className=" "  onClick={()=>toggleAboutMe('Home','/')}>about_me.ts</span>
                 </div>
                 {showAboutme && <AboutTs />}
             </div>

@@ -10,7 +10,10 @@ export default {
   theme: {
     extend: {
       colors: {
-       
+        light:{ 
+          linkcolorlight:'',
+
+        },
         foreground: "var(--foreground)",
         fontcolor:"rgb(169, 177, 214)",
         borderdark:"rgb(27 ,30 ,46 )",

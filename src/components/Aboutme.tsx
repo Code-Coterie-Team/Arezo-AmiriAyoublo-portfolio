@@ -2,7 +2,6 @@
 import WorkExperience from "./Workexperience";
 import PersonalInformation from "./Personinformation";
 import Skills from "./Skills";
-import Mywokr from "./Mywork";
 import ContactToMe from "./Contacttome";
 import Mywork from "./Mywork";
 import AnimateComponent from "./AnimateComponent";

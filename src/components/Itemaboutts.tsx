@@ -51,8 +51,8 @@ export default function AboutTs() {
     return (
         < motion.div className="flex flex-col gap-1 pl-6 "  variants={animationlink} initial="hidden" animate="visible">
 
-            {navs.map((item, index) => {
-                const itemHash = item.link.split('#')[1]
+        {navs.map((item, index) => {
+                
                 
                 return (
                     <motion.div  key={index}  variants={itemMotion}  >
@@ -63,14 +63,7 @@ export default function AboutTs() {
                             
 
                         </Link>
-                        {/* {`#${itemHash}` && (
-                                <div className="flex  gap-10">
-                                    <BorderSvg />
-                                    <BorderSvg className=" absolute top-0 -left-4 -rotate-90" />
-                                    <BorderSvg className="rotate-90 absolute top-4 " />
-                                    <BorderSvg className=" -rotate-180 absolute top-4 -left-4" />
-                                </div>)
-                            } */}
+                       
                     </motion.div>
                 )
 

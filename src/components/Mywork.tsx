@@ -19,11 +19,9 @@ export default function Mywork(){
             <div className="grid grid-cols-1 gap-8 pt-20">
                 <Samplework project={'Kanban '} image={'/kanban.jpg'} link={'/apps/kanban'} projectlink=""/>
                 <Samplework project={'real-state'} image={'/real-estate.png'} link={'/apps/real-state'} projectlink=""/>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <SampleMini project={'Calculator'} image={'/calculator.png'} link={'/apps/calculator'} projectlink={'https://calculator-react-app-arezoo.netlify.app/'}/>
-                    <SampleMini project={'Product list'} image={'/productlist.webp'} link={'/apps/product-list'} projectlink={'https://product-list-card-js.netlify.app/'}/>
+                <Samplework project={'Calculator'} image={'/calculator.png'} link={'/apps/calculator'} projectlink={'https://calculator-react-app-arezoo.netlify.app/'}/>
+                 <Samplework project={'Product list'} image={'/productlist.webp'} link={'/apps/product-list'} projectlink={'https://product-list-card-js.netlify.app/'}/>
 
-                </div>
             </div>
         </div>
     )

@@ -2,7 +2,7 @@ import { persist, createJSONStorage } from "zustand/middleware";
 
 import { create } from "zustand";
 import Link from "next/link";
-import { stat } from "fs";
+
 
 interface Link {
   name: string;
@@ -24,8 +24,8 @@ interface StoreState {
 
 export const useStore = create<StoreState>()(
   persist(
-    (set,get) => ({
-      links: [],
+    (set, get) => ({
+      links: [{name:'Home',href:'/'},],
       activeLink: null,
       activeProject: null,
       setActiveLink: (href) => set({ activeLink: href }),
@@ -33,19 +33,12 @@ export const useStore = create<StoreState>()(
         set((state) => ({
           links: [...state.links, newlink],
         })),
-      removeLink: (href) =>{
-        
-            const{links}=get();
-            const filterLinks=links.filter((link) => link.href !== href);
-            set({links:filterLinks});
+      removeLink: (href) => {
+        const { links } = get();
+        const filterLinks = links.filter((link) => link.href !== href);
+        set({ links: filterLinks });
+      },
 
-            if(filterLinks.length>0){
-                return filterLinks[filterLinks.length]
-          
-           }  
-           return null;
-        },
-    
       setActiveProject: (name) =>
         set(() => ({
           activeProject: name,
@@ -59,7 +52,6 @@ export const useStore = create<StoreState>()(
         links: state.links,
         activeProject: state.activeProject,
         activeLink: state.activeLink,
-       
       }),
     }
   )
