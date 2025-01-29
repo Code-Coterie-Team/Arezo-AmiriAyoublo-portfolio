@@ -6,7 +6,7 @@ import BorderTop from "./Bordertop";
 export default function ContactToMe() {
 
     return (
-        <div className="grid grid-cols-1 gap-8 pb-20" id='contact-me'>
+        <div className="grid grid-cols-1 gap-8  pt-10 pb-20"  id='contact-me'>
             <BorderTop />
             <div className="flex gap-4 relative p-6 ">
                 <div className="size-10 rounded-full bg-contactcolor  blur-xl"></div>

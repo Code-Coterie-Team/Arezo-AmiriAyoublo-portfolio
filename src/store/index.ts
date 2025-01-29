@@ -23,6 +23,8 @@ interface StoreState {
   setActiveProject: (name: string) => void;
   activeSection:string;
   setActiveSection:(id:string)=>void;
+  activeSectionProject:string;
+  setActiveSectionProject:(id:string)=>void;
 }
 
 export const useStore = create<StoreState>()(
@@ -54,6 +56,8 @@ export const useStore = create<StoreState>()(
       setVisibileExplore: (value) => set({ visibleExplore: value }),
       activeSection:"aboutme",
       setActiveSection:(id)=>set({activeSection:id}),
+      activeSectionProject:"about",
+      setActiveSectionProject:(id)=>set({activeSectionProject:id}),
       
     }),
    

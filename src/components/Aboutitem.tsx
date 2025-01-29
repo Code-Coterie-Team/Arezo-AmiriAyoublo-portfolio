@@ -3,6 +3,7 @@ import { StarSvg } from "@/assets";
 import { useEffect, useState } from "react";
 import AboutTs from "./Itemaboutts";
 import { useStore } from "@/store";
+import Link from "next/link";
 
 const AboutMets = () => {
    
@@ -27,7 +28,7 @@ const AboutMets = () => {
                 <div className="flex gap-1  hover:bg-borderdark  font-medium text-base " onClick={()=>setShowAboutme(!showAboutme)}  >
 
                     <StarSvg />
-                    <span className=" "  onClick={()=>toggleAboutMe('Home','/')}>about_me.ts</span>
+                    <Link  href={'/'}  onClick={()=>toggleAboutMe('Home','/')}>about_me.ts</Link>
                 </div>
                 {showAboutme && <AboutTs />}
             </div>

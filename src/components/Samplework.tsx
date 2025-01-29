@@ -9,8 +9,9 @@ interface Idata {
   image: string;
   link: string;
   projectlink: string;
+  gitlink:string
 }
-const Samplework = ({ project, image, link, projectlink }: Idata) => {
+const Samplework = ({ project, image, link, projectlink ,gitlink}: Idata) => {
   const [bgPosition, setBgPosition] = useState({ x: 0, y: 0 });
   const links = useStore((state) => state.links);
   const addLink = useStore((state) => state.addLink);
@@ -41,7 +42,7 @@ const Samplework = ({ project, image, link, projectlink }: Idata) => {
             {project}
           </Link>
           <div className="flex  items-center  gap-2">
-            <Link href={""} target="_blank">
+            <Link href={gitlink} target="_blank">
               <GiticonSvg width={20} height={20} className="fill-white" />
             </Link>
             <Link href={projectlink} target="_blank">

@@ -8,6 +8,7 @@ import College from "./College";
 import Social from "./Social";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { div } from "framer-motion/client";
 
 export default function PersonalInformation() {
   const activeRef = useRef(null);
@@ -18,11 +19,8 @@ export default function PersonalInformation() {
   };
 
   return (
-    <>
-      <div
-        id="aboutme"
-        className="flex flex-col pt-20 gap-4 justify-center content-center  text-white scroll-smooth"
-      >
+    <div id="aboutme" className=" flex flex-col gap-60">
+      <div className="flex flex-col pt-20 gap-4 justify-center content-center  text-white scroll-smooth">
         <div className="flex text-5xl gap-4 relative">
           <h1 className=" font-semibold ">Arezoo AmiriAyoubloo</h1>
           <span className="  animation animate-wave">👋</span>
@@ -46,24 +44,24 @@ export default function PersonalInformation() {
         <Social />
       </div>
       <div className=" flex flex-col justify-center items-center ">
-      {[...Array(3)].map((_, index) => (
-        <motion.span
-          key={index}
-          className="size-4 border-white border-r-2 border-b-2"
-          animate={{
-            rotate:[45,45,45],
-            y: [0, 15, 0], 
-            opacity: [1, 0, 1],  
-          }}
-          transition={{
-            duration: 1,
-            delay: index * 0.6, 
-            repeat: Infinity, 
-            repeatType: 'loop', 
-            ease: 'easeInOut',
-          }}
-        />
-      ))}
+        {[...Array(3)].map((_, index) => (
+          <motion.span
+            key={index}
+            className="size-4 border-white border-r-2 border-b-2"
+            animate={{
+              rotate: [45, 45, 45],
+              y: [0, 15, 0],
+              opacity: [1, 0, 1],
+            }}
+            transition={{
+              duration: 1,
+              delay: index * 0.6,
+              repeat: Infinity,
+              repeatType: "loop",
+              ease: "easeInOut",
+            }}
+          />
+        ))}
       </div>
 
       <div className="flex flex-col gap-10 text-white">
@@ -107,6 +105,6 @@ export default function PersonalInformation() {
         </motion.div>
         <College />
       </div>
-    </>
+    </div>
   );
 }
