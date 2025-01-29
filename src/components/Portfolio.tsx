@@ -105,9 +105,9 @@ const Portfolio = () => {
       </div>
       {showSrc && (
         <div className="flex gap-2 pl-4">
-          <div className="border-[0.1px] border-bordercolor"></div>
+          <div className="border-[0.5px] border-bordercolor"></div>
           <div className="flex flex-col  gap-2   ">
-            <div className="border-l-[0.4px] border-bordercolor"></div>
+            <div className="border-l-[0.5px] border-bordercolor"></div>
             <div className="flex gap-1 " onClick={toggleWork}>
               <ArowSvg />
               <WorksrcSvg />
@@ -118,7 +118,7 @@ const Portfolio = () => {
         </div>
       )}
 
-      <div className="flex flex-col gap-4 pl-6">
+      <div className="flex flex-col gap-1 pl-6">
         {directory.map((item, index) => (
           <div key={index} className="flex gap-4">
             {item.svg}

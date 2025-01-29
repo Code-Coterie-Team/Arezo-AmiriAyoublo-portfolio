@@ -25,18 +25,16 @@ const Headermain = () => {
   };
 
   useEffect(() => {
-    if (links.length > 0) {
+    
       const lastLink = links[links.length - 1]?.href;
       if (lastLink) {
         router.push(lastLink);
       }
-    } else {
-      router.push("/");
-    }
+   
   }, [links, router]);
 
   return (
-    <div className=" w-full h-12 border-b-2 border-borderdark flex justify-between  items-center bg-maincolor text-sm  fixed z-10  pr-20">
+    <div className=" w-full h-12 border-b-2 border-borderdark flex justify-between   items-center bg-maincolor text-sm ">
       <div className="flex h-full ">
         {links.map((item: { name: string; href: string }, index: number) => (
           <div
@@ -59,7 +57,8 @@ const Headermain = () => {
           </div>
         ))}
       </div>
-      <div className="flex ">
+    
+      <div className="flex gap-2 ">
         <LoadBranchSvg />
         <SidewindowSvg />
         <ToggleSvg />

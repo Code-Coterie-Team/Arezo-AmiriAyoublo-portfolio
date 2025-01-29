@@ -2,6 +2,7 @@ import { persist, createJSONStorage } from "zustand/middleware";
 
 import { create } from "zustand";
 import Link from "next/link";
+import { link } from "fs";
 
 
 interface Link {
@@ -20,6 +21,8 @@ interface StoreState {
   setVisibileExplore: (value: boolean) => void;
   activeProject: string | null;
   setActiveProject: (name: string) => void;
+  activeSection:string;
+  setActiveSection:(id:string)=>void;
 }
 
 export const useStore = create<StoreState>()(
@@ -35,17 +38,25 @@ export const useStore = create<StoreState>()(
         })),
       removeLink: (href) => {
         const { links } = get();
-        const filterLinks = links.filter((link) => link.href !== href);
-        set({ links: filterLinks });
+        if(links.length>1){
+          const filterLinks = links.filter((link) => link.href !== href);
+          set({ links: filterLinks });
+        }
+        
       },
 
       setActiveProject: (name) =>
         set(() => ({
           activeProject: name,
         })),
+
       visibleExplore: true,
       setVisibileExplore: (value) => set({ visibleExplore: value }),
+      activeSection:"aboutme",
+      setActiveSection:(id)=>set({activeSection:id}),
+      
     }),
+   
     {
       name: "store-links",
       partialize: (state) => ({

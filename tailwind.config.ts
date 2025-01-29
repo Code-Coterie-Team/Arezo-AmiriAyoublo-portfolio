@@ -77,15 +77,11 @@ export default {
             transform:' rotate(0deg)'
         }
         },
-        scroll:{
-          '0%': { transform: 'translateY(2px) rotate-45 ', opacity: '1' },
-          '50%': { transform: 'translateY(15px) rotate-45 ', opacity: '0.5' },
-          '100%': { transform: 'translateY(30px) rotate-45 ', opacity: '1' },
-        }
+        
       },
       animation:{
         wave:'wave 2s ease infinite',
-        scroll:'scroll 0.5s  ease-in-out infinite',
+       
       },
       
       

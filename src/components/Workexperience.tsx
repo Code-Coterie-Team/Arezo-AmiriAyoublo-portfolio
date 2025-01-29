@@ -8,7 +8,7 @@ import { useStore } from "@/store";
 
 
 const WorkExperience=()=>{
-    const {styleChange}=useStore(state=>state)
+   
     
     
     

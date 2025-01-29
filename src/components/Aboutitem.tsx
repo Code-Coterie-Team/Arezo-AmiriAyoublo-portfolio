@@ -1,7 +1,5 @@
 "use client"
 import { StarSvg } from "@/assets";
-
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import AboutTs from "./Itemaboutts";
 import { useStore } from "@/store";
@@ -10,11 +8,15 @@ const AboutMets = () => {
    
     const {setActiveLink,addLink}=useStore();
     const [showAboutme, setShowAboutme] = useState(true);
-     
+     const links=useStore((state)=>state.links)
     
     const toggleAboutMe = (name:string,href:string) => {
         setShowAboutme(!showAboutme);
-        addLink({name,href});
+        const existlink=links.some((l:any)=>l.href===href);
+        if(!existlink){
+            addLink({name,href});
+        }
+      
         setActiveLink('/')
         
     }
