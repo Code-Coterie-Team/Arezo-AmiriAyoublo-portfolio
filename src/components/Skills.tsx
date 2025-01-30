@@ -110,6 +110,7 @@ const Skills = () => {
               { image: "/github-logo.webp", name: "Github" },
               { image: "/figma-logo.webp", name: "Figma" },
               { image: "/redux-logo.webp", name: "Redux" },
+              {image:'/zustand.png',name:'Zustand'},
             ]}
           />
         )}
@@ -125,6 +126,9 @@ const Skills = () => {
               { image: "/tailwindcss-logo.webp", name: "Tailwind" },
             ]}
           />
+        )}
+        {activeSkill==='Back'&&(
+          <CircleSkill title="Back" icon={[{image:'/django.png',name:'Django'},{image:'/sql.png',name:'SQL'}]}/>
         )}
       </div>
     </div>

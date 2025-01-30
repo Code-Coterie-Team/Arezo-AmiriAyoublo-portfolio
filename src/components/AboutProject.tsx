@@ -5,7 +5,8 @@ interface IData{
     imageproject:string;
 
 }
-export default function AboutKanban({project,description,imageproject}:IData) {
+export default function AboutProject({project,description,imageproject}:IData) {
+    
     return (
         <div id='about' className="flex flex-col gap-20 justify-center items-center pt-20 pb-10">
             <div className="flex flex-col gap-6 justify-center items-center">

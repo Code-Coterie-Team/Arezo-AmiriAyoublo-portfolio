@@ -1,4 +1,4 @@
-import AboutKanban from "@/components/AboutProject";
+import AboutProject from "@/components/AboutProject";
 import AnimateProject from "@/components/AnimateProject";
 import Challenge from "@/components/Challenge";
 import Soultion from "@/components/Sulotion";
@@ -7,16 +7,16 @@ import Technologies from "@/components/Technology";
 export default function Kanban() {
   return (
     <div className="grid grid-cols-1 gap-4 h-full">
-      <AboutKanban
+      <AnimateProject id='about'><AboutProject
         project={"Kanban"}
         description={
           "A Kanban project built using React,Redux, and Tailwind CSS is a modern, responsive task management application."
         }
         imageproject={"/kanban.jpg"}
-      />
-      <Challenge />
-      <Soultion />
-      <Technologies
+      /></AnimateProject>
+      <AnimateProject id='challenge'> <Challenge /></AnimateProject>
+      <AnimateProject id='solution'><Soultion /></AnimateProject>
+      <AnimateProject id='technologies'><Technologies
         item={[
           { name: "JavaScript", image: "/js-logo.webp" },
           { name: "HTML5", image: "/html5-logo.webp" },
@@ -26,7 +26,7 @@ export default function Kanban() {
           { name: "Github", image: "/github-logo.webp" },
           { name: "TailwindCSS", image: "/tailwindcss-logo.webp" },
         ]}
-      />
+      /></AnimateProject>
     </div>
   );
 }

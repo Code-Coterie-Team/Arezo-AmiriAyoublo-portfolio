@@ -77,7 +77,7 @@ const Portfolio = () => {
   ];
   return (
     <div
-      className="flex flex-col gap-2  h-screen overflow-y-auto"
+      className="flex flex-col gap-1  h-screen overflow-y-auto"
       style={{ maxHeight: "400px" }}
     >
       {firstDirectory.map((item, index) => (
@@ -95,7 +95,7 @@ const Portfolio = () => {
         <PublicitemSvg />
         <span>public</span>
       </div>
-      <div className="flex gap-8 pl-4 ">{showPublic && <AboutMets />}</div>
+      <div className="flex gap-4 pl-4 ">{showPublic && <AboutMets />}</div>
       <div className="pl-2 flex gap-1 " onClick={toggleSrc}>
         <div className="flex gap-1">
           <ArowSvg />

@@ -34,8 +34,7 @@ export default function PersonalInformation() {
         </div>
         <p>
           I’m a frontend developer passionate about creating engaging and
-          visually appealing user interfaces. With a background in backend
-          development using Python and Django, I bring valuable problem-solving
+          visually appealing user interfaces.I bring valuable problem-solving
           skills and a broad perspective to my work. Lately, I’ve been fully
           immersed in frontend projects, continuously honing my skills and
           staying updated with the latest technologies to deliver seamless user

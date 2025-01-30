@@ -1,33 +1,27 @@
 "use client"
 import { useStore } from "@/store"
 import { div } from "framer-motion/client"
-import { useEffect } from "react"
-import AboutKanban from "./AboutProject"
-import Technologies from "./Technology"
-import Challenge from "./Challenge"
-import Soultion from "./Sulotion"
-const AnimateProject=()=>{
+import React, { useEffect,useRef } from "react"
+import { useInView } from "framer-motion"
+import {motion } from 'framer-motion'
+const AnimateProject=( {id,children}:{id:string,children:React.ReactNode})=>{
     const { setActiveSectionProject}=useStore()
-    const nav=['about','challenge','solution','technologies']
+    const  projectRef = useRef(null)
+    const isInView = useInView(projectRef, {amount:0.1});
+  
     useEffect(() => {
-        const observer = new IntersectionObserver(
-          (entries) => {
-            const visible = entries.find((entry) => entry.isIntersecting);
-            if (visible) setActiveSectionProject(visible.target.id);
-          },
-          { threshold: 0.1 }
-        );
-    
-        nav.forEach((id) => {
-          const el = document.getElementById(id);
-          if (el) observer.observe(el);
-        });
-    
-        return () => observer.disconnect();
-      }, []);
+      if (isInView) setActiveSectionProject(id);
+    }, [isInView]);
+  
+  
     return(
-         
-        <div></div>
+         <motion.div 
+           ref={projectRef}
+           
+         >
+             {children}
+         </motion.div>
+      
     )
 
 }

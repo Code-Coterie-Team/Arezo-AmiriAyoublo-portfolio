@@ -16,13 +16,19 @@ interface StoreState {
   addLink: (newlink: Link) => void;
   setActiveLink: (href: string) => void;
   removeLink: (name: string) => void;
+   
+  showAboutme:boolean;
+  setShowAboutme:(value:boolean)=>void;
 
   visibleExplore: boolean;
   setVisibileExplore: (value: boolean) => void;
+
   activeProject: string | null;
   setActiveProject: (name: string) => void;
+
   activeSection:string;
   setActiveSection:(id:string)=>void;
+
   activeSectionProject:string;
   setActiveSectionProject:(id:string)=>void;
 }
@@ -30,7 +36,7 @@ interface StoreState {
 export const useStore = create<StoreState>()(
   persist(
     (set, get) => ({
-      links: [{name:'Home',href:'/'},],
+      links: [{name:'About me',href:'/'},],
       activeLink: null,
       activeProject: null,
       setActiveLink: (href) => set({ activeLink: href }),
@@ -51,6 +57,8 @@ export const useStore = create<StoreState>()(
         set(() => ({
           activeProject: name,
         })),
+      showAboutme:true,
+      setShowAboutme:(value)=>set({showAboutme:value}),
 
       visibleExplore: true,
       setVisibileExplore: (value) => set({ visibleExplore: value }),

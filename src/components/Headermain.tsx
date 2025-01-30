@@ -15,20 +15,35 @@ import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 
 const Headermain = () => {
-  const { removeLink } = useStore();
+
   const links = useStore((state) => state.links);
+  const  {setActiveProject,setActiveLink,setShowAboutme,removeLink}=useStore();
   const path = usePathname();
   const router = useRouter();
-  console.log(links);
+  const  activeLink=useStore((state)=>state.activeLink)
   const handelDelete = (href: string) => {
     removeLink(href);
   };
+  const setLink=(name:string,href:string)=>{
+          setActiveProject(name)
+          setActiveLink(href);
+          if(name==='About me'){
+            setShowAboutme(true);
+          }else{
+            setShowAboutme(false)
+          }
+  }
 
   useEffect(() => {
     
-      const lastLink = links[links.length - 1]?.href;
-      if (lastLink) {
-        router.push(lastLink);
+      
+      if (activeLink) {
+        router.push(activeLink);
+        if (activeLink !=='/'){
+          setShowAboutme(false);
+        }else{
+          setShowAboutme(true)
+        }
       }
    
   }, [links, router]);
@@ -45,8 +60,8 @@ const Headermain = () => {
                 : "text-fontcolor"
             }`}
           >
-            {item.name === "Home" && <StarSvg />}
-            <Link href={item.href}>{item.name}</Link>
+            {item.name === "About me" && <StarSvg />}
+            <button onClick={()=>setLink(item.name,item.href)}><Link href={item.href}>{item.name}</Link></button>
             <button
               onClick={() => {
                 handelDelete(item.href);

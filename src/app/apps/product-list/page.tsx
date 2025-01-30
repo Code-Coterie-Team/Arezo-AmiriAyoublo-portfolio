@@ -4,29 +4,25 @@ import AnimateProject from "@/components/AnimateProject";
 import Challenge from "@/components/Challenge";
 import Soultion from "@/components/Sulotion";
 import Technologies from "@/components/Technology";
-
-const Calculator = () => {
+export default function ProductList() {
   return (
     <div className="grid grid-cols-1 gap-4 h-full">
       <AnimateProject id="about">
-        {" "}
         <AboutProject
-          project={"Calculator"}
+          project={"product-list"}
           description={
-            "This project is a  calculator application built using React and Tailwind CSS, designed to perform basic arithmetic operations with an intuitive and user-friendly interface."
+            "Product list with cart is to build out this product list project that includes a functional cart and get it looking as close to the design as possible.."
           }
-          imageproject={"/calculator.png"}
+          imageproject={"/productlist.webp"}
         />
       </AnimateProject>
       <AnimateProject id="challenge">
-        {" "}
         <Challenge />
       </AnimateProject>
       <AnimateProject id="soultion">
         <Soultion />
       </AnimateProject>
       <AnimateProject id="technologies">
-        {" "}
         <Technologies
           item={[
             { name: "JavaScript", image: "/js-logo.webp" },
@@ -41,6 +37,4 @@ const Calculator = () => {
       </AnimateProject>
     </div>
   );
-};
-
-export default Calculator;
+}
