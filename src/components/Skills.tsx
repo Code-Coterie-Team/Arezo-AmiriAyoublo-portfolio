@@ -5,19 +5,42 @@ import BorderTop from "./Bordertop";
 import CircleSkill from "./Circleskill";
 
 const Skills = () => {
-  const [styleTitle, setyleTitle] = useState({ opacity: 0 });
+
   const [activeSkill, setActiveSkill] = useState("Language");
 
   const [randomColor, setColor] = useState("rgb(255,255,255)");
 
-  const change = () => {
-    setyleTitle({ opacity: 1 });
-  };
+
   const randomColorF = () => {
     const r = Math.floor(Math.random() * 256);
     const g = Math.floor(Math.random() * 256);
     const b = Math.floor(Math.random() * 256);
     return `rgb(${r},${g},${b})`;
+  };
+  const skillCategories :Record<string,{image:string,name:string}[]>= {
+    Language: [
+      { image: "/js-logo.webp", name: "JavaScript" },
+      { image: "/python-logo.webp", name: "Python" },
+      { image: "/ts-logo.webp", name: "TypeScript" },
+    ],
+    Tools: [
+      { image: "/git-logo.webp", name: "Git" },
+      { image: "/github-logo.webp", name: "GitHub" },
+      { image: "/figma-logo.webp", name: "Figma" },
+      { image: "/redux-logo.webp", name: "Redux" },
+      { image: "/zustand.png", name: "Zustand" },
+    ],
+    Front: [
+      { image: "/html5-logo.webp", name: "HTML" },
+      { image: "/css-logo.png", name: "CSS" },
+      { image: "/react-logo.webp", name: "React" },
+      { image: "/nextjs-logo.webp", name: "Next.js" },
+      { image: "/tailwindcss-logo.webp", name: "Tailwind CSS" },
+    ],
+    Back: [
+      { image: "/django.png", name: "Django" },
+      { image: "/sql.png", name: "SQL" },
+    ],
   };
   useEffect(() => {
     const interval = setInterval(() => {
@@ -29,7 +52,7 @@ const Skills = () => {
   return (
     <div className="grid grid-cols-1 gap-8 pt-10" id="skills">
       <BorderTop />
-      <div className=" flex gap-6 content-center relative" onScroll={change}>
+      <div className=" flex gap-6 content-center relative" >
         <div className="size-10 rounded-full bg-skillcolor blur-lg"></div>
         <Skillitem className=" absolute " />
         <p className="text-2xl text-white">Skills</p>
@@ -44,6 +67,8 @@ const Skills = () => {
           className="  relative size-72  border-4 border-borderdark rounded-full shadow-sm shadow-white"
           style={{ background: randomColor }}
         >
+           
+           
           <div className="size-56 rounded-full bg-black/80 absolute left-7 bottom-7">
             <div
               className="size-60 bg-transparent absolute left-8 top-48 rotate-45 -translate-x-1/2  -translate-y-1/2 rounded-xl "
@@ -89,47 +114,16 @@ const Skills = () => {
             >
               Back
             </button>
-          </div>
+          </div> 
         </div>
-
-        {activeSkill === "Language" && (
-          <CircleSkill
-            title="Programming Languages"
-            icon={[
-              { image: "/js-logo.webp", name: "JavaScript" },
-              { image: "/python-logo.webp", name: "Python" },
-              { image: "/ts-logo.webp", name: "TypeScript" },
-            ]}
+        {Object.keys(skillCategories).map((item,index)=>(
+              activeSkill=== item &&(
+                <CircleSkill key={index} title={activeSkill} icon={skillCategories[activeSkill]}
+            
           />
-        )}
-        {activeSkill == "Tools" && (
-          <CircleSkill
-            title="Tools"
-            icon={[
-              { image: "/git-logo.webp", name: "git" },
-              { image: "/github-logo.webp", name: "Github" },
-              { image: "/figma-logo.webp", name: "Figma" },
-              { image: "/redux-logo.webp", name: "Redux" },
-              {image:'/zustand.png',name:'Zustand'},
-            ]}
-          />
-        )}
-        {activeSkill === "Front" && (
-          <CircleSkill
-            title="Front"
-            icon={[
-              { image: "/html5-logo.webp", name: "HTML" },
-              { image: "/css-logo.png", name: "CSS" },
-              { image: "/react-logo.webp", name: "REACT" },
-              { image: "/nextjs-logo.webp", name: "NextJS" },
-
-              { image: "/tailwindcss-logo.webp", name: "Tailwind" },
-            ]}
-          />
-        )}
-        {activeSkill==='Back'&&(
-          <CircleSkill title="Back" icon={[{image:'/django.png',name:'Django'},{image:'/sql.png',name:'SQL'}]}/>
-        )}
+              )
+        ))},
+      
       </div>
     </div>
   );
