@@ -16,7 +16,7 @@ export default function Experience({date,position,description,company,imageSrc}:
             </div>
             <div className="flex flex-col gap-8 ">
                     <div className="flex flex-col gap-6">
-                         <p className="text-red-400 text-lg font-semibold "> {company}|{position}</p>
+                         <p className="text-red-400 text-lg font-semibold "> {company} | {position}</p>
                     
                             <div className="flex flex-col gap-2 content-center">
                                 {description.map((desc,index)=>(

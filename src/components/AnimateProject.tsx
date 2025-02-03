@@ -17,8 +17,8 @@ const AnimateProject=( {id,children}:{id:string,children:React.ReactNode})=>{
     return(
          <motion.div 
            ref={projectRef}
-           
-         >
+           id={id}
+           >
              {children}
          </motion.div>
       

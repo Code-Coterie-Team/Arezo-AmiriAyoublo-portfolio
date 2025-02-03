@@ -1,16 +1,15 @@
 "use clinet";
-import { AboutSvg, BackgroundSvg, ContactSvg, GiticonSvg } from "@/assets";
-import Link from "next/link";
-
+import { ContactSvg } from "@/assets";
 import BorderTop from "./Bordertop";
 import Image from "next/image";
 import College from "./College";
 import Social from "./Social";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { div } from "framer-motion/client";
+import { useState, useEffect } from "react";
 
 export default function PersonalInformation() {
+  const [animationState, setAnimationState] = useState("visible");
   const activeRef = useRef(null);
   const isView = useInView(activeRef, { once: false });
   const animationVariants = {
@@ -18,6 +17,35 @@ export default function PersonalInformation() {
     visible: { opacity: 1, x: 0, transition: { duration: 1 } },
   };
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setAnimationState((prev) => (prev === "visible" ? "hidden" : "visible"));
+    }, (job.length + 1) * 200);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const job = [
+    "F",
+    "r",
+    "o",
+    "n",
+    "t",
+    "-",
+    "e",
+    "n",
+    "d",
+    "  ",
+    "d",
+    "e",
+    "v",
+    "e",
+    "l",
+    "o",
+    "p",
+    "e",
+    "r",
+  ];
   return (
     <div id="aboutme" className=" flex flex-col gap-60">
       <div className="flex flex-col pt-20 gap-4 justify-center content-center  text-white scroll-smooth">
@@ -28,9 +56,40 @@ export default function PersonalInformation() {
         <div className="flex gap-2  items-center">
           <span>Looking for job</span>
           <div className="size-2 bg-red-600 animate-pulse rounded-full"></div>
-          <span className="text-linkcolor animate-pulse">
-            /Frontend Developer
-          </span>
+          <motion.div
+            className="text-linkcolor "
+            initial="hidden"
+            animate={animationState}
+            variants={{
+              visible: {
+                transition: {
+                  staggerChildren: 0.2,
+                  staggerDirection: 1,
+                },
+              },
+              hidden: {
+                transition: {
+                  staggerChildren: 0.2,
+                  staggerDirection: -1,
+                },
+              },
+            }}
+          >
+            {job.map((item, index) => (
+              <motion.span
+                key={index}
+                variants={{
+                  hidden: { opacity: 0, y: 10 },
+                  visible: {
+                    opacity: 1,
+                    y: 0,
+                  },
+                }}
+              >
+                {item}
+              </motion.span>
+            ))}
+          </motion.div>
         </div>
         <p>
           I’m a frontend developer passionate about creating engaging and
@@ -49,15 +108,15 @@ export default function PersonalInformation() {
             className="size-4 border-white border-r-2 border-b-2"
             animate={{
               rotate: [45, 45, 45],
-              y: [0, 15, 0],
-              opacity: [1, 0, 1],
+              y: [-15, 0, 15],
+              opacity: [0, 1, 0],
             }}
             transition={{
-              duration: 1,
-              delay: index * 0.6,
+              duration: 1.2,
+              delay:index*0.2,
               repeat: Infinity,
               repeatType: "loop",
-              ease: "easeInOut",
+              ease: "linear",
             }}
           />
         ))}
@@ -68,9 +127,9 @@ export default function PersonalInformation() {
         <div className="flex items-center gap-4 relative">
           <div className="size-10 rounded-full bg-green-300 blur-lg "></div>
           <ContactSvg
-            className="fill-white absolute  left-4 "
-            width={32}
-            height={32}
+            className="text-white absolute  left-2 "
+            width="2rem"
+            height="2rem"
           />
           <h2 className="text-2xl">About Me</h2>
         </div>
@@ -90,8 +149,8 @@ export default function PersonalInformation() {
             <h3 className="text-2xl">Arezoo AmiriAyoubloo</h3>
             <span className="text-green-500">Frontend Developer</span>
             <p className="text-fontcolor">
-              I’m a junior software developer , passionate about honing my
-              skills and always eager to learn new technologies
+              I’m software developer , passionate about honing my skills and
+              always eager to learn new technologies
             </p>
           </div>
           <Image

@@ -7,7 +7,7 @@ interface IData {
 const Technologies = ({ item }: IData) => {
 
     return (
-        <div className="flex flex-col gap-4 p-10" id='technologies'>
+        <div id="technologies" className="flex flex-col gap-4 p-10" >
             <BorderTop />
             <span className="text-white text-3xl ">Technologies</span>
             <div className="flex gap-4 pb-20  items-center">

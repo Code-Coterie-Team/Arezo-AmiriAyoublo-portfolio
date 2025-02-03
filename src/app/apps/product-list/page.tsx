@@ -17,10 +17,10 @@ export default function ProductList() {
         />
       </AnimateProject>
       <AnimateProject id="challenge">
-        <Challenge />
+        <Challenge description={'l build a Product List Card UI using JavaScript, HTML, and CSS. The goal is to create a visually appealing and interactive product display that showcases product details efficiently.'}  point1={' Dynamic Product Display: Render multiple products dynamically.'} point2={'Product Details: Each product should display an image, title, price, and description.'} point3={'Add a hover effect for better UI interaction,Include a Buy Now or Add to Cart button for engagement.'}/>
       </AnimateProject>
       <AnimateProject id="soultion">
-        <Soultion />
+        <Soultion soultions={['Fetching and Displaying Product Data','addToCard(productName  productPrice) stores product details in the cart object and updates the product count','The updateCart() function dynamically updates the cart summary']} />
       </AnimateProject>
       <AnimateProject id="technologies">
         <Technologies

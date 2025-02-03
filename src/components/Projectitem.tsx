@@ -2,7 +2,6 @@
 import { ChallengeSvg, ProjectAboutSvg, SolutionSvg, TechnologySvg ,BorderSvg} from "@/assets";
 import Link from "next/link";
 import { motion } from 'framer-motion'
-import { div } from "framer-motion/client";
 import { useStore } from "@/store";
 import clsx from "clsx";
 const ProjectItem = () => {

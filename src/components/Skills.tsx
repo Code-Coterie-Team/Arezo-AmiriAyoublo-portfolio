@@ -71,12 +71,12 @@ const Skills = () => {
            
           <div className="size-56 rounded-full bg-black/80 absolute left-7 bottom-7">
             <div
-              className="size-60 bg-transparent absolute left-8 top-48 rotate-45 -translate-x-1/2  -translate-y-1/2 rounded-xl "
+              className="size-60 bg-transparent absolute left-8 top-48 rotate-45 -translate-x-1/2  -translate-y-1/2  "
               style={{ borderTop: ` 12px solid  ${randomColor}` }}
             ></div>
 
             <div
-              className="size-60 bg-transparent  border-b-[12px] absolute top-8 left-8  -translate-x-1/2  -translate-y-1/2 rounded-xl -rotate-45"
+              className="size-60 bg-transparent  border-b-[12px] absolute top-8 left-8  -translate-x-1/2  -translate-y-1/2 -rotate-45"
               style={{ borderBottom: `12px solid ${randomColor}` }}
             ></div>
 
@@ -106,7 +106,7 @@ const Skills = () => {
             </button>
             <button
               className={` absolute top-24 left-6 font-semibold text-xl border-b border-skillcolor ${
-                activeSkill === "Back" ? "border-b-4" : ""
+                activeSkill === "Back" ? "border-b-4" : "" 
               }`}
               onClick={() => {
                 setActiveSkill("Back");

@@ -2,19 +2,16 @@
 
 import {
   AboutSvg,
-  BorderSvg,
-  ContactMeSvg,
-  ContactSvg,
+  BorderSvg, 
   MailSvg,
   MywokrSvg,
   SkillsSvg,
   WorkSvg,
 } from "@/assets";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+
 import { useStore } from "@/store";
 import { motion } from "framer-motion";
-import { nav } from "framer-motion/client";
 import clsx from "clsx";
 
 export default function AboutTs() {

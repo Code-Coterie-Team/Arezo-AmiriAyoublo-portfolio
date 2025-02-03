@@ -17,7 +17,7 @@ const WorkExperience = () => {
       </div>
       <h2 className="font-extrabold  text-white  text-3xl ">
         {" "}
-        <span className="text-red-400"> Junior Frontend </span> with{" "}
+        <span className="text-red-400">  Front-end </span> with{" "}
         <span className="text-red-400">1 years</span> of <br /> experience in
         the software industry
       </h2>
