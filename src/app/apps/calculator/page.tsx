@@ -1,7 +1,7 @@
 import AboutProject from "@/components/AboutProject";
 import AnimateProject from "@/components/AnimateProject";
 import Challenge from "@/components/Challenge";
-import Soultion from "@/components/Sulotion";
+import Soultion from "@/components/Soultion";
 import Technologies from "@/components/Technology";
 
 const Calculator = () => {
@@ -19,10 +19,22 @@ const Calculator = () => {
       </AnimateProject>
       <AnimateProject id="challenge">
         {" "}
-        <Challenge description={'Design and develop a React Calculator with a clean and user-friendly UI. The calculator should support basic arithmetic operations (Addition, Subtraction, Multiplication, Division) '} point1={' Implement using React & Tailwind CSS'} point2={'Support live calculations with a clear display'} point3={'Include a Clear (C) button to reset input'} />
+        <Challenge
+          description={
+            "Design and develop a React Calculator with a clean and user-friendly UI. The calculator should support basic arithmetic operations (Addition, Subtraction, Multiplication, Division) "
+          }
+          point1={" Implement using React & Tailwind CSS"}
+          point2={"Support live calculations with a clear display"}
+          point3={"Include a Clear (C) button to reset input"}
+        />
       </AnimateProject>
       <AnimateProject id="soultion">
-        <Soultion soultions={['This React-based calculator application is designed using React Hooks (useState) for state management','It implements essential arithmetic operations along with some advanced mathematical functions.ww']}  />
+        <Soultion
+          soultions={[
+            "This React-based calculator application is designed using React Hooks (useState) for state management",
+            "It implements essential arithmetic operations along with some advanced mathematical functions.ww",
+          ]}
+        />
       </AnimateProject>
       <AnimateProject id="technologies">
         {" "}

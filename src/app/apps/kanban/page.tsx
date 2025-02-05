@@ -1,7 +1,7 @@
 import AboutProject from "@/components/AboutProject";
 import AnimateProject from "@/components/AnimateProject";
 import Challenge from "@/components/Challenge";
-import Soultion from "@/components/Sulotion";
+import Soultion from "@/components/Soultion";
 import Technologies from "@/components/Technology";
 
 export default function Kanban() {
@@ -25,13 +25,19 @@ export default function Kanban() {
           point1={
             "Users should be able to create tasks with a title  description"
           }
-         point2={'users should be able to edit tasks and board '}
+          point2={"users should be able to edit tasks and board "}
           point3={`The board should be responsive and work well on both mobile and desktop screens
            `}
         />
       </AnimateProject>
       <AnimateProject id="solution">
-        <Soultion soultions={['build with a state and save in local stoarge','set a global state with redux for handeling edit ','responsive with tailwind']} />
+        <Soultion
+          soultions={[
+            "build with a state and save in local stoarge",
+            "set a global state with redux for handeling edit ",
+            "responsive with tailwind",
+          ]}
+        />
       </AnimateProject>
       <AnimateProject id="technologies">
         <Technologies
