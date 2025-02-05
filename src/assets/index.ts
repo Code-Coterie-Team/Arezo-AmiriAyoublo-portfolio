@@ -44,7 +44,8 @@ import BorderSvg from "./border.svg";
 import LoadBranchSvg from './loadBranch.svg';
 import ToggleSvg from './toggle.svg';
 import MailSvg from './mail.svg';
-import DemoSvg from './demo.svg'
+import DemoSvg from './demo.svg';
+
 export {
   ArowSvg,
   AboutSvg,

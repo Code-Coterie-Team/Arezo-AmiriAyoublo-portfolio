@@ -1,5 +1,5 @@
-"use client";
-import { Skillitem } from "@/assets";
+
+import Skillitem  from "@/assets/skillitem.svg";
 import {  useEffect, useState } from "react";
 import BorderTop from "./Bordertop";
 import CircleSkill from "./Circleskill";
@@ -9,7 +9,7 @@ const Skills = () => {
   const [activeSkill, setActiveSkill] = useState("Language");
 
   const [randomColor, setColor] = useState("rgb(255,255,255)");
-
+  
 
   const randomColorF = () => {
     const r = Math.floor(Math.random() * 256);
@@ -65,7 +65,7 @@ const Skills = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 md:gap-10 ">
         <div
           className="  relative size-72  border-4 border-borderdark rounded-full shadow-sm shadow-white"
-          style={{ background: randomColor }}
+          style={{ background: randomColor}}
         >
            
            
@@ -117,9 +117,11 @@ const Skills = () => {
           </div> 
         </div>
         {Object.keys(skillCategories).map((item,index)=>(
+              
               activeSkill=== item &&(
+                
                 <CircleSkill key={index} title={activeSkill} icon={skillCategories[activeSkill]}
-            
+                
           />
               )
         ))}

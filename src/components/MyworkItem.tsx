@@ -15,22 +15,22 @@ const MyWorkItem = () => {
 
   const navProject = [
     {
-      path: "/apps/kanban",
+      path: "/kanban",
       name: "Kanban",
       svg: <ReactItemSvg />,
     },
     {
-      path: "/apps/real-state",
+      path: "/real-state",
       name: "Real State",
       svg: <ReactItemSvg />,
     },
     {
-      path: "/apps/calculator",
+      path: "/calculator",
       name: "Calculator",
       svg: <ReactItemSvg />,
     },
     {
-      path: "/apps/product-list",
+      path: "/product-list",
       name: "product-list",
       svg: <JsonpakageSvg />,
     },

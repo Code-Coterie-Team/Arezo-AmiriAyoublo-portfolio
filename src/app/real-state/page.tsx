@@ -1,7 +1,7 @@
 import AboutProject from "@/components/AboutProject";
 import AnimateProject from "@/components/AnimateProject";
 import Challenge from "@/components/Challenge";
-import Soultion from "@/components/Soultion";
+import Soultion from "@/components/Sulotion";
 import Technologies from "@/components/Technology";
 const RealState = () => {
   return (
@@ -9,10 +9,8 @@ const RealState = () => {
       <AnimateProject id="about">
         <AboutProject
           project={"Real State"}
-          description={`
-            This project is a feature-rich real estate management platform developed using React Redux
-             and Tailwind CSS It is designed to provide a seamless and
-             responsive user experience for buying, selling, and renting propertie`}
+          description=
+          {"This project is a feature-rich real estate management platform developed using React Redux and Tailwind CSS It is designed to provide a seamless and responsive user experience for buying, selling, and renting propertie"}
           imageproject={"/real-estate.png"}
         />
       </AnimateProject>
@@ -42,7 +40,7 @@ const RealState = () => {
         />
       </AnimateProject>
       <AnimateProject id="technologies">
-        {" "}
+       
         <Technologies
           item={[
             { name: "JavaScript", image: "/js-logo.webp" },

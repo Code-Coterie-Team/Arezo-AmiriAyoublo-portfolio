@@ -1,21 +1,19 @@
-"use client";
-
 import {
   ActiveWindowSvg,
- 
   HorizWindowSvg,
   SidewindowSvg,
   VscodeSvg,
 } from "../assets";
 
 const Header = () => {
-    const liArray=['File','Edit','View','Run','Go','Terminal','Help']
+  const liArray = ["File", "Edit", "View", "Run", "Go", "Terminal", "Help"];
   return (
     <div className=" row-span-1  flex justify-between  border-b-2 border-borderdark text-sm p-2  ">
       <div className="flex gap-20 text-base">
+       <VscodeSvg />
         <ul className="flex gap-4   ">
-          <VscodeSvg />
-          {liArray.map((item,index)=>(
+          
+          {liArray.map((item, index) => (
             <li key={index}>{item}</li>
           ))}
         </ul>

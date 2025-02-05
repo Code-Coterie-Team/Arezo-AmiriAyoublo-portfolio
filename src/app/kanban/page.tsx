@@ -1,43 +1,39 @@
 import AboutProject from "@/components/AboutProject";
 import AnimateProject from "@/components/AnimateProject";
 import Challenge from "@/components/Challenge";
-import Soultion from "@/components/Soultion";
+import Soultion from "@/components/Sulotion";
 import Technologies from "@/components/Technology";
-
-export default function ProductList() {
+ const Kanban=()=> {
   return (
     <div className="grid grid-cols-1 gap-4 h-full">
       <AnimateProject id="about">
         <AboutProject
-          project={"product-list"}
+          project={"Kanban"}
           description={
-            "Product list with cart is to build out this product list project that includes a functional cart and get it looking as close to the design as possible.."
+            "A Kanban project built using React,Redux, and Tailwind CSS is a modern, responsive task management application."
           }
-          imageproject={"/productlist.webp"}
+          imageproject={"/kanban.jpg"}
         />
       </AnimateProject>
       <AnimateProject id="challenge">
+        
         <Challenge
           description={
-            "l build a Product List Card UI using JavaScript, HTML, and CSS. The goal is to create a visually appealing and interactive product display that showcases product details efficiently."
+            "Build a fully functional Kanban board application where users can manage tasks by moving them between columns (To-Do, In Progress, and Done)"
           }
           point1={
-            " Dynamic Product Display: Render multiple products dynamically."
+            "Users should be able to create tasks with a title  description"
           }
-          point2={
-            "Product Details: Each product should display an image, title, price, and description."
-          }
-          point3={
-            "Add a hover effect for better UI interaction,Include a Buy Now or Add to Cart button for engagement."
-          }
+          point2={"users should be able to edit tasks and board "}
+          point3={"The board should be responsive and work well on both mobile and desktop screens"}
         />
       </AnimateProject>
-      <AnimateProject id="soultion">
+      <AnimateProject id="solution">
         <Soultion
           soultions={[
-            "Fetching and Displaying Product Data",
-            "addToCard(productName  productPrice) stores product details in the cart object and updates the product count",
-            "The updateCart() function dynamically updates the cart summary",
+            "build with a state and save in local stoarge",
+            "set a global state with redux for handeling edit ",
+            "responsive with tailwind",
           ]}
         />
       </AnimateProject>
@@ -57,3 +53,4 @@ export default function ProductList() {
     </div>
   );
 }
+export default Kanban
