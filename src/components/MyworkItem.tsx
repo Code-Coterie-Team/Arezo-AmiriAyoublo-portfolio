@@ -4,8 +4,7 @@ import Link from "next/link";
 
 import { useStore } from "@/store";
 import ProjectItem from "./Projectitem";
-import { useState } from "react";
-import { FlatESLint } from "eslint/use-at-your-own-risk";
+
 
 const MyWorkItem = () => {
   const links = useStore((state) => state.links);
@@ -38,7 +37,7 @@ const MyWorkItem = () => {
   ];
 
   const handleAddLink = (name: string, href: string) => {
-    const existlink = links.some((l: any) => l.href === href);
+    const existlink = links.some((l) => l.href === href);
     if (!existlink) {
       addLink({ name, href });
       

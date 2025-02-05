@@ -13,7 +13,7 @@ export default function ContactToMe() {
                 <ContactMeSvg className=" absolute " />
                 <p className="text-white font-semibold text-2xl">Contact Me</p>
             </div>
-            <p className="text-3xl font-semibold text-white">Get in <span className="text-contactcolor">contact</span> and let's <span className="text-contactcolor">work together</span>
+            <p className="text-3xl font-semibold text-white">Get in <span className="text-contactcolor">contact</span> and let s <span className="text-contactcolor">work together</span>
             </p>
             <div className="w-full flex flex-col   rounded-2xl ">
                 <div className="flex flex-col border  group  rounded-tl-xl rounded-tr-xl border-fontcolor p-4 :border-blue-500">

@@ -1,4 +1,4 @@
-import { strict } from "assert"
+import Image from "next/image";
 
 interface IData{
     date:string;
@@ -12,7 +12,7 @@ export default function Experience({date,position,description,company,imageSrc}:
         <div className="p-6 border-l border-fontcolor grid grid-cols-2 gap-6">
             <div className="flex flex-col gap-16">
                     <p className="text-sm text-white">{date}</p>
-                    <img src={imageSrc} alt="" className="size-32" />
+                    <Image src={imageSrc} alt="" width={128} height={128} className="size-32" />
             </div>
             <div className="flex flex-col gap-8 ">
                     <div className="flex flex-col gap-6">

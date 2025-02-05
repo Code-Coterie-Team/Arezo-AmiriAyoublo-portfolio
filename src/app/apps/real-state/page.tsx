@@ -1,5 +1,4 @@
 import AboutProject from "@/components/AboutProject";
-import AboutKanban from "@/components/AboutProject";
 import AnimateProject from "@/components/AnimateProject";
 import Challenge from "@/components/Challenge";
 import Soultion from "@/components/Sulotion";

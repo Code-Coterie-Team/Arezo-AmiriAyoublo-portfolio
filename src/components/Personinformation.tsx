@@ -21,9 +21,9 @@ export default function PersonalInformation() {
     const interval = setInterval(() => {
       setAnimationState((prev) => (prev === "visible" ? "hidden" : "visible"));
     }, (job.length + 1) * 200);
-
+    
     return () => clearInterval(interval);
-  }, []);
+  });
 
   const job = [
     "F",
@@ -134,7 +134,7 @@ export default function PersonalInformation() {
           <h2 className="text-2xl">About Me</h2>
         </div>
         <p className="text-5xl">
-          I'm a <span className="text-green-600">software developer</span>{" "}
+          I am a <span className="text-green-600">software developer</span>{" "}
           specialized on
           <span className="text-green-600"> Web Applications</span>
         </p>

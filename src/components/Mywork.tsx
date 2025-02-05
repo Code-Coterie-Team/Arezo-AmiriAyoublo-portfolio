@@ -1,7 +1,7 @@
-import { MywokrSvg, MyworkiconSvg, WorkSvg } from "@/assets";
+import {  MyworkiconSvg } from "@/assets";
 import BorderTop from "./Bordertop";
 import Samplework from "./Samplework";
-import SampleMini from "./SampleMini";
+
 
 
 export default function Mywork(){

@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState ,MouseEvent} from "react";
 import { useStore } from "@/store";
 import { DemoSvg, GiticonSvg } from "@/assets";
 interface Idata {
@@ -16,13 +16,13 @@ const Samplework = ({ project, image, link, projectlink ,gitlink}: Idata) => {
   const links = useStore((state) => state.links);
   const addLink = useStore((state) => state.addLink);
 
-  const handelMouse = (e: any) => {
+  const handelMouse = (e:MouseEvent<HTMLDivElement, globalThis.MouseEvent>) => {
     const { offsetX, offsetY } = e.nativeEvent;
     setBgPosition({ x: offsetX, y: offsetY });
   };
 
   const handleAddLink = (name: string, href: string) => {
-    const existlink = links.some((l: any) => l.href === href);
+    const existlink = links.some((l) => l.href === href);
     if (!existlink) {
       addLink({ name, href });
     }

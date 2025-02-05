@@ -3,8 +3,6 @@
 import { SuitcaSvg } from "@/assets";
 import Experience from "./Experience";
 import BorderTop from "./Bordertop";
-import { useState, useEffect } from "react";
-import { useStore } from "@/store";
 
 const WorkExperience = () => {
   return (
@@ -24,7 +22,7 @@ const WorkExperience = () => {
       <div className="pt-20">
         <Experience
           date="JUN 2023-PRESENT"
-          imageSrc="codecoterie.jpeg"
+          imageSrc="/codecoterie.jpeg"
           company="CodeCoterie"
           position="Frontend Developer"
           description={[
@@ -33,6 +31,7 @@ const WorkExperience = () => {
             "Collaborated with other developers to implement new features in a way that is consistent with existing codebase conventions.",
           ]}
         />
+        <Experience date="SEP 2023-MAY 2024" imageSrc='/acodev.jpeg' company="ACODEV" position=" Web Developer" description={['Generate API',"Design and implement the RESTful API with Django RESTFramework"]}/>
       </div>
     </div>
   );

@@ -24,13 +24,13 @@ import GiticonSvg from "./giticon.svg";
 import EsllintSvg from "./eslinticon.svg";
 import GitignoreSvg from "./gitignore.svg";
 import JsonpakageSvg from "./jsonpakage.svg";
-import NextSvg from "./nexticon.svg";
+
 import TailwindSvg from "./tailwind.svg";
 import TsconfigSvg from "./tsconfig.svg";
 import SidewindowSvg from "./sidewindow.svg";
 import HorizWindowSvg from "./horizwindow.svg";
 import ActiveWindowSvg from "./activwindow.svg";
-import BackgroundSvg from "./background.svg";
+
 import SrcSvg from "./src.svg";
 import WorksrcSvg from "./worksrc.svg";
 import ContactMeSvg from "./contacttome.svg";
@@ -71,13 +71,13 @@ export {
   EsllintSvg,
   GitignoreSvg,
   JsonpakageSvg,
-  NextSvg,
+
   TailwindSvg,
   TsconfigSvg,
   HorizWindowSvg,
   SidewindowSvg,
   ActiveWindowSvg,
-  BackgroundSvg,
+
   SrcSvg,
   WorksrcSvg,
   MyworkiconSvg,

@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import AboutMe from "./Aboutitem";
+import { useState } from "react";
+
 import AboutMets from "./Aboutitem";
 import {
   ArowSvg,
@@ -11,15 +11,13 @@ import {
   NextitemSvg,
   NodeitemSvg,
   PublicitemSvg,
-  SearchSvg,
+  
   SrcSvg,
   TailwindSvg,
   TsconfigSvg,
   WorksrcSvg,
 } from "@/assets";
-import { title } from "process";
-import { transform } from "next/dist/build/swc/generated-native";
-import { useStore } from "@/store";
+
 import MyWorkItem from "./MyworkItem";
 
 const Portfolio = () => {

@@ -46,7 +46,7 @@ const Headermain = () => {
         }
       }
    
-  }, [links, router]);
+  }, [links, router,activeLink,setShowAboutme]);
 
   return (
     <div className=" w-full h-12 border-b-2 border-borderdark flex justify-between   items-center bg-maincolor text-sm ">

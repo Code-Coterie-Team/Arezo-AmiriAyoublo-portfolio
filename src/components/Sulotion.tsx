@@ -1,5 +1,5 @@
-import { p } from "framer-motion/client";
-import BorderTop from "./Bordertop";
+
+import BorderTop from "./Bordertop"
 
 interface IProps{
     soultions:string[]

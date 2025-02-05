@@ -7,7 +7,7 @@ import Footer from "../components/Footer";
 import Activiybar from "../components/Activitybar";
 import Explore from "../components/Explore";
 import Headermain from "../components/Headermain";
-import { useStore } from "zustand";
+
 
 export const metadata: Metadata = {
   title: "Arezoo Amiri Ayobloo",
@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className=" antialiased  h-screen w-screen text-fontcolor">
+      <body className="  h-screen w-screen text-fontcolor">
         <div className="  grid grid-rows-16 w-screen h-screen ">
           <Header />
           <div className="grid row-start-2 row-end-16   grid-cols-6 md:grid-cols-16 w-full h-full   ">

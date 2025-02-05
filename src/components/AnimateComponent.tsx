@@ -17,7 +17,7 @@ const AnimateComponent = ({
 
   useEffect(() => {
     if (isInView) setActiveSection(id);
-  }, [isInView]);
+  }, [isInView,id,setActiveSection]);
 
   const animationVariants = {
     hidden: { opacity: 0, x: -30 },

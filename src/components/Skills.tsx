@@ -1,6 +1,6 @@
 "use client";
 import { Skillitem } from "@/assets";
-import { act, useEffect, useState } from "react";
+import {  useEffect, useState } from "react";
 import BorderTop from "./Bordertop";
 import CircleSkill from "./Circleskill";
 
@@ -122,7 +122,7 @@ const Skills = () => {
             
           />
               )
-        ))},
+        ))}
       
       </div>
     </div>

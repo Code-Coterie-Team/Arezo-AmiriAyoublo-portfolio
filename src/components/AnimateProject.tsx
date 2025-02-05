@@ -1,6 +1,6 @@
 "use client"
 import { useStore } from "@/store"
-import { div } from "framer-motion/client"
+
 import React, { useEffect,useRef } from "react"
 import { useInView } from "framer-motion"
 import {motion } from 'framer-motion'
@@ -11,7 +11,7 @@ const AnimateProject=( {id,children}:{id:string,children:React.ReactNode})=>{
   
     useEffect(() => {
       if (isInView) setActiveSectionProject(id);
-    }, [isInView]);
+    }, [isInView,id,setActiveSectionProject]);
   
   
     return(
