@@ -25,7 +25,7 @@ export default function RootLayout({
           <div className="grid row-start-2 row-end-16   grid-cols-6 md:grid-cols-16 w-full h-full    ">
             <Activiybar />
             <Explore />
-            <div className="col-start-2 col-end-7 w-full md:col-start-6  md:col-end-17  overflow-hidden h-full flex flex-col ">
+            <div className=" w-full md:col-start-6  md:col-end-17  overflow-hidden h-full flex flex-col ">
               <Headermain />
               <div className="overflow-y-auto overflow-x-hidden ">
                 {children}
