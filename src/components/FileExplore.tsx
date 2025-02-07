@@ -28,13 +28,13 @@ const FileExplore = () => {
     "SCRIPTS",
   ];
   return (
-    <div className="flex flex-col gap-4 h-full ">
+    <div className="flex flex-col gap-4 h-full overflow-hidden ">
       <div className="font-light ">EXPLORER</div>
-      <div className="flex font-bold bordr-b-2 border-borderdark text-xs flex-col gap-2 ">
+      <div className="flex bordr-b-2 border-borderdark text-xs flex-col gap-2 ">
         {exploreitem.map((item, index) => (
-          <div className="border-b border-borderdark " key={index}>
+          <div className="border-b-2 font-extrabold border-borderdark " key={index}>
             <div
-              className="flex flex-col gap-1  hover:border-[0.5px] hover:border-fontcolor"
+              className="flex flex-col gap-1 pb-2  hover:border-[0.5px] hover:border-fontcolor"
               onClick={() => toggleItem(item)}
             >
               <div className="flex">

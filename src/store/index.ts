@@ -19,6 +19,9 @@ interface StoreState {
    
   showAboutme:boolean;
   setShowAboutme:(value:boolean)=>void;
+  
+  hideExplore:boolean;
+  setHideExplore:(value:boolean)=>void;
 
   visibleExplore: boolean;
   setVisibileExplore: (value: boolean) => void;
@@ -59,6 +62,9 @@ export const useStore = create<StoreState>()(
         })),
       showAboutme:true,
       setShowAboutme:(value)=>set({showAboutme:value}),
+      
+      hideExplore:false,
+      setHideExplore:(value)=>set({hideExplore:value}),
 
       visibleExplore: true,
       setVisibileExplore: (value) => set({ visibleExplore: value }),

@@ -50,14 +50,14 @@ const MyWorkItem = () => {
   };
 
   return (
-    <div className="flex gap-4 pl-4 ">
+    <div className="flex gap-2 pt-2 pl-4 text-base  ">
       <div className="border-[0.1px] border-bordercolor"></div>
-      <div className="flex flex-col gap-4 ">
+      <div className="flex flex-col  gap-2 ">
         {navProject.map((item, index) => (
           <div key={index} className="flex flex-col">
             <Link
               href={item.path}
-              className="flex gap-1 text-sm font-medium"
+              className="flex gap-1 font-medium"
               onClick={() => {
                 handleAddLink(item.name, item.path);
               }}

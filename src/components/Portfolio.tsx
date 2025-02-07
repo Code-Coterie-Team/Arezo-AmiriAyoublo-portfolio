@@ -73,26 +73,26 @@ const Portfolio = () => {
   ];
   return (
     <div
-      className="flex flex-col gap-1 text-xs h-full overflow-y-auto"
-      style={{ maxHeight: "380px" }}
+      className="flex flex-col gap-1 text-base font-medium overflow-y-auto overflow-x-hidden"
+      
     >
       {firstDirectory.map((item, index) => (
-        <div key={index} className="flex gap-1  hover:bg-borderdark pl-2">
+        <div key={index} className="flex gap-2 hover:bg-borderdark pl-2">
           <ArowSvg />
           {item.svg}
           <span className="text-gray-500">{item.title}</span>
         </div>
       ))}
       <div
-        className="flex gap-1 text-sm text-fontcolor hover:bg-borderdark pl-2"
+        className="flex gap-1  text-fontcolor hover:bg-borderdark pl-2"
         onClick={togglePublic}
       >
         <ArowSvg />
         <Publicitem/>
         <span>public</span>
       </div>
-      <div className="flex gap-4 pl-4 ">{showPublic && <AboutMets />}</div>
-      <div className="pl-2 flex gap-1  text-sm" onClick={toggleSrc}>
+      <div className="flex gap-1 pl-4 ">{showPublic && <AboutMets />}</div>
+      <div className="pl-2 flex gap-1  " onClick={toggleSrc}>
         <div className="flex gap-1">
           <ArowSvg />
           <SrcSvg/>
@@ -100,9 +100,9 @@ const Portfolio = () => {
         </div>
       </div>
       {showSrc && (
-        <div className="flex gap-2 pl-4">
+        <div className="flex gap-1 pl-4">
           <div className="border-[0.5px] border-bordercolor"></div>
-          <div className="flex flex-col  gap-2   ">
+          <div className="flex flex-col  gap-1   ">
             <div className="border-l-[0.5px] border-bordercolor"></div>
             <div className="flex gap-1 " onClick={toggleWork}>
               <ArowSvg />
@@ -114,7 +114,7 @@ const Portfolio = () => {
         </div>
       )}
 
-      <div className="flex flex-col gap-1 pl-6">
+      <div className="flex flex-col gap-2 pl-6">
         {directory.map((item, index) => (
           <div key={index} className="flex gap-4">
             {item.svg}
