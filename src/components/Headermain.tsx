@@ -50,7 +50,7 @@ const Headermain = () => {
 
   return (
     <div className=" w-full h-12 border-b-2 border-borderdark flex justify-between   items-center bg-maincolor text-sm ">
-      <div className="flex h-full ">
+      <div className="flex ">
         {links.map((item: { name: string; href: string }, index: number) => (
           <div
             key={index}

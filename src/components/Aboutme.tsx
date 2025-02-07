@@ -9,7 +9,7 @@ import AnimateComponent from "./AnimateComponent";
 const AboutMe = () => {
    
 return (
-        <div className={`flex flex-col p-8 gap-60 h-full  `}  >
+        <div className={`flex flex-col p-8 gap-60  `}  >
             <AnimateComponent id='aboutme'><PersonalInformation   /></AnimateComponent>
             <AnimateComponent id='work-experience'><WorkExperience /></AnimateComponent>
             <AnimateComponent id='skills'><Skills /></AnimateComponent>

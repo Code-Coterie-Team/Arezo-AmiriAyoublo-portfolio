@@ -17,18 +17,18 @@ const Activiybar = () => {
                addLink({name,href})
     }
     const svgitem = [
-        { id: "file", icon: <FileSvg/> },
-        { id: "search", icon:<SearchSvg/> },
-        { id: "branch", icon: <BranchSvg/> },
-        { id: "run", icon: <Runitem/> },
-        { id: "extension", icon: <ExtentionSvg/> }
+        { id: "file", icon: <FileSvg width={32} height={32} className="text-slate-500"/> },
+        { id: "search", icon:<SearchSvg width={32} height={32} className="text-slate-500"/> },
+        { id: "branch", icon: <BranchSvg width={32} height={32} className="text-slate-500"/> },
+        { id: "run", icon: <Runitem width={32} height={32} className="text-slate-500"/> },
+        { id: "extension", icon: <ExtentionSvg width={32} height={32} className="text-slate-500"/> }
     
     ]
     return (
         <div className=" col-span-1 flex flex-col justify-between  ">
             <div className="flex flex-col gap-1  items-center">
                 {svgitem.map((item, index) => (
-                    <button key={ index} className=" w-full p-3  focus:border-l-2 border-fontcolor focus:fill-fontcolor  "  onClick={() => {
+                    <button key={ index} className=" w-full p-3 focus:border-l-2 border-fontcolor focus:fill-fontcolor  "  onClick={() => {
                         setVisibileExplore(item.id === "file");
                     }}>{item.icon}</button>
                 ))}
@@ -36,8 +36,8 @@ const Activiybar = () => {
 
             </div>
             <div className="flex flex-col gap-4 p-2  ">
-                <ContactSvg  className=" fill-slate-500 hover:fill-fontcolor  " width={32} height={32}/>
-                <Link href="/setting" onClick={()=>{handleAddLink('Setting','/setting')} } ><SettingSvg width={32} height={32} /></Link>
+                <ContactSvg width={32} height={32}  className=" fill-slate-500 hover:fill-fontcolor  "/>
+                <Link href="/setting" onClick={()=>{handleAddLink('Setting','/setting')} } ><SettingSvg width={32} height={32}   /></Link>
             </div>
         </div>
     )

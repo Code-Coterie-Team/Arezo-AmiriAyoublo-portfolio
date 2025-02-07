@@ -8,9 +8,9 @@ import VscodeSvg from "@/icon/VscodeSvg";
 const Header = () => {
   const liArray = ["File", "Edit", "View", "Run", "Go", "Terminal", "Help"];
   return (
-    <div className=" row-span-1  flex justify-between  border-b-2 border-borderdark text-sm p-2  ">
-      <div className="flex gap-20 text-base">
-       <VscodeSvg />
+    <div className=" row-span-1  flex justify-between  border-b-2 border-borderdark text-sm   ">
+      <div className="flex gap-20 text-base ">
+        <VscodeSvg  />
         <ul className="flex gap-4   ">
           
           {liArray.map((item, index) => (

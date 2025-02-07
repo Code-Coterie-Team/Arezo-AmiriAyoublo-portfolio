@@ -20,10 +20,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="h-screen w-screen">
+      <body className="antialiased  h-screen w-screen">
         <div className="  grid grid-rows-16 w-screen h-screen   text-fontcolor">
           <Header/>
-          <div className="grid row-start-2 row-end-16   grid-cols-6 md:grid-cols-16 w-full h-full   ">
+          <div className="grid row-start-2 row-end-16   grid-cols-6 md:grid-cols-16 w-full    ">
             <Activiybar />
             <Explore />
             <div

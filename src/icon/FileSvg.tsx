@@ -7,7 +7,7 @@ const FileSvg=(props: React.SVGProps<SVGSVGElement>)  => {
       height="20"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
-      fill="currentcolor"
+      fill="currentColor"
       {...props}
      
     >
