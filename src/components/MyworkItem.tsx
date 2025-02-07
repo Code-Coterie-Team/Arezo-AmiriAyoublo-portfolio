@@ -1,9 +1,11 @@
 "use client";
-import { JsonpakageSvg, ReactItemSvg } from "@/assets";
+
 import Link from "next/link";
 
 import { useStore } from "@/store";
 import ProjectItem from "./Projectitem";
+import ReactItem from "@/icon/ReactItem";
+import JsonPackageSvg from "@/icon/JsonPackageSvg";
 
 
 const MyWorkItem = () => {
@@ -17,22 +19,22 @@ const MyWorkItem = () => {
     {
       path: "/kanban",
       name: "Kanban",
-      svg: <ReactItemSvg />,
+      svg: <ReactItem />,
     },
     {
       path: "/real-state",
       name: "Real State",
-      svg: <ReactItemSvg />,
+      svg: <ReactItem />,
     },
     {
       path: "/calculator",
       name: "Calculator",
-      svg: <ReactItemSvg />,
+      svg: <ReactItem/>,
     },
     {
       path: "/product-list",
       name: "product-list",
-      svg: <JsonpakageSvg />,
+      svg: <JsonPackageSvg />,
     },
   ];
 

@@ -3,7 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState ,MouseEvent} from "react";
 import { useStore } from "@/store";
-import { DemoSvg, GiticonSvg } from "@/assets";
+import GitIconSvg from "@/icon/GitIconSvg";
+import DemoSvg from "@/icon/DemoSvg";
+
 interface Idata {
   project: string;
   image: string;
@@ -43,7 +45,7 @@ const Samplework = ({ project, image, link, projectlink ,gitlink}: Idata) => {
           </Link>
           <div className="flex  items-center  gap-2">
             <Link href={gitlink} target="_blank">
-              <GiticonSvg width={20} height={20} className="fill-white" />
+              <GitIconSvg width={20} height={20} className="fill-white" />
             </Link>
             <Link href={projectlink} target="_blank">
               <DemoSvg width={20} height={20} className=" fill-white" />

@@ -1,5 +1,5 @@
 "use clinet";
-import { ContactSvg } from "@/assets";
+
 import BorderTop from "./Bordertop";
 import Image from "next/image";
 import College from "./College";
@@ -7,6 +7,7 @@ import Social from "./Social";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { useState, useEffect } from "react";
+import ContactSvg from "@/icon/ContactSvg";
 
 export default function PersonalInformation() {
   const [animationState, setAnimationState] = useState("visible");

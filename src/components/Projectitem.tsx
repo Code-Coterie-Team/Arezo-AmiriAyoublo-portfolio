@@ -1,16 +1,22 @@
 "use client"
-import { ChallengeSvg, ProjectAboutSvg, SolutionSvg, TechnologySvg ,BorderSvg} from "@/assets";
+
 import Link from "next/link";
 import { motion } from 'framer-motion'
 import { useStore } from "@/store";
 import clsx from "clsx";
+
+import ChallengeSvg from "@/icon/ChallengeSvg";
+import SolutionItem from "@/icon/SolutionItem";
+import TechnologySvg from "@/icon/TechnologySvg";
+import BorderSvg from "@/icon/BorderSvg";
+import ProjectSvg from "@/icon/ProjectSvg";
 const ProjectItem = () => {
     const activeSectionProject=useStore((state)=>state.activeSectionProject)
     const projectItem = [
         {   
             id:'about',
             href: '#about',
-            svg: <ProjectAboutSvg />,
+            svg: <ProjectSvg />,
             name: 'about'
         },
         {
@@ -21,13 +27,13 @@ const ProjectItem = () => {
         },
         {   id:'solution',
             href: '#solution',
-            svg: <SolutionSvg />,
+            svg: < SolutionItem/>,
             name: 'Solution'
         },
         {   
             id:'technologies',
             href: '#technologies',
-            svg: <TechnologySvg />,
+            svg: <TechnologySvg/>,
             name: ' Technologies'
         }
     ]

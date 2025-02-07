@@ -1,4 +1,5 @@
-import { BranchSvg } from "@/assets";
+import BranchSvg from "@/icon/BarnchSvg";
+
 
 
 const Footer=()=>{

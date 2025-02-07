@@ -1,18 +1,18 @@
 "use client";
 import Link from "next/link";
 
-import {
-  DeletSvg,
-  LoadBranchSvg,
-  SidewindowSvg,
-  StarSvg,
-  ToggleSvg,
-} from "@/assets";
+
 import React from "react";
 import { useStore } from "@/store";
 import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
+import Starsvg from "@/icon/Starsvg";
+import DeleteSvg from "@/icon/DeleteSvg";
+import LoadBranchSvg from "@/icon/LoadBranchSvg";
+import Sidewindow from "@/icon/Sidewindow";
+import ToggleSvg from "@/icon/ToggleSvg";
+
 
 const Headermain = () => {
 
@@ -60,22 +60,22 @@ const Headermain = () => {
                 : "text-fontcolor"
             }`}
           >
-            {item.name === "About me" && <StarSvg />}
+            {item.name === "About me" && <Starsvg/>}
             <button onClick={()=>setLink(item.name,item.href)}><Link href={item.href}>{item.name}</Link></button>
             <button
               onClick={() => {
                 handelDelete(item.href);
               }}
             >
-              <DeletSvg className="fill-white" />
+              <DeleteSvg className="fill-white" />
             </button>
           </div>
         ))}
       </div>
     
       <div className="flex gap-2 ">
-        <LoadBranchSvg />
-        <SidewindowSvg />
+        <LoadBranchSvg/>
+        <Sidewindow/>
         <ToggleSvg />
       </div>
     </div>

@@ -1,10 +1,11 @@
 "use client";
 import Image from "next/image";
-import { GiticonSvg } from "@/assets";
+
 import Link from "next/link";
 import { MouseEvent, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
+import GitIconSvg from "@/icon/GitIconSvg";
 
 export default function College() {
   const [coordinate, setCoordinate] = useState({ x: 0, y: 0 });
@@ -51,7 +52,7 @@ export default function College() {
           <Link href={"https://github.com/arezooamiri"}>
             <button className="bg-white w-6 rounded-full">
               {" "}
-              <GiticonSvg />{" "}
+              <GitIconSvg />{" "}
             </button>
           </Link>
           <Link href={"/#contact-me"}>

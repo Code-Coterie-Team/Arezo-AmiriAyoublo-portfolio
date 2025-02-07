@@ -1,9 +1,9 @@
-import {
-  ActiveWindowSvg,
-  HorizWindowSvg,
-  SidewindowSvg,
-  VscodeSvg,
-} from "../assets";
+
+import ActivewindowSvg from "@/icon/ActivwindowSvg";
+import HorizintalSvg from "@/icon/HorizntalWindowSvg";
+import Sidewindow from "@/icon/Sidewindow";
+import VscodeSvg from "@/icon/VscodeSvg";
+
 
 const Header = () => {
   const liArray = ["File", "Edit", "View", "Run", "Go", "Terminal", "Help"];
@@ -23,13 +23,13 @@ const Header = () => {
       <div className="flex gap-6  ">
         <div className="flex gap-2">
           <button>
-            <ActiveWindowSvg />
+            <ActivewindowSvg/>
           </button>
           <button>
-            <HorizWindowSvg />
+            <HorizintalSvg />
           </button>
           <button>
-            <SidewindowSvg />
+            <Sidewindow />
           </button>
         </div>
       </div>

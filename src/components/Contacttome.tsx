@@ -1,4 +1,5 @@
-import { ContactMeSvg } from "@/assets";
+
+import ContacttoMeSvg from "@/icon/ContacttoMeSvg";
 import BorderTop from "./Bordertop";
 
 
@@ -10,7 +11,7 @@ export default function ContactToMe() {
             <BorderTop />
             <div className="flex gap-4 relative p-6 ">
                 <div className="size-10 rounded-full bg-contactcolor  blur-xl"></div>
-                <ContactMeSvg className=" absolute " />
+                <ContacttoMeSvg className=" absolute " />
                 <p className="text-white font-semibold text-2xl">Contact Me</p>
             </div>
             <p className="text-3xl font-semibold text-white">Get in <span className="text-contactcolor">contact</span> and let s <span className="text-contactcolor">work together</span>

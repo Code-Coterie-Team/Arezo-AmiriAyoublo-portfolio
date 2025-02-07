@@ -1,4 +1,5 @@
-import {  MyworkiconSvg } from "@/assets";
+
+import MyWorkSvg from "@/icon/MyWorkSvg";
 import BorderTop from "./Bordertop";
 import Samplework from "./Samplework";
 
@@ -11,7 +12,7 @@ export default function Mywork(){
             <BorderTop/>
             <div className="flex gap-4 relative">
                 <div className="size-10 rounded-full bg-workfont blur-xl"></div>
-                <MyworkiconSvg className=" absolute left-2 top-1"/>
+                <MyWorkSvg className=" absolute left-2 top-1"/>
                 <span className="text-2xl text-white">My work</span>
                 
             </div>

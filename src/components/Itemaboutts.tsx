@@ -1,18 +1,18 @@
 "use client";
 
-import {
-  AboutSvg,
-  BorderSvg, 
-  MailSvg,
-  MywokrSvg,
-  SkillsSvg,
-  WorkSvg,
-} from "@/assets";
 import Link from "next/link";
 
 import { useStore } from "@/store";
 import { motion } from "framer-motion";
 import clsx from "clsx";
+import AboutSvg from "@/icon/AboutSvg";
+import Worksvg from "@/icon/Worksvg";
+import SkillsSvg from "@/icon/SkillsSvg";
+import MyWorkSvg from "@/icon/Mywork";
+import MailSvg from "@/icon/MailSvg";
+import BorderSvg from "@/icon/BorderSvg";
+
+
 
 export default function AboutTs() {
   const activeSection=useStore((state)=>state.activeSection);
@@ -22,31 +22,31 @@ export default function AboutTs() {
       id: "aboutme",
       title: "About Me",
       link: "/#aboutme",
-      svg: <AboutSvg />,
+      svg: <AboutSvg/>,
     },
     {
       id: "work-experience",
       title: "Work Experience",
       link: " /#work-experience",
-      svg: <WorkSvg />,
+      svg: <Worksvg/>,
     },
     {
       id: "skills",
       title: "Skills",
       link: "/#skills",
-      svg: <SkillsSvg />,
+      svg: <SkillsSvg/>,
     },
     {
       id: "mywork",
       title: "My Work",
       link: "/#mywork",
-      svg: <MywokrSvg />,
+      svg: <MyWorkSvg/>,
     },
     {
       id: "contact-me",
       title: "Contact Me",
       link: "/#contact-me",
-      svg: <MailSvg />,
+      svg: <MailSvg/>
     },
   ];
 

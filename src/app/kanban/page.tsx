@@ -5,7 +5,7 @@ import Soultion from "@/components/Sulotion";
 import Technologies from "@/components/Technology";
  const Kanban=()=> {
   return (
-    <div className="grid grid-cols-1 gap-4 h-full">
+    <div className="grid grid-cols-1 gap-4">
       <AnimateProject id="about">
         <AboutProject
           project={"Kanban"}

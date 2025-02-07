@@ -1,8 +1,9 @@
 
-import Skillitem  from "@/assets/skillitem.svg";
+
 import {  useEffect, useState } from "react";
 import BorderTop from "./Bordertop";
 import CircleSkill from "./Circleskill";
+import Skillitem from "@/icon/skillitem";
 
 const Skills = () => {
 

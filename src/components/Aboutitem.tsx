@@ -1,8 +1,9 @@
 "use client"
-import { StarSvg } from "@/assets";
+
 import AboutTs from "./Itemaboutts";
 import { useStore } from "@/store";
 import Link from "next/link";
+import Starsvg from "@/icon/Starsvg";
 
 const AboutMets = () => {
    
@@ -26,7 +27,7 @@ const AboutMets = () => {
             <div className="flex flex-col gap-2 text-fontcolor ">
                 <div className="flex gap-1  hover:bg-borderdark  font-medium text-base " onClick={()=>setShowAboutme(!showAboutme)}  >
 
-                    <StarSvg />
+                    <Starsvg />
                     <Link  href={'/'}  onClick={()=>toggleAboutMe('About me','/')}>about_me.ts</Link>
                 </div>
                 { showAboutme && <AboutTs />}

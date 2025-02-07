@@ -1,8 +1,9 @@
 "use client";
 
-import { SuitcaSvg } from "@/assets";
+
 import Experience from "./Experience";
 import BorderTop from "./Bordertop";
+import SuticasSvg from "@/icon/SuticasSvg";
 
 const WorkExperience = () => {
   return (
@@ -10,7 +11,7 @@ const WorkExperience = () => {
       <BorderTop />
       <div className="flex gap-8  relative ">
         <div className=" size-10 rounded-full bg-red-400 blur-lg "></div>
-        <SuitcaSvg className=" absolute " />
+        <SuticasSvg className=" absolute " />
         <span className="text-2xl text-white">work experience </span>
       </div>
       <h2 className="font-extrabold  text-white  text-3xl ">

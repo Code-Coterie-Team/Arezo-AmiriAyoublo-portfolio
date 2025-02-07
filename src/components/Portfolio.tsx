@@ -3,22 +3,20 @@
 import { useState } from "react";
 
 import AboutMets from "./Aboutitem";
-import {
-  ArowSvg,
-  EsllintSvg,
-  GitignoreSvg,
-  JsonpakageSvg,
-  NextitemSvg,
-  NodeitemSvg,
-  PublicitemSvg,
-  
-  SrcSvg,
-  TailwindSvg,
-  TsconfigSvg,
-  WorksrcSvg,
-} from "@/assets";
 
 import MyWorkItem from "./MyworkItem";
+import NextItem from "@/icon/NextItem";
+import Nodeitem from "@/icon/Nodeitem";
+import EslintSvg from "@/icon/EslintSvg";
+import GitignoreSvg from "@/icon/GitignoreSvg";
+import NextIcon from "@/icon/NextIcon";
+import JsonPackageSvg from "@/icon/JsonPackageSvg";
+import TailwindSvg from "@/icon/TailwindSvg";
+import TsconfigSvg from "@/icon/TsconfigSvg";
+import ArowSvg from "@/icon/ArowSvg";
+import Publicitem from "@/icon/Publicitem";
+import SrcSvg from "@/icon/SrcSvg";
+import WorksrcSvg from "@/icon/WorksrcSvg";
 
 const Portfolio = () => {
   const [showPublic, setShowPublic] = useState(true);
@@ -36,33 +34,33 @@ const Portfolio = () => {
   const firstDirectory = [
     {
       title: ".next",
-      svg: <NextitemSvg />,
+      svg: <NextItem/>,
     },
     {
       title: "node-modules",
-      svg: <NodeitemSvg />,
+      svg: < Nodeitem/>,
     },
   ];
   const directory = [
     {
       title: ".eslintrc.json",
-      svg: <EsllintSvg />,
+      svg: <EslintSvg/>,
     },
     {
       title: ".gitignore",
-      svg: <GitignoreSvg />,
+      svg: <GitignoreSvg/>,
     },
     {
       title: "next.config.js",
-      svg: <NextitemSvg />,
+      svg: <NextIcon/>,
     },
     {
       title: "package-lock.js",
-      svg: <JsonpakageSvg />,
+      svg: <JsonPackageSvg />,
     },
     {
       title: "package.json",
-      svg: <JsonpakageSvg />,
+      svg: <JsonPackageSvg />,
     },
     {
       title: "tailwind.config.ts",
@@ -90,14 +88,14 @@ const Portfolio = () => {
         onClick={togglePublic}
       >
         <ArowSvg />
-        <PublicitemSvg />
+        <Publicitem/>
         <span>public</span>
       </div>
       <div className="flex gap-4 pl-4 ">{showPublic && <AboutMets />}</div>
       <div className="pl-2 flex gap-1 " onClick={toggleSrc}>
         <div className="flex gap-1">
           <ArowSvg />
-          <SrcSvg />
+          <SrcSvg/>
           <span>src</span>
         </div>
       </div>
@@ -108,7 +106,7 @@ const Portfolio = () => {
             <div className="border-l-[0.5px] border-bordercolor"></div>
             <div className="flex gap-1 " onClick={toggleWork}>
               <ArowSvg />
-              <WorksrcSvg />
+              < WorksrcSvg/>
               <span>my work</span>
             </div>
             {showWork && <MyWorkItem />}
