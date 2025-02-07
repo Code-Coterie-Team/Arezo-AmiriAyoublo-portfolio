@@ -5,8 +5,6 @@ import "./globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Activiybar from "../components/Activitybar";
-import Explore from "../components/Explore";
-import Headermain from "../components/Headermain";
 import LayoutExplore from "@/components/LayoutExplore";
 
 export const metadata: Metadata = {
