@@ -49,19 +49,19 @@ const Headermain = () => {
   }, [links, router,activeLink,setShowAboutme]);
 
   return (
-    <div className=" w-full h-12 border-b-2 border-borderdark flex justify-between   items-center bg-maincolor text-sm ">
-      <div className="flex ">
+    <div className=" h-12  border-b-2 border-borderdark flex justify-between   items-center bg-maincolor text-sm ">
+      <div className="flex">
         {links.map((item: { name: string; href: string }, index: number) => (
           <div
             key={index}
-            className={`w-36  h-full flex  gap-2 items-center justify-around text-center font-semibold  border-r border-borderdark ${
+            className={`w-36 flex  gap-2 items-center justify-around text-center font-semibold  border-r border-borderdark ${
               item.href === path
                 ? "border-b-2 border-b-headerborder text-linkcolor"
                 : "text-fontcolor"
             }`}
           >
             {item.name === "About me" && <Starsvg/>}
-            <button onClick={()=>setLink(item.name,item.href)}><Link href={item.href}>{item.name}</Link></button>
+            <button onClick={()=>setLink(item.name,item.href)} className="h-10">{item.name}</button>
             <button
               onClick={() => {
                 handelDelete(item.href);
@@ -73,7 +73,7 @@ const Headermain = () => {
         ))}
       </div>
     
-      <div className="flex gap-2 ">
+      <div className="flex h-full gap-2 ">
         <LoadBranchSvg/>
         <Sidewindow/>
         <ToggleSvg />

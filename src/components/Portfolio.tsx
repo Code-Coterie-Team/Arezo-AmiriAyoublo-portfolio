@@ -73,7 +73,7 @@ const Portfolio = () => {
   ];
   return (
     <div
-      className="flex flex-col gap-1 text-xs overflow-y-auto"
+      className="flex flex-col gap-1 text-xs h-full overflow-y-auto"
       style={{ maxHeight: "380px" }}
     >
       {firstDirectory.map((item, index) => (
