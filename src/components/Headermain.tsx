@@ -1,6 +1,4 @@
 "use client";
-import Link from "next/link";
-
 
 import React from "react";
 import { useStore } from "@/store";
@@ -13,40 +11,36 @@ import LoadBranchSvg from "@/icon/LoadBranchSvg";
 import Sidewindow from "@/icon/Sidewindow";
 import ToggleSvg from "@/icon/ToggleSvg";
 
-
 const Headermain = () => {
-
   const links = useStore((state) => state.links);
-  const  {setActiveProject,setActiveLink,setShowAboutme,removeLink}=useStore();
+  const { setActiveProject, setActiveLink, setShowAboutme, removeLink } =
+    useStore();
   const path = usePathname();
   const router = useRouter();
-  const  activeLink=useStore((state)=>state.activeLink)
+  const activeLink = useStore((state) => state.activeLink);
   const handelDelete = (href: string) => {
     removeLink(href);
   };
-  const setLink=(name:string,href:string)=>{
-          setActiveProject(name)
-          setActiveLink(href);
-          if(name==='About me'){
-            setShowAboutme(true);
-          }else{
-            setShowAboutme(false)
-          }
-  }
+  const setLink = (name: string, href: string) => {
+    setActiveProject(name);
+    setActiveLink(href);
+    if (name === "About me") {
+      setShowAboutme(true);
+    } else {
+      setShowAboutme(false);
+    }
+  };
 
   useEffect(() => {
-    
-      
-      if (activeLink) {
-        router.push(activeLink);
-        if (activeLink !=='/'){
-          setShowAboutme(false);
-        }else{
-          setShowAboutme(true)
-        }
+    if (activeLink) {
+      router.push(activeLink);
+      if (activeLink !== "/") {
+        setShowAboutme(false);
+      } else {
+        setShowAboutme(true);
       }
-   
-  }, [links, router,activeLink,setShowAboutme]);
+    }
+  }, [links, router, activeLink, setShowAboutme]);
 
   return (
     <div className=" h-12  border-b-2 border-borderdark flex justify-between   items-center bg-maincolor text-sm ">
@@ -60,8 +54,13 @@ const Headermain = () => {
                 : "text-fontcolor"
             }`}
           >
-            {item.name === "About me" && <Starsvg/>}
-            <button onClick={()=>setLink(item.name,item.href)} className="h-10">{item.name}</button>
+            {item.name === "About me" && <Starsvg />}
+            <button
+              onClick={() => setLink(item.name, item.href)}
+              className="h-10"
+            >
+              {item.name}
+            </button>
             <button
               onClick={() => {
                 handelDelete(item.href);
@@ -72,10 +71,10 @@ const Headermain = () => {
           </div>
         ))}
       </div>
-    
+
       <div className="flex h-full gap-2 ">
-        <LoadBranchSvg/>
-        <Sidewindow/>
+        <LoadBranchSvg />
+        <Sidewindow />
         <ToggleSvg />
       </div>
     </div>
