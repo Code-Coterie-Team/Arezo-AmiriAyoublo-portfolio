@@ -22,7 +22,7 @@ const AboutMets = () => {
         
     }
     return (
-        <div className=" flex gap-6 text-base">
+        <div className=" flex gap-6 text-base flex-grow-0">
             <div className="border-l-[0.3px] border-bordercolor"></div>
             <div className="flex flex-col gap-2 text-fontcolor ">
                 <div className="flex gap-1  hover:bg-borderdark  font-medium text-base " onClick={()=>setShowAboutme(!showAboutme)}  >

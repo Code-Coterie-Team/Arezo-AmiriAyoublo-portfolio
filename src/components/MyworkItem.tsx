@@ -50,7 +50,7 @@ const MyWorkItem = () => {
   };
 
   return (
-    <div className="flex gap-2 pt-2 pl-4 text-base  ">
+    <div className="flex gap-2 pt-2 pl-4 text-base flex-grow-0 ">
       <div className="border-[0.1px] border-bordercolor"></div>
       <div className="flex flex-col  gap-2 ">
         {navProject.map((item, index) => (

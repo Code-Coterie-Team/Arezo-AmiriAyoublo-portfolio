@@ -43,7 +43,7 @@ const Headermain = () => {
   }, [links, router, activeLink, setShowAboutme]);
 
   return (
-    <div className="  flex-1 border-b-2 border-borderdark flex justify-between   items-center bg-maincolor text-sm ">
+    <div className="  flex-1 border-b-2 border-borderdark flex justify-between   items-center bg-maincolor text-sm  flex-grow-0">
       <div className="flex">
         {links.map((item: { name: string; href: string }, index: number) => (
           <div

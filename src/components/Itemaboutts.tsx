@@ -66,7 +66,7 @@ export default function AboutTs() {
  
   return (
     <motion.div
-      className="flex flex-col gap-1 pl-6 relative "
+      className="flex flex-col gap-1 pl-6 relative flex-grow-0 "
       variants={animationlink}
       initial="hidden"
       animate="visible"
