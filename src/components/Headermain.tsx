@@ -72,7 +72,7 @@ const Headermain = () => {
         ))}
       </div>
 
-      <div className="flex h-full gap-2 ">
+      <div className="flex h-full items-center gap-2 ">
         <LoadBranchSvg />
         <Sidewindow />
         <ToggleSvg />

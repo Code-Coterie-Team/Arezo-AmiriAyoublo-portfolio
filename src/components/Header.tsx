@@ -13,16 +13,16 @@ const Header = () => {
   return (
     <div className="  row-span-1 flex justify-between  p-4 items-center  border-b-2 border-borderdark text-sm    ">
       <div className="flex gap-20 text-base ">
-        <VscodeSvg  />
+        
         <ul className="flex gap-4   ">
-          
+           <li><VscodeSvg  /></li>
           {liArray.map((item, index) => (
             <li key={index}>{item}</li>
           ))}
         </ul>
-        <h1>Arezoo AmiriAyoubloo-Visual Studio Code</h1>
+        
       </div>
-
+      <h1>Arezoo AmiriAyoubloo-Visual Studio Code</h1>
       <div className="flex gap-6  ">
         <div className="flex gap-2">
           <button onClick={()=>setHideExplore(!hideExplore)}>
