@@ -11,7 +11,7 @@ const LayoutExplore = ({ children }: { children: React.ReactNode }) => {
   const hideExplore = useStore((state) => state.hideExplore);
 
   return (
-    <div className="grid grid-cols-12 overflow-hidden">
+    <div className="grid grid-cols-12 w-full overflow-hidden">
       <div
         className={clsx(
           "transition-all duration-300",
