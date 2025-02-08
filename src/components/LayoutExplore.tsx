@@ -27,7 +27,7 @@ const LayoutExplore = ({ children }: { children: React.ReactNode }) => {
         )}
       >
         <Headermain />
-        <div className="overflow-y-auto overflow-x-hidden ">
+        <div className="overflow-y-auto  overflow-x-hidden  ">
           {children}
         </div>
       </div>

@@ -52,7 +52,7 @@ const FileExplore = () => {
               </div>
             </div>
             {item === "PORTFOLIO" && arowStyle[item]&&
-                 <div className="max-h-[300px] overflow-y-auto">
+                 <div className="max-h-[300px]  overflow-y-auto ">
                      <Portfolio />
                  </div>
             }
