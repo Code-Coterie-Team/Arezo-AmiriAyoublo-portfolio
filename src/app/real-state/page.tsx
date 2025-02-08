@@ -12,6 +12,7 @@ const RealState = () => {
           description=
           {"This project is a feature-rich real estate management platform developed using React Redux and Tailwind CSS It is designed to provide a seamless and responsive user experience for buying, selling, and renting propertie"}
           imageproject={"/real-estate.png"}
+          industry="Real-State"
         />
       </AnimateProject>
       <AnimateProject id="challenge">
@@ -28,6 +29,7 @@ const RealState = () => {
           point3={
             "A clean and intuitive navigation bar helps users explore the site effortlessly."
           }
+          
         />
       </AnimateProject>
       <AnimateProject id="soultion">

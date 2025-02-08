@@ -15,6 +15,7 @@ const ProductList=()=> {
             "Product list with cart is to build out this product list project that includes a functional cart and get it looking as close to the design as possible.."
           }
           imageproject={"/productlist.webp"}
+          industry="shop"
         />
       </AnimateProject>
       <AnimateProject id="challenge">

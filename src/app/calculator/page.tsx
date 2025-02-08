@@ -15,6 +15,7 @@ const Calculator = () => {
             "This project is a  calculator application built using React and Tailwind CSS, designed to perform basic arithmetic operations with an intuitive and user-friendly interface."
           }
           imageproject={"/calculator.png"}
+          industry="General"
         />
       </AnimateProject>
       <AnimateProject id="challenge">

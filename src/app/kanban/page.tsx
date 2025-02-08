@@ -13,6 +13,7 @@ import Technologies from "@/components/Technology";
             "A Kanban project built using React,Redux, and Tailwind CSS is a modern, responsive task management application."
           }
           imageproject={"/kanban.jpg"}
+          industry="Management"
         />
       </AnimateProject>
       <AnimateProject id="challenge">
