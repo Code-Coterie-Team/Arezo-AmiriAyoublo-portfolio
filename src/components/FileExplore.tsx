@@ -5,6 +5,7 @@ import ArowSvg from "@/icon/ArowSvg";
 
 
 
+
 const FileExplore = () => {
   const [arowStyle, setArowStyle] = useState<{[key:string]:boolean}>({
     "OPEN EDITORS": false,
@@ -28,13 +29,13 @@ const FileExplore = () => {
     "SCRIPTS",
   ];
   return (
-    <div className="flex flex-col gap-4 h-full overflow-hidden ">
+    <div className="flex flex-col gap-4 h-full overflow-hidden  ">
       <div className="font-light ">EXPLORER</div>
-      <div className="flex bordr-b-2 border-borderdark text-xs flex-col gap-2 ">
+      <div className="flex bordr-b-2 border-borderdark  overflow-hidden text-xs flex-col gap-2 ">
         {exploreitem.map((item, index) => (
-          <div className="border-b-2 font-extrabold border-borderdark " key={index}>
+          <div className="border-b-2 font-extrabold border-borderdark flex-1   " key={index}>
             <div
-              className="flex flex-col gap-1 pb-2  hover:border-[0.5px] hover:border-fontcolor"
+              className="flex flex-col pb-1  hover:border-[0.5px] hover:border-fontcolor"
               onClick={() => toggleItem(item)}
             >
               <div className="flex">
@@ -50,7 +51,11 @@ const FileExplore = () => {
                 <span>{item}</span>
               </div>
             </div>
-            {item === "PORTFOLIO" && arowStyle[item]&& <Portfolio />}
+            {item === "PORTFOLIO" && arowStyle[item]&&
+                 <div className="max-h-[300px] overflow-y-auto">
+                     <Portfolio />
+                 </div>
+            }
           </div>
         ))}
       </div>

@@ -4,7 +4,7 @@ import BranchSvg from "@/icon/BarnchSvg";
 
 const Footer=()=>{
     return(
-        <div className="flex  bg-borderdark border-t-2 justify-between items-center border-borderdark ">
+        <div className="flex row-span-12  bg-borderdark border-t-2 justify-between items-center border-borderdark ">
             <div className="flex hover:bg-slate-800 ">
                 <div className="w-10    opacity-35 hover:bg-blue-300"></div>
                 <div className="flex pl-2  pt-1 ">

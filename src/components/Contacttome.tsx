@@ -16,9 +16,9 @@ export default function ContactToMe() {
             </div>
             <p className="text-3xl font-semibold text-white">Get in <span className="text-contactcolor">contact</span> and let s <span className="text-contactcolor">work together</span>
             </p>
-            <div className="w-full flex flex-col   rounded-2xl ">
-                <div className="flex flex-col border  group  rounded-tl-xl rounded-tr-xl border-fontcolor p-4 :border-blue-500">
-                    <label htmlFor="" className=" group-focus-within:text-red-500">Name</label>
+            <div className="w-full flex flex-col group  rounded-2xl ">
+                <div className="flex flex-col border  group  rounded-tl-xl rounded-tr-xl border-fontcolor p-4 group-focus-within:border-contactcolor group-focus-within:border-2 ">
+                    <label htmlFor="" className=" group-focus-within:text-contactcolor" >Name</label>
                     <input type="text" className="bg-transparent  outline-none" />
                 </div>
                 <div className="flex flex-col  border border-fontcolor p-4">

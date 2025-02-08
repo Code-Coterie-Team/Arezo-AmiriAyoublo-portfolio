@@ -11,7 +11,7 @@ const Header = () => {
   const {setHideExplore}=useStore();
   const liArray = ["File", "Edit", "View", "Run", "Go", "Terminal", "Help"];
   return (
-    <div className=" row-span-1  flex justify-between  border-b-2 border-borderdark text-sm   ">
+    <div className="  row-span-1 flex justify-between  p-4 items-center  border-b-2 border-borderdark text-sm    ">
       <div className="flex gap-20 text-base ">
         <VscodeSvg  />
         <ul className="flex gap-4   ">
