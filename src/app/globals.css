@@ -50,6 +50,17 @@ body {
   height: 100vh;
   
 }
+ 
+::-webkit-scrollbar {
+  width: 8px; 
+}
 
-/* ? condition on the activity bar and border style in activity */
-/* setting tab  */
+::-webkit-scrollbar-track {
+  background: rgb(30,35,54); 
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background:  rgb(42, 49, 75);
+  border-radius: 10px;
+}
