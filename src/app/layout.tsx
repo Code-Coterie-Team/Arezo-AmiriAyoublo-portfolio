@@ -21,7 +21,7 @@ export default function RootLayout({
       <body className="antialiased  h-screen w-screen">
         <div className="  grid grid-rows-16 w-screen h-screen overflow-hidden  text-fontcolor">
           <Header />
-          <div className="grid row-start-2 row-end-16  overflow-hidden  grid-cols-6 md:flex w-full h-full    ">
+          <div className=" row-start-2 row-end-16  overflow-hidden  flex w-full h-full    ">
             <Activiybar />
             <LayoutExplore >{children}</LayoutExplore>
             

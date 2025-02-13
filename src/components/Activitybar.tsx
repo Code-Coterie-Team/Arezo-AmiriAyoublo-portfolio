@@ -25,7 +25,7 @@ const Activiybar = () => {
     
     ]
     return (
-        <div className="flex flex-col justify-between h-full   ">
+        <div className="md:flex md:flex-col justify-between h-full col-span-1    ">
             <div className="flex flex-col gap-1 items-center">
                 {svgitem.map((item, index) => (
                     <button key={ index} className=" w-full p-3 focus:border-l-2 border-fontcolor  "  onClick={() => {
