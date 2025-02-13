@@ -6,9 +6,19 @@ import React from "react";
 import Explore from "./Explore";
 import clsx from "clsx";
 import Headermain from "./Headermain";
+import { useEffect } from "react";
 
 const LayoutExplore = ({ children }: { children: React.ReactNode }) => {
   const hideExplore = useStore((state) => state.hideExplore);
+  const {setHideExplore}=useStore()
+   useEffect(() => {
+      if (window.innerHeight<768){
+        setHideExplore(true);
+      }
+    
+  }, [setHideExplore])
+  
+  
 
   return (
     <div className=" grid grid-cols-6  md:grid-cols-12 w-full overflow-hidden">
