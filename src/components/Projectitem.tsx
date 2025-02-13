@@ -10,31 +10,32 @@ import SolutionItem from "@/icon/SolutionItem";
 import TechnologySvg from "@/icon/TechnologySvg";
 import BorderSvg from "@/icon/BorderSvg";
 import ProjectSvg from "@/icon/ProjectSvg";
+
 const ProjectItem = () => {
     const activeSectionProject=useStore((state)=>state.activeSectionProject)
     const projectItem = [
         {   
-            id:'about',
-            href: '#about',
+            
+            href: `#about`,
             svg: <ProjectSvg />,
             name: 'about'
         },
         {
-            id:'challenge',
-            href: '#challenge',
+            
+            href:`#challenge` ,
             svg: <ChallengeSvg />,
-            name: ' Challenge'
+            name: 'Challenge'
         },
-        {   id:'solution',
-            href: '#solution',
+        {   
+            href: `#solution`,
             svg: < SolutionItem/>,
             name: 'Solution'
         },
         {   
-            id:'technologies',
-            href: '#technologies',
+            
+            href: `#technologies`,
             svg: <TechnologySvg/>,
-            name: ' Technologies'
+            name: 'Technologies'
         }
     ]
     const animationlink = {
@@ -53,11 +54,11 @@ const ProjectItem = () => {
             {projectItem.map((item,index) => (
                 <motion.div key={index} variants={itemMotion} className="relative">
 
-                    <Link href={item.href} id={item.id} className={clsx('flex gap-2',{"text-linkcolor":activeSectionProject===item.id})} >
+                    <Link href={item.href} className={clsx('flex gap-2',{"text-linkcolor":activeSectionProject===item.name.toLowerCase() })} >
                         {item.svg}
                         {item.name}
                     </Link>
-                    {activeSectionProject ===item.id && (
+                    {activeSectionProject ===item.name.toLowerCase() && (
                                   <>
                                     
                                     <motion.span
