@@ -10,7 +10,7 @@ import Headermain from "./Headermain";
 
 const LayoutExplore = ({ children }: { children: React.ReactNode }) => {
   const hideExplore = useStore((state) => state.hideExplore);
-  const {setHideExplore}=useStore()
+  
   
   
 
