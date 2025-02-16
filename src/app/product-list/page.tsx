@@ -41,6 +41,7 @@ const ProductList=()=> {
             "addToCard(productName  productPrice) stores product details in the cart object and updates the product count",
             "The updateCart() function dynamically updates the cart summary",
           ]}
+          linkPoject="https://product-list-card-js.netlify.app/"
         />
       </AnimateProject>
       <AnimateProject id="technologies">

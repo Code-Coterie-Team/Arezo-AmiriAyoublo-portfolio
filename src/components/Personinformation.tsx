@@ -52,7 +52,7 @@ export default function PersonalInformation() {
       <div className="flex flex-col pt-20 gap-4 justify-center content-center  text-white scroll-smooth">
         <div className="flex text-5xl gap-4 relative">
           <h1 className=" font-semibold ">Arezoo AmiriAyoubloo</h1>
-          <span className="  animation animate-wave">👋</span>
+          <span className="   animate-wave">👋</span>
         </div>
         <div className="flex gap-2  items-center">
           <span>Looking for job</span>

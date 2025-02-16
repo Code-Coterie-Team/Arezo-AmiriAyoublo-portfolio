@@ -36,6 +36,7 @@ import Technologies from "@/components/Technology";
             "set a global state with redux for handeling edit ",
             "responsive with tailwind",
           ]}
+          linkPoject='https://kanban-react-arezoo.netlify.app/'
         />
       </AnimateProject>
       <AnimateProject id="technologies">

@@ -35,6 +35,7 @@ const Calculator = () => {
             "This React-based calculator application is designed using React Hooks (useState) for state management",
             "It implements essential arithmetic operations along with some advanced mathematical functions.ww",
           ]}
+          linkPoject='https://calculator-react-app-arezoo.netlify.app/'
         />
       </AnimateProject>
       <AnimateProject id="technologies">

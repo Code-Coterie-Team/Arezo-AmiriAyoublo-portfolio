@@ -39,6 +39,7 @@ const RealState = () => {
             "Implemented a sticky navigation bar for easy access to key sections",
             "Integrated CSS animations and hover effects to provide a dynamic user experience.",
           ]}
+          linkPoject='https://home-landing-arezoo.netlify.app/'
         />
       </AnimateProject>
       <AnimateProject id="technologies">
