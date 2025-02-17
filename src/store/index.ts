@@ -2,7 +2,6 @@ import { persist} from "zustand/middleware";
 
 import { create } from "zustand";
 import Link from "next/link";
-import { ReactElement } from "react";
 
 
 
