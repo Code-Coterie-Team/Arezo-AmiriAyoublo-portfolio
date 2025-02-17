@@ -2,12 +2,14 @@ import { persist} from "zustand/middleware";
 
 import { create } from "zustand";
 import Link from "next/link";
+import { ReactElement } from "react";
 
 
 
 interface Link {
   name: string;
   href: string;
+  
 }
 
 interface StoreState {
@@ -40,6 +42,7 @@ export const useStore = create<StoreState>()(
   persist(
     (set, get) => ({
       links: [{name:'About me',href:'/'},],
+      
       activeLink: null,
       activeProject: null,
       setActiveLink: (href) => set({ activeLink: href }),

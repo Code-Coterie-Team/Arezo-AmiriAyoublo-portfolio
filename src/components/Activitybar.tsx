@@ -17,18 +17,18 @@ const Activiybar = () => {
                addLink({name,href})
     }
     const svgitem = [
-        { id: "file", icon: <FileSvg width={32} height={32} className="text-slate-500"/> },
-        { id: "search", icon:<SearchSvg width={32} height={32} className="text-slate-500"/> },
-        { id: "branch", icon: <BranchSvg width={32} height={32} className="text-slate-500"/> },
-        { id: "run", icon: <Runitem width={32} height={32} className="text-slate-500"/> },
-        { id: "extension", icon: <ExtentionSvg width={32} height={32} className="text-slate-500"/> }
+        { id: "file", icon: <FileSvg width={32} height={32} className="text-slate-500 hover:text-fontcolor "/> },
+        { id: "search", icon:<SearchSvg width={32} height={32} className="text-slate-500 hover:text-fontcolor "/> },
+        { id: "branch", icon: <BranchSvg width={32} height={32} className="text-slate-500 hover:text-fontcolor"/> },
+        { id: "run", icon: <Runitem width={32} height={32} className="text-slate-500 hover:text-fontcolor"/> },
+        { id: "extension", icon: <ExtentionSvg width={32} height={32} className="text-slate-500 hover:text-fontcolor"/> }
     
     ]
     return (
         <div className="md:flex md:flex-col justify-between h-full col-span-1    ">
             <div className="flex flex-col gap-1 items-center">
                 {svgitem.map((item, index) => (
-                    <button key={ index} className=" w-full p-3 focus:border-l-2 border-fontcolor  "  onClick={() => {
+                    <button key={ index} className=" w-full p-3 focus:border-l-2 border-fontcolor "  onClick={() => {
                         setVisibileExplore(item.id === "file");
                     }}>{item.icon}</button>
                 ))}
