@@ -6,7 +6,7 @@ const Runitem=(props: React.SVGProps<SVGSVGElement>)  => {
       width="20"
       height="20"
       xmlns="http://www.w3.org/2000/svg"
-      fill="currentcolor"
+    
       viewBox="0 0 32 32"
       {...props}
     >

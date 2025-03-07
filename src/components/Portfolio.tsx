@@ -73,7 +73,7 @@ const Portfolio = () => {
   ];
   return (
     <div
-      className="flex flex-col gap-1 text-base  min-h-0 h-full font-medium overflow-x-hidden">
+      className="flex flex-col gap-1 text-base  min-h-0 h-full font-normal overflow-x-hidden">
       {firstDirectory.map((item, index) => (
         <div key={index} className="flex gap-2 hover:bg-borderdark pl-2 flex-grow-0">
           <ArowSvg />

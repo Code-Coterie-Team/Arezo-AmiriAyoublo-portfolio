@@ -79,7 +79,7 @@ export default function AboutTs() {
             <Link
               key={item.id}
               href={item.link}
-              className={clsx("flex text-base font-medium gap-1 ",{"text-linkcolor":activeSection===item.id})}
+              className={clsx("flex text-base font-normal gap-1 ",{"text-linkcolor":activeSection===item.id})}
             >
               {item.svg}
               {item.title}

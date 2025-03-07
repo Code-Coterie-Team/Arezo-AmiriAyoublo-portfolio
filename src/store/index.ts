@@ -50,10 +50,18 @@ export const useStore = create<StoreState>()(
           links: [...state.links, newlink],
         })),
       removeLink: (href) => {
-        const { links } = get();
+        const { links,setActiveLink } = get();
         if(links.length>1){
+          const index=links.findIndex(link=>link.href===href);
           const filterLinks = links.filter((link) => link.href !== href);
           set({ links: filterLinks });
+          const perviousLink=filterLinks[index-1];
+          if(perviousLink){
+            setActiveLink(perviousLink.href);
+          }else{
+            setActiveLink(filterLinks[0].href);
+          }
+          
         }
         
       },

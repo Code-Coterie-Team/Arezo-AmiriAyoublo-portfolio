@@ -31,7 +31,7 @@ const FileExplore = () => {
   return (
     <div className="flex flex-col gap-4 h-full overflow-hidden  ">
       <div className="font-medium text-xs p-2">EXPLORER</div>
-      <div className="flex bordr-b-2 border-borderdark  overflow-hidden text-xs flex-col gap-2 ">
+      <div className="flex bordr-b-2 border-borderdark font-normal  overflow-hidden text-xs flex-col gap-2 ">
         {exploreitem.map((item, index) => (
           <div className="border-b-2 font-extrabold border-borderdark flex-1   " key={index}>
             <div

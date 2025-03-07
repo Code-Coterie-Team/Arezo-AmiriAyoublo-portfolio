@@ -28,7 +28,9 @@ const Headermain = () => {
     "Calculator": <ReactItem />
   };
   const handelDelete = (href: string) => {
+ 
     removeLink(href);
+   
   };
   const setLink = (name: string, href: string) => {
     setActiveProject(name);

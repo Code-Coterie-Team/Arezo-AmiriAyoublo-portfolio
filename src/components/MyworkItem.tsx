@@ -57,7 +57,7 @@ const MyWorkItem = () => {
           <div key={index} className="flex flex-col">
             <Link
               href={item.path}
-              className="flex gap-1 font-medium"
+              className="flex gap-1 font-normal"
               onClick={() => {
                 handleAddLink(item.name, item.path);
               }}
