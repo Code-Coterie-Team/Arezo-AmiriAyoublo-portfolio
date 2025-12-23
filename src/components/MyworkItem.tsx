@@ -17,6 +17,11 @@ const MyWorkItem = () => {
 
   const navProject = [
     {
+      path:"/dashboard",
+      name:"CryptoDashboard",
+      svg:<ReactItem/>,
+    },
+    {
       path: "/kanban",
       name: "Kanban",
       svg: <ReactItem />,
@@ -36,7 +41,9 @@ const MyWorkItem = () => {
       name: "product-list",
       svg: <JsonPackageSvg />,
     },
+    
   ];
+
 
   const handleAddLink = (name: string, href: string) => {
     const existlink = links.some((l) => l.href === href);
